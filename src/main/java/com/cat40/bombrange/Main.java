@@ -242,12 +242,12 @@ event.manager.addSound("mod_id:Sparkler.ogg");
   * C4- 5 lbs 14.26
   * C4-20 lbs -57.78
   * Minecraft Gunpoweder: 3 blast power
-  * Relistic Gunpowder: 4,000,000 blast power NOT DOABLE (crash minecraft+ java can only take 4 charecter float values)
-  * condense all explosives into one class which has arguements for entity spawned. (think entity type is Entity
-  * Condense all explosive entities into one class wich has argument for blast power. 
-  * remove entities and make the blocks explode instead of spawning an explosive entity. 
-  * 
-  * Use seperate explosives with a longer fuse when dispensed, to allow for condensing and falling into water
+  * Relistic Gunpowder: 4,000,000 blast power
+  * todo condense all explosives into one class which has arguements for entity spawned. (think entity type is Entity
+  * todo Condense all explosive entities into one class wich has argument for blast power.
+  * todo remove entities and make the blocks explode instead of spawning an explosive entity.
+  * todo make sandbags fall like gravel and sand
+  * todo Use seperate explosives with a longer fuse when dispensed, to allow for condensing and falling into water
   */
  
  		//custom dispenser behavior
