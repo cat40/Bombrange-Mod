@@ -36,3 +36,6 @@ hs_err_pid*
 !/build.gradle
 !/gradlew
 !/gradlew.bat
+
+# Intellij stuff
+!.idea/
