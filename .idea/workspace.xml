@@ -61,8 +61,8 @@
       <file leaf-file-name="FallingSubstrate.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/substrate/FallingSubstrate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="89" column="98" selection-start-line="89" selection-start-column="98" selection-end-line="89" selection-end-column="98" />
+            <state relative-caret-position="255">
+              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
               <folding>
                 <element signature="e#3474#3475#0" expanded="true" />
                 <element signature="e#3501#3502#0" expanded="true" />
@@ -1052,8 +1052,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/substrate/FallingSubstrate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="89" column="98" selection-start-line="89" selection-start-column="98" selection-end-line="89" selection-end-column="98" />
+        <state relative-caret-position="255">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
           <folding>
             <element signature="e#3474#3475#0" expanded="true" />
             <element signature="e#3501#3502#0" expanded="true" />

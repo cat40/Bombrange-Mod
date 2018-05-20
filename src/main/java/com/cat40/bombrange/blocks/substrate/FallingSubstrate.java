@@ -24,7 +24,7 @@ public class FallingSubstrate extends Entity
         this.yOffset = this.height / 2.0F;
     }
 
-    public FallingSubstrate(World par1World, double x, double y, double z)//EntityLivingBase par8EntityLivingBase
+    public FallingSubstrate(World par1World, double x, double y, double z)
     {
         this(par1World);
         this.setPosition(x, y, z);
@@ -70,14 +70,6 @@ public class FallingSubstrate extends Entity
         this.motionX *= 1;
         this.motionY *= 1;
         this.motionZ *= 1;
-        /*
-        for(int i=0; i<100; i++)
-        {
-        	this.worldObj.spawnParticle("explode", this.posX, this.posY+0.5D, this.posZ, 255, 0, 0);
-        	//System.out.println(System.out.format("spawned particel at %f, %f, %f", this.posX, this.posY, this.posZ));
-        	// TODO Particles not appearing when tracer is moving rapidly
-        }
-        */
 
         if (this.onGround)
         {
