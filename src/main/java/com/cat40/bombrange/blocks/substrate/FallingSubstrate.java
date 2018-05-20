@@ -3,38 +3,42 @@ package com.cat40.bombrange.blocks.substrate;
 import com.cat40.bombrange.Main;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 
 public class FallingSubstrate extends Entity
 {
     private World world;
-    private EntityLivingBase tntPlacedBy;
     public int fuse = 0;
+    private static final int stoneDist = 5;
+    private int startY;
 
     public FallingSubstrate(World par1World)
     {
         super(par1World);
+        world = par1World;
         this.preventEntitySpawning = true;
         this.setSize(0.98F, 0.98F);
         this.yOffset = this.height / 2.0F;
     }
 
-    public FallingSubstrate(World par1World, double par2, double par4, double par6)//EntityLivingBase par8EntityLivingBase
+    public FallingSubstrate(World par1World, double x, double y, double z)//EntityLivingBase par8EntityLivingBase
     {
         this(par1World);
-        this.setPosition(par2, par4, par6);
+        this.setPosition(x, y, z);
         float f = (float)(Math.random() * Math.PI * 2.0D);
         this.motionX = (double)(-((float)Math.sin((double)f)) * 0.02F);
         this.motionY = 0.20000000298023224D;
         this.motionZ = (double)(-((float)Math.cos((double)f)) * 0.02F);
         //this.fuse = 0.25;
         this.world=par1World;
-        this.prevPosX = par2;
-        this.prevPosY = par4;
-        this.prevPosZ = par6;
+        this.prevPosX = x;
+        this.prevPosY = y;
+        this.prevPosZ = z;
         //this.tntPlacedBy = par8EntityLivingBase;
     }
 
@@ -83,7 +87,9 @@ public class FallingSubstrate extends Entity
             this.motionX *= 0.699999988079071D;
             this.motionZ *= 0.699999988079071D;
             this.motionY *= -0.5D;
-            this.worldObj.setBlock((int) this.posX, (int) this.posY, (int) this.posZ, Main.TracerUsed);
+            // sets the block to spawn to stone if the entity has fallen more than 5 blocks
+            Block spawnBlock = this.posY <= this.startY - stoneDist ? Blocks.stone : Blocks.dirt;
+            this.worldObj.setBlock((int) this.posX, (int) this.posY, (int) this.posZ, spawnBlock);
         }
 
     }
@@ -95,19 +101,12 @@ public class FallingSubstrate extends Entity
     }
 
     @SideOnly(Side.CLIENT)
+    @Override
     public float getShadowSize()
     {
         return 0.0F;
     }
 
-    /**
-     * returns null or the entityliving it was placed or ignited by
-     */
-    public EntityLivingBase getTntPlacedBy()
-    {
-        return this.tntPlacedBy;
-    }
-	
 	/**
      * (abstract) Protected helper method to write subclass entity data to NBT.
      */

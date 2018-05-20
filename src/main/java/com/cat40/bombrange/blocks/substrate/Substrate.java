@@ -53,7 +53,7 @@ public class Substrate extends Block
         }
         if (world.isAirBlock(x, y-1, z)) // todo check if it's a liquid
         {
-            //todo spawn the falling entity here
+            world.spawnEntityInWorld(new FallingSubstrate(world, x, y, z));
             world.setBlockToAir(x, y, z);
         }
 
