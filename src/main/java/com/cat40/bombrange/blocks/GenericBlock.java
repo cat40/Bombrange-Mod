@@ -33,7 +33,7 @@ public class GenericBlock extends Block
     /**
      * @param id integer id of the block
      * @param material material of the block
-     * @param textureName texture file name
+     * @param textureName texture file name, excluding extension
      * @param name the name of the block
      * @param tool mining tool
      * @param level mining level

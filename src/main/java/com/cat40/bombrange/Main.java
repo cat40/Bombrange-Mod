@@ -127,6 +127,7 @@ public static Block MovableObsidian;
 public static Block Benchmark;
 public static Block Dispense;
 public static Block Tnt;
+public static Block Sandbag;
 //public static Block StructOldCannon;
 
 public static Material stone = Material.rock;
@@ -324,6 +325,9 @@ event.manager.addSound("mod_id:Sparkler.ogg");
         
         ReConcrete = new GenericBlock(++idBase, Material.rock, "ReConcrete", "Pickaxe", 2).setResistance(70).setCreativeTab(Main.CreativeTabMod.tabBomb);
         GameRegistry.registerBlock(ReConcrete, "ReConcrete");
+
+        Sandbag = new GenericBlock(++idBase, Material.sand, "Sandbag", "Shovel", 0).setResistance(45);
+        GameRegistry.registerBlock(Sandbag, "Sandbag");
         
         Steel = new GenericItem(++idBase, "Steel").setCreativeTab(Main.CreativeTabMod.tabBomb);
         GameRegistry.registerItem(Steel, "Steel");

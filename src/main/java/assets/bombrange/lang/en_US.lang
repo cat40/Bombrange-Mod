@@ -30,6 +30,7 @@ tile.FireLarge.name=Large Fire Bomb
 tile.OldCannon.name=Spawn Old Cannon
 tile.Dispense.name=Bomb Dispenser
 tile.Tnt.name=TNT bomb
+tile.Sandbag.name=Sand Bag
 
 item.Lighter.name=Fuse Lighter
 item.Plastic.name=Plastic
