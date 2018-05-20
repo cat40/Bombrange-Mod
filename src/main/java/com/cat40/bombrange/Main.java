@@ -533,6 +533,7 @@ event.manager.addSound("mod_id:Sparkler.ogg");
 	 GameRegistry.addShapelessRecipe(new ItemStack(C4Quart, 2),  new ItemStack(C4Half, 1));
 	 GameRegistry.addShapelessRecipe(new ItemStack(C4ThreeQuart, 1),  new ItemStack(C4Quart, 1), new ItemStack(C4Quart, 1), new ItemStack(C4Quart, 1));
 	 GameRegistry.addShapelessRecipe(new ItemStack(Sandbag, 1), new ItemStack(Blocks.wool, 1), new ItemStack(Blocks.sand, 1));
+	 GameRegistry.addShapelessRecipe(new ItemStack(Substrate, 2), new ItemStack(Blocks.sand, 1), new ItemStack(Blocks.gravel, 1));
 
 	 ItemStack StackBlastH = new ItemStack(BlastHead, 1);//.addEnchantment(Enchantment.blastProtection, 4);
 	 StackBlastH.addEnchantment(Enchantment.blastProtection, 4);
