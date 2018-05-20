@@ -79,7 +79,7 @@ import net.minecraftforge.common.util.EnumHelper;
 
 
 /* 	MOD INFO */
-	@Mod(modid = "bombrange", name = "Bomb Range Mod", version = "0.1.0")
+	@Mod(modid = "bombrange", name = "Bomb Range Mod", version = "0.2.0")
 	//@NetworkMod(clientSideRequired=true, serverSideRequired=false)	
 
 
