@@ -28,11 +28,10 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="377" column="47" lean-forward="true" selection-start-line="377" selection-start-column="47" selection-end-line="377" selection-end-column="47" />
+            <state relative-caret-position="424">
+              <caret line="353" column="65" selection-start-line="353" selection-start-column="65" selection-end-line="353" selection-end-column="65" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -884,7 +883,6 @@
           <caret line="323" column="57" lean-forward="true" selection-start-line="323" selection-start-column="57" selection-end-line="323" selection-end-column="57" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1048,11 +1046,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="377" column="47" lean-forward="true" selection-start-line="377" selection-start-column="47" selection-end-line="377" selection-end-column="47" />
+        <state relative-caret-position="424">
+          <caret line="353" column="65" selection-start-line="353" selection-start-column="65" selection-end-line="353" selection-end-column="65" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

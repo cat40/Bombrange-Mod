@@ -43,11 +43,13 @@ import com.cat40.bombrange.blocks.potion.Potion;
 import com.cat40.bombrange.blocks.potion.PotionPrime;
 import com.cat40.bombrange.blocks.powder.Powder;
 import com.cat40.bombrange.blocks.powder.PowderPrime;
+import com.cat40.bombrange.blocks.substrate.FallingSubstrate;
 import com.cat40.bombrange.blocks.tnt.Tnt;
 import com.cat40.bombrange.blocks.tnt.TntPrime;
 import com.cat40.bombrange.blocks.tracer.Tracer;
 import com.cat40.bombrange.blocks.tracer.TracerPrime;
 import com.cat40.bombrange.blocks.tracer.TracerUsed;
+import com.cat40.bombrange.blocks.substrate.Substrate;
 import com.cat40.bombrange.items.GenericItem;
 import com.cat40.bombrange.items.Lighter;
 import com.cat40.bombrange.proxies.CommonProxy;
@@ -128,6 +130,7 @@ public static Block Benchmark;
 public static Block Dispense;
 public static Block Tnt;
 public static Block Sandbag;
+public static Block Substrate;
 //public static Block StructOldCannon;
 
 public static Material stone = Material.rock;
@@ -348,14 +351,17 @@ event.manager.addSound("mod_id:Sparkler.ogg");
         GameRegistry.registerBlock(Dispense, "Dispense");
         //GameRegistry.registerTileEntity(Dispenser.class, "Dispense");
         
-        Tracer = new Tracer(++idBase, Material.rock, "Substrate").setResistance(bombres).setStepSound(bombSound);//
-        GameRegistry.registerBlock(Tracer, "Substrate");
+        Tracer = new Tracer(++idBase, Material.rock, "Tracer").setResistance(bombres).setStepSound(bombSound);//
+        GameRegistry.registerBlock(Tracer, "Tracer");
         
-        TracerUsed = new TracerUsed(++idBase, Material.rock, "Substrate").setResistance(bombres).setStepSound(bombSound).setLightLevel(0.5F);
+        TracerUsed = new TracerUsed(++idBase, Material.rock, "Tracer").setResistance(bombres).setStepSound(bombSound).setLightLevel(0.5F);
         GameRegistry.registerBlock(TracerUsed, "TracerUsed");
         
         MovableObsidian = new MovableObsidian(++idBase, Material.rock, "pickaxe", 3).setResistance(9999F).setStepSound(Block.soundTypeStone);
         GameRegistry.registerBlock(MovableObsidian, "MovableObsidian");
+
+        Substrate = new Substrate(++idBase, Material.ground, "Substrate");
+        GameRegistry.registerBlock(Substrate, "Substrate");
         
         /*StructOldCannon = new BlockStructure(++idBase, Material.rock, "OldCannon", Structures.cannonOld, false);
         GameRegistry.registerBlock(StructOldCannon, "OldCannon");// TODO: game crashing on every loop over the structure components */
@@ -372,6 +378,7 @@ event.manager.addSound("mod_id:Sparkler.ogg");
     	EntityRegistry.registerModEntity(TracerPrime.class, "Primed Substrate", ++EntityID, this, 256, 10, true);
     	EntityRegistry.registerModEntity(LargeFirePrime.class,"Primed Large Fire Bomb", ++EntityID, this, 256, 10, true);
     	EntityRegistry.registerModEntity(TntPrime.class,"Primed TNT Bomb", ++EntityID, this, 256, 10, true);
+    	EntityRegistry.registerModEntity(FallingSubstrate.class, "Falling Substrate:",++EntityID, this, 256, 10, true);
 
         BlastHead = new BlastShirt(ArmBlast, 0, 0, "BlastHead").setTextureName(modid + "BlastHead").setCreativeTab(CreativeTabMod.tabBomb);
         BlastShirt = new BlastShirt(ArmBlast, 0, 1, "BlastShirt").setTextureName(modid + "BlastShirt").setCreativeTab(CreativeTabMod.tabBomb);
