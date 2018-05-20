@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7ed5093c-a0d9-4802-8d5f-3f1c608f1899" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/substrate/FallingSubstrate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/substrate/FallingSubstrate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/substrate/Substrate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/substrate/Substrate.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -37,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Substrate.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Substrate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/substrate/Substrate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+            <state relative-caret-position="680">
+              <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
               <folding>
                 <element signature="e#3035#3036#0" expanded="true" />
                 <element signature="e#3062#3063#0" expanded="true" />
@@ -59,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FallingSubstrate.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FallingSubstrate.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/substrate/FallingSubstrate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="544">
+              <caret line="89" column="98" selection-start-line="89" selection-start-column="98" selection-end-line="89" selection-end-column="98" />
               <folding>
                 <element signature="e#3474#3475#0" expanded="true" />
                 <element signature="e#3501#3502#0" expanded="true" />
@@ -622,8 +621,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/mcmod.info" />
         <option value="$PROJECT_DIR$/src/main/java/assets/bombrange/lang/en_US.lang" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/substrate/FallingSubstrate.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/substrate/Substrate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/substrate/FallingSubstrate.java" />
       </list>
     </option>
   </component>
@@ -1033,17 +1032,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/substrate/FallingSubstrate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="e#3474#3475#0" expanded="true" />
-            <element signature="e#3501#3502#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/substrate/RenderFallingSubstrate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1053,11 +1041,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/substrate/Substrate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        <state relative-caret-position="680">
+          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
           <folding>
             <element signature="e#3035#3036#0" expanded="true" />
             <element signature="e#3062#3063#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/substrate/FallingSubstrate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="89" column="98" selection-start-line="89" selection-start-column="98" selection-end-line="89" selection-end-column="98" />
+          <folding>
+            <element signature="e#3474#3475#0" expanded="true" />
+            <element signature="e#3501#3502#0" expanded="true" />
           </folding>
         </state>
       </provider>

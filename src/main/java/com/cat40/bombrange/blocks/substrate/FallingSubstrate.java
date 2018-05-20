@@ -28,15 +28,13 @@ public class FallingSubstrate extends Entity
     {
         this(par1World);
         this.setPosition(x, y, z);
-        // float f = (float)(Math.random() * Math.PI * 2.0D);
-        this.motionX = 0; //(double)(-((float)Math.sin((double)f)) * 0.02F);
-        this.motionY = 0; //0.20000000298023224D;
-        this.motionZ = 0; //(double)(-((float)Math.cos((double)f)) * 0.02F);
+        this.motionX = 0;
+        this.motionY = 0;
+        this.motionZ = 0;
         this.world = par1World;
         this.prevPosX = x;
         this.prevPosY = y;
         this.prevPosZ = z;
-        //this.tntPlacedBy = par8EntityLivingBase;
     }
 
     protected void entityInit() {}
@@ -69,9 +67,9 @@ public class FallingSubstrate extends Entity
         this.prevPosZ = this.posZ;
         this.motionY -= 0.03999999910593033D;
         this.moveEntity(this.motionX, this.motionY, this.motionZ);
-        this.motionX *= 1; //0.9800000190734863D;
-        this.motionY *= 1; //0.9800000190734863D;
-        this.motionZ *= 1; //0.9800000190734863D;
+        this.motionX *= 1;
+        this.motionY *= 1;
+        this.motionZ *= 1;
         /*
         for(int i=0; i<100; i++)
         {
@@ -89,7 +87,7 @@ public class FallingSubstrate extends Entity
             this.motionY *= -0.5D;
             // sets the block to spawn to stone if the entity has fallen more than 5 blocks
             Block spawnBlock = this.posY <= this.startY - stoneDist ? Blocks.stone : Blocks.dirt;
-            this.worldObj.setBlock((int) this.posX, (int) this.posY, (int) this.posZ, spawnBlock);
+            this.worldObj.setBlock((int) (this.posX-0.5F), (int) this.posY, (int) (this.posZ-0.5F), spawnBlock);
         }
 
     }
