@@ -348,10 +348,10 @@ event.manager.addSound("mod_id:Sparkler.ogg");
         GameRegistry.registerBlock(Dispense, "Dispense");
         //GameRegistry.registerTileEntity(Dispenser.class, "Dispense");
         
-        Tracer = new Tracer(++idBase, Material.rock, "Tracer").setResistance(bombres).setStepSound(bombSound);//
-        GameRegistry.registerBlock(Tracer, "Tracer");
+        Tracer = new Tracer(++idBase, Material.rock, "Substrate").setResistance(bombres).setStepSound(bombSound);//
+        GameRegistry.registerBlock(Tracer, "Substrate");
         
-        TracerUsed = new TracerUsed(++idBase, Material.rock, "Tracer").setResistance(bombres).setStepSound(bombSound).setLightLevel(0.5F);
+        TracerUsed = new TracerUsed(++idBase, Material.rock, "Substrate").setResistance(bombres).setStepSound(bombSound).setLightLevel(0.5F);
         GameRegistry.registerBlock(TracerUsed, "TracerUsed");
         
         MovableObsidian = new MovableObsidian(++idBase, Material.rock, "pickaxe", 3).setResistance(9999F).setStepSound(Block.soundTypeStone);
@@ -369,7 +369,7 @@ event.manager.addSound("mod_id:Sparkler.ogg");
     	EntityRegistry.registerModEntity(DelayPrime5.class, "5 Second Delay Primed", ++EntityID, this, 64, 10, true);
     	EntityRegistry.registerModEntity(DelayPrime10.class, "10 Second Delay Primed", ++EntityID, this, 64, 10, true);
     	EntityRegistry.registerModEntity(DelayPrime30.class, "30 Second Delay Primed", ++EntityID, this, 64, 10, true);
-    	EntityRegistry.registerModEntity(TracerPrime.class, "Primed Tracer", ++EntityID, this, 256, 10, true);
+    	EntityRegistry.registerModEntity(TracerPrime.class, "Primed Substrate", ++EntityID, this, 256, 10, true);
     	EntityRegistry.registerModEntity(LargeFirePrime.class,"Primed Large Fire Bomb", ++EntityID, this, 256, 10, true);
     	EntityRegistry.registerModEntity(TntPrime.class,"Primed TNT Bomb", ++EntityID, this, 256, 10, true);
 
