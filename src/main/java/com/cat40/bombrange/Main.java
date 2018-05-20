@@ -184,14 +184,9 @@ public static class CreativeTabMod
         
         public static ArmorMaterial ArmBlast = EnumHelper.addArmorMaterial("ArmBlast", 50, new int[]{3, 5, 4, 2}, 0);
         
-void RI(Item item, String name)
+private void RI(Item item, String name)
 {
 	GameRegistry.registerItem(item,  name);
-}
-
-void RB(Block item, String name)
-{
-	GameRegistry.registerBlock(item,  name);
 }
 
 ItemStack Enchant(ItemStack stack, Enchantment enc, int level)

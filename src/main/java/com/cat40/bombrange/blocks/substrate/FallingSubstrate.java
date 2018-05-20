@@ -35,6 +35,7 @@ public class FallingSubstrate extends Entity
         this.prevPosX = x;
         this.prevPosY = y;
         this.prevPosZ = z;
+        this.startY = (int) y;
     }
 
     protected void entityInit() {}
