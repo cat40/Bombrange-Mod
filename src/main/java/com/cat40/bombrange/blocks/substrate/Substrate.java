@@ -5,14 +5,10 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
-
-import java.util.Random;
 
 /**
  * todo: make another version that drops itself, and remains substrate when placed
@@ -53,7 +49,7 @@ public class Substrate extends Block
         }
         if (world.isAirBlock(x, y-1, z)) // todo check if it's a liquid
         {
-            world.spawnEntityInWorld(new FallingSubstrate(world, x, y, z));
+            world.spawnEntityInWorld(new FallingSubstrate(world, x+0.5F, y, z+0.5F));
             world.setBlockToAir(x, y, z);
         }
 

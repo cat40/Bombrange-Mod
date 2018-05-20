@@ -1,11 +1,9 @@
 package com.cat40.bombrange.blocks.substrate;
 
-import com.cat40.bombrange.Main;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
@@ -30,12 +28,11 @@ public class FallingSubstrate extends Entity
     {
         this(par1World);
         this.setPosition(x, y, z);
-        float f = (float)(Math.random() * Math.PI * 2.0D);
-        this.motionX = (double)(-((float)Math.sin((double)f)) * 0.02F);
-        this.motionY = 0.20000000298023224D;
-        this.motionZ = (double)(-((float)Math.cos((double)f)) * 0.02F);
-        //this.fuse = 0.25;
-        this.world=par1World;
+        // float f = (float)(Math.random() * Math.PI * 2.0D);
+        this.motionX = 0; //(double)(-((float)Math.sin((double)f)) * 0.02F);
+        this.motionY = 0; //0.20000000298023224D;
+        this.motionZ = 0; //(double)(-((float)Math.cos((double)f)) * 0.02F);
+        this.world = par1World;
         this.prevPosX = x;
         this.prevPosY = y;
         this.prevPosZ = z;
@@ -72,32 +69,29 @@ public class FallingSubstrate extends Entity
         this.prevPosZ = this.posZ;
         this.motionY -= 0.03999999910593033D;
         this.moveEntity(this.motionX, this.motionY, this.motionZ);
-        this.motionX *= 0.9800000190734863D;
-        this.motionY *= 0.9800000190734863D;
-        this.motionZ *= 0.9800000190734863D;
+        this.motionX *= 1; //0.9800000190734863D;
+        this.motionY *= 1; //0.9800000190734863D;
+        this.motionZ *= 1; //0.9800000190734863D;
+        /*
         for(int i=0; i<100; i++)
         {
         	this.worldObj.spawnParticle("explode", this.posX, this.posY+0.5D, this.posZ, 255, 0, 0);
         	//System.out.println(System.out.format("spawned particel at %f, %f, %f", this.posX, this.posY, this.posZ));
         	// TODO Particles not appearing when tracer is moving rapidly
         }
+        */
+
         if (this.onGround)
         {
         	this.setDead();
-            this.motionX *= 0.699999988079071D;
-            this.motionZ *= 0.699999988079071D;
+            this.motionX *= 1; //0.699999988079071D;
+            this.motionZ *= 1 ; //0.699999988079071D;
             this.motionY *= -0.5D;
             // sets the block to spawn to stone if the entity has fallen more than 5 blocks
             Block spawnBlock = this.posY <= this.startY - stoneDist ? Blocks.stone : Blocks.dirt;
             this.worldObj.setBlock((int) this.posX, (int) this.posY, (int) this.posZ, spawnBlock);
         }
 
-    }
-
-    private void explode()
-    {
-        //float f = 0.70F;
-        this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, Main.arrowPower, true);
     }
 
     @SideOnly(Side.CLIENT)
