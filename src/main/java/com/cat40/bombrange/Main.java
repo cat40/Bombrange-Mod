@@ -454,104 +454,81 @@ event.manager.addSound("mod_id:Sparkler.ogg");
 	//yourItemStack.addEnchantment(Enchantment.protection, 3); // adding enchantments. Do what ever you like
  
     //  Dynamite Recipie (temporary until Nitroglycerin is added)     
-        GameRegistry.addRecipe(new ItemStack(Dyno, 1), new Object[]
-        {
+        GameRegistry.addRecipe(new ItemStack(Dyno, 1),
                 "SXS",
                 "XSX",
                 "SXS",
             'S', Blocks.sand,
-            'X', Items.gunpowder,
-        });
+            'X', Items.gunpowder
+        );
     //  Gunpower bomb         
-        GameRegistry.addRecipe(new ItemStack(Bomb, 5), new Object[]
-        {
+        GameRegistry.addRecipe(new ItemStack(Bomb, 5),
                 "SSS",
                 "SSS",
                 "SSS",
-            'S', Items.gunpowder,
-        });
+            'S', Items.gunpowder);
     //  ITEM RECIPE         
-        GameRegistry.addRecipe(new ItemStack(C4Half, 1), new Object[]
-        {
+        GameRegistry.addRecipe(new ItemStack(C4Half, 1),
                 "SXS",
                 "XSX",
                 "SXS",
             'S', Items.gunpowder,
-            'X', Plastic,
-        });
+            'X', Plastic);
             //  ITEM RECIPE         
-        GameRegistry.addRecipe(new ItemStack(Lighter, 1), new Object[]
-        {
+        GameRegistry.addRecipe(new ItemStack(Lighter, 1),
                 "G",
                 "S",
                 "T",
             'S', Items.stick,
             'G', Items.gunpowder,
-            'T', Blocks.torch,
-        });
+            'T', Blocks.torch);
 
-        GameRegistry.addRecipe(new ItemStack(Concrete, 1), new Object[]
-        {
+        GameRegistry.addRecipe(new ItemStack(Concrete, 1),
                 "W",
                 "S",
             'S', Blocks.sand,
-            'W', Items.water_bucket.setContainerItem(Items.bucket)
-        });
+            'W', Items.water_bucket.setContainerItem(Items.bucket));
         
-        GameRegistry.addRecipe(new ItemStack(SteelBar, 2), new Object[]
-        {
+        GameRegistry.addRecipe(new ItemStack(SteelBar, 2),
                 "S",
                 "S",
-            'S', Steel,
-        });
+            'S', Steel);
         
-        GameRegistry.addRecipe(new ItemStack(ReConcrete, 1), new Object[]
-        {
+        GameRegistry.addRecipe(new ItemStack(ReConcrete, 1),
         		"R",
                 "W",
                 "S",
             'S', Blocks.sand,
             'W', Items.water_bucket.setContainerItem(Items.bucket),
-            'R', SteelBar
-        });
+            'R', SteelBar);
         
-        GameRegistry.addRecipe(new ItemStack(Cord, 8), new Object[]
-        {
-        	"WWW",
+        GameRegistry.addRecipe(new ItemStack(Cord, 8),
+                "WWW",
         	"WGW",
         	"WWW",
         'W', Blocks.wool,
-        'G', Items.gunpowder
-        });
+        'G', Items.gunpowder);
         
-        GameRegistry.addRecipe(new ItemStack(WoolHat, 1), new Object[]
-        		{
+        GameRegistry.addRecipe(new ItemStack(WoolHat, 1),
         				"WWW",
         				"W W",
         				
-        				'W', Blocks.wool
-        		});
-        GameRegistry.addRecipe(new ItemStack(WoolShirt, 1), new Object[]
-        		{
+        				'W', Blocks.wool);
+        GameRegistry.addRecipe(new ItemStack(WoolShirt, 1),
         				"W W", 
         				"WWW", 
         				"WWW", 
         				
-        				'W', Blocks.wool
-        		});
-        GameRegistry.addRecipe(new ItemStack(WoolPants, 1), new Object[]
-        		{
+        				'W', Blocks.wool);
+        GameRegistry.addRecipe(new ItemStack(WoolPants, 1),
         				"WWW",
         				"W W",
         				"W W",
-        				'W', Blocks.wool
-        		});
-        GameRegistry.addRecipe(new ItemStack(WoolShoes, 1), new Object[]
-        		{
+        				'W', Blocks.wool);
+        GameRegistry.addRecipe(new ItemStack(WoolShoes, 1),
         				"W W",
         				"W W",
-        				'W', Blocks.wool
-        		});
+        				'W', Blocks.wool);
         
      //2;1x7,7x3,1x2;1;village(size=5 distance=9)   
 	 //GameRegistry.addShapelessRecipe(new ItemStack (C4mine, 1), new ItemStack (C41, 2);//, new ItemStack (C41, 1));
