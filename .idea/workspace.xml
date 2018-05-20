@@ -24,8 +24,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="521" column="42" lean-forward="true" selection-start-line="521" selection-start-column="42" selection-end-line="521" selection-end-column="42" />
+            <state relative-caret-position="327">
+              <caret line="325" column="133" selection-start-line="325" selection-start-column="133" selection-end-line="325" selection-end-column="133" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -618,6 +618,30 @@
               <item name="Bombrange-Mod" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bombrange-Mod" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bombrange-Mod" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cat40" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bombrange-Mod" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bombrange-Mod" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cat40" type="462c0819:PsiDirectoryNode" />
+              <item name="bombrange" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bombrange-Mod" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bombrange-Mod" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -745,11 +769,11 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50364584" side_tool="true" visible="true" weight="0.21572796" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49635416" visible="true" weight="0.21572796" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49635416" visible="true" weight="0.21572796" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49791667" weight="0.17003188" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -907,8 +931,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="521" column="42" lean-forward="true" selection-start-line="521" selection-start-column="42" selection-end-line="521" selection-end-column="42" />
+        <state relative-caret-position="327">
+          <caret line="325" column="133" selection-start-line="325" selection-start-column="133" selection-end-line="325" selection-end-column="133" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

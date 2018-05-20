@@ -326,7 +326,7 @@ event.manager.addSound("mod_id:Sparkler.ogg");
         ReConcrete = new GenericBlock(++idBase, Material.rock, "ReConcrete", "Pickaxe", 2).setResistance(70).setCreativeTab(Main.CreativeTabMod.tabBomb);
         GameRegistry.registerBlock(ReConcrete, "ReConcrete");
 
-        Sandbag = new GenericBlock(++idBase, Material.sand, "Sandbag", "Shovel", 0).setResistance(45).setStepSound(Block.soundtypeGravel);
+        Sandbag = new GenericBlock(++idBase, Material.sand, "Sandbag", "Shovel", 0).setResistance(45).setStepSound(Block.soundTypeGravel);
         GameRegistry.registerBlock(Sandbag, "Sandbag"); // todo add a texture for this
         
         Steel = new GenericItem(++idBase, "Steel").setCreativeTab(Main.CreativeTabMod.tabBomb);
