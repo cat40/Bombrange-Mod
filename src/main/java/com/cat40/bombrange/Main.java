@@ -77,7 +77,7 @@ import net.minecraftforge.common.util.EnumHelper;
 
 
 /* 	MOD INFO */
-	@Mod(modid = "bombrange", name = "Blast Range Mod", version = "1.0")
+	@Mod(modid = "bombrange", name = "Bomb Range Mod", version = "0.1.0")
 	//@NetworkMod(clientSideRequired=true, serverSideRequired=false)	
 
 
@@ -327,7 +327,7 @@ event.manager.addSound("mod_id:Sparkler.ogg");
         GameRegistry.registerBlock(ReConcrete, "ReConcrete");
 
         Sandbag = new GenericBlock(++idBase, Material.sand, "Sandbag", "Shovel", 0).setResistance(45);
-        GameRegistry.registerBlock(Sandbag, "Sandbag");
+        GameRegistry.registerBlock(Sandbag, "Sandbag"); // todo add a texture for this
         
         Steel = new GenericItem(++idBase, "Steel").setCreativeTab(Main.CreativeTabMod.tabBomb);
         GameRegistry.registerItem(Steel, "Steel");
