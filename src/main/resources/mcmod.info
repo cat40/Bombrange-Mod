@@ -1,8 +1,8 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "bombrange",
+  "name": "Bomb Range Mod",
+  "description": "Adds more explosives.",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
