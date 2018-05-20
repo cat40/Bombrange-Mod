@@ -326,7 +326,7 @@ event.manager.addSound("mod_id:Sparkler.ogg");
         ReConcrete = new GenericBlock(++idBase, Material.rock, "ReConcrete", "Pickaxe", 2).setResistance(70).setCreativeTab(Main.CreativeTabMod.tabBomb);
         GameRegistry.registerBlock(ReConcrete, "ReConcrete");
 
-        Sandbag = new GenericBlock(++idBase, Material.sand, "Sandbag", "Shovel", 0).setResistance(45);
+        Sandbag = new GenericBlock(++idBase, Material.sand, "Sandbag", "Shovel", 0).setResistance(45).setStepSound(Block.soundtypeGravel);
         GameRegistry.registerBlock(Sandbag, "Sandbag"); // todo add a texture for this
         
         Steel = new GenericItem(++idBase, "Steel").setCreativeTab(Main.CreativeTabMod.tabBomb);
@@ -442,19 +442,6 @@ event.manager.addSound("mod_id:Sparkler.ogg");
  * RECIPES SECTION 
  * *********************************************************** */
  
- /* Item Stacks 
-   // ItemStacks (Item/block, stack size, damage)
- ItemStack C41Stack = new ItemStack(Main.C41, 1);
- ItemStack C45Stack = new ItemStack(Main.C45, 1);
- ItemStack C410Stack = new ItemStack(Main.C410, 1);
- ItemStack C420Stack = new ItemStack(Main.C420, 1);
- ItemStack C4mineStack = new ItemStack(Main.C4mine, 1);
- ItemStack C41_2Stack = new ItemStack(Main.C41, 2);
- ItemStack C45_2Stack = new ItemStack(Main.C45, 2);
- ItemStack C410_2Stack = new ItemStack(Main.C410,2);
- ItemStack C420_2Stack = new ItemStack(Main.C420, 2);
- ItemStack C41_5Stack = new ItemStack(Main.C41, 5); */
-	
 	//yourItemStack.addEnchantment(Enchantment.protection, 3); // adding enchantments. Do what ever you like
  
     //  Dynamite Recipie (temporary until Nitroglycerin is added)     
@@ -471,7 +458,7 @@ event.manager.addSound("mod_id:Sparkler.ogg");
                 "SSS",
                 "SSS",
             'S', Items.gunpowder);
-    //  ITEM RECIPE         
+
         GameRegistry.addRecipe(new ItemStack(C4Half, 1),
                 "SXS",
                 "XSX",
@@ -543,7 +530,8 @@ event.manager.addSound("mod_id:Sparkler.ogg");
 	 GameRegistry.addShapelessRecipe(new ItemStack(C41, 1), new ItemStack(C4Half, 1), new ItemStack(C4Half, 1));
 	 GameRegistry.addShapelessRecipe(new ItemStack(C4Quart, 2),  new ItemStack(C4Half, 1));
 	 GameRegistry.addShapelessRecipe(new ItemStack(C4ThreeQuart, 1),  new ItemStack(C4Quart, 1), new ItemStack(C4Quart, 1), new ItemStack(C4Quart, 1));
-	 
+	 GameRegistry.addShapelessRecipe(new ItemStack(Sandbag, 1), new ItemStack(Blocks.wool, 1), new ItemStack(Blocks.sand, 1));
+
 	 ItemStack StackBlastH = new ItemStack(BlastHead, 1);//.addEnchantment(Enchantment.blastProtection, 4);
 	 StackBlastH.addEnchantment(Enchantment.blastProtection, 4);
 	 
