@@ -2,14 +2,7 @@ package com.cat40.bombrange.proxies;
 
 import com.cat40.bombrange.blocks.arrow.ArrowPrime;
 import com.cat40.bombrange.blocks.arrow.RenderArrowPrime;
-import com.cat40.bombrange.blocks.delay.DelayPrime1;
-import com.cat40.bombrange.blocks.delay.DelayPrime10;
-import com.cat40.bombrange.blocks.delay.DelayPrime30;
-import com.cat40.bombrange.blocks.delay.DelayPrime5;
-import com.cat40.bombrange.blocks.delay.RenderDelay1;
-import com.cat40.bombrange.blocks.delay.RenderDelay10;
-import com.cat40.bombrange.blocks.delay.RenderDelay30;
-import com.cat40.bombrange.blocks.delay.RenderDelay5;
+import com.cat40.bombrange.blocks.delay.*;
 import com.cat40.bombrange.blocks.fire.FirePrime;
 import com.cat40.bombrange.blocks.fire.RenderFirePrime;
 import com.cat40.bombrange.blocks.largefire.LargeFirePrime;
@@ -18,9 +11,10 @@ import com.cat40.bombrange.blocks.potion.PotionPrime;
 import com.cat40.bombrange.blocks.potion.RenderPotionPrime;
 import com.cat40.bombrange.blocks.powder.PowderPrime;
 import com.cat40.bombrange.blocks.powder.RenderPowderPrime;
+import com.cat40.bombrange.blocks.substrate.FallingSubstrate;
+import com.cat40.bombrange.blocks.substrate.RenderFallingSubstrate;
 import com.cat40.bombrange.blocks.tracer.RenderTracerPrime;
 import com.cat40.bombrange.blocks.tracer.TracerPrime;
-
 import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class ClientProxy extends CommonProxy
@@ -37,5 +31,6 @@ public class ClientProxy extends CommonProxy
 		RenderingRegistry.registerEntityRenderingHandler(TracerPrime.class, new RenderTracerPrime());
 		RenderingRegistry.registerEntityRenderingHandler(PotionPrime.class, new RenderPotionPrime());
 		RenderingRegistry.registerEntityRenderingHandler(LargeFirePrime.class, new RenderLargeFirePrime());
+		RenderingRegistry.registerEntityRenderingHandler(FallingSubstrate.class, new RenderFallingSubstrate());
 	}
 }
