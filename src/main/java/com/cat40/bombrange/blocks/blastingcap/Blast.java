@@ -51,11 +51,8 @@ public class Blast extends Block
         {
             if ((par5 & 1) == 1)
             {
-                /*BlastPrime entitytntprimed = new BlastPrime(world, (double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5), 1);
-                world.spawnEntityInWorld(entitytntprimed);
-                world.playSoundAtEntity(entitytntprimed, "random.fuse", 0.0F, 0.0F);*/
                 float f = 1.250F;
-                world.createExplosion(new DummyEntity(world, (double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5), 1), x, y, z, f, true);
+                world.createExplosion(new DummyEntity(world), x, y, z, f, true);
             }
         }
     }
