@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ed5093c-a0d9-4802-8d5f-3f1c608f1899" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/C4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/C4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/cord/Cord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/cord/Cord.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -27,8 +27,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="255" column="71" lean-forward="true" selection-start-line="255" selection-start-column="71" selection-end-line="255" selection-end-column="71" />
+            <state relative-caret-position="578">
+              <caret line="256" column="73" lean-forward="true" selection-start-line="256" selection-start-column="73" selection-end-line="256" selection-end-column="73" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -36,33 +36,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="C4.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/C4.java">
+      <file leaf-file-name="Cord.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/cord/Cord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
-              <folding>
-                <element signature="e#3075#3076#0" expanded="true" />
-                <element signature="e#3103#3104#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="306">
+              <caret line="51" column="13" lean-forward="true" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="C4_Quart.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/Quart/C4_Quart.java">
+      <file leaf-file-name="CordPrime.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/cord/CordPrime.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="25" column="45" lean-forward="true" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuartPrime.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/Quart/QuartPrime.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="86" />
+            <state relative-caret-position="476">
+              <caret line="98" column="99" selection-start-line="98" selection-start-column="7" selection-end-line="98" selection-end-column="99" />
             </state>
           </provider>
         </entry>
@@ -98,24 +85,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
               <caret line="15" column="38" selection-end-line="129" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EntityLargeFireball.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/entity/EntityLargeFireball.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="en_US.lang" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/assets/bombrange/lang/en_US.lang">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -633,6 +602,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/Quart/C4_Quart.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/C4.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/cord/Cord.java" />
       </list>
     </option>
   </component>
@@ -728,8 +698,7 @@
               <item name="cat40" type="462c0819:PsiDirectoryNode" />
               <item name="bombrange" type="462c0819:PsiDirectoryNode" />
               <item name="blocks" type="462c0819:PsiDirectoryNode" />
-              <item name="c4" type="462c0819:PsiDirectoryNode" />
-              <item name="Quart" type="462c0819:PsiDirectoryNode" />
+              <item name="cord" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Bombrange-Mod" type="b2602c69:ProjectViewProjectNode" />
@@ -1140,24 +1109,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/cord/CordList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/C4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="32" column="27" lean-forward="true" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+          <folding>
+            <element signature="e#3075#3076#0" expanded="true" />
+            <element signature="e#3103#3104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="255" column="71" lean-forward="true" selection-start-line="255" selection-start-column="71" selection-end-line="255" selection-end-column="71" />
+        <state relative-caret-position="578">
+          <caret line="256" column="73" lean-forward="true" selection-start-line="256" selection-start-column="73" selection-end-line="256" selection-end-column="73" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/C4.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/cord/CordPrime.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
-          <folding>
-            <element signature="e#3075#3076#0" expanded="true" />
-            <element signature="e#3103#3104#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="476">
+          <caret line="98" column="99" selection-start-line="98" selection-start-column="7" selection-end-line="98" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/cord/Cord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="51" column="13" lean-forward="true" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
         </state>
       </provider>
     </entry>

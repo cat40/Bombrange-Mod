@@ -1,7 +1,7 @@
 package com.cat40.bombrange.blocks.cord;
 
-import java.util.Random;
 import com.cat40.bombrange.Main;
+import com.cat40.bombrange.entity.DummyEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -11,6 +11,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+
+import java.util.Random;
 
 public class Cord extends Block
 {
@@ -40,15 +42,13 @@ public class Cord extends Block
         return p_149691_1_ == 0 ? this.field_150115_b : (p_149691_1_ == 1 ? this.field_150116_a : this.blockIcon);
     }
 */
-    public void primeTnt(World par1World, int par2, int par3, int par4, int par5)
+    public void primeTnt(World world, int x, int y, int z, int par5)
     {
-        if (!par1World.isRemote)
+        if (!world.isRemote)
         {
             if ((par5 & 1) == 1)
             {
-                CordPrime entitytntprimed = new CordPrime(par1World, (double)((float)par2 + 0.5F), (double)((float)par3 + 0.5F), (double)((float)par4 + 0.5));
-                par1World.spawnEntityInWorld(entitytntprimed);
-                par1World.playSoundAtEntity(entitytntprimed, "random.fuse", 0.0F, 0.0F);
+                world.createExplosion(new DummyEntity(world), x, y, z, Main.cordPower, true);
             }
         }
     }
