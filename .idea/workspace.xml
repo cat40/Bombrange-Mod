@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ed5093c-a0d9-4802-8d5f-3f1c608f1899" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/dispenser/Dispenser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/dispenser/Dispenser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/blastingcap/BlastPrime.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/dynamite/Dynamite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/dynamite/Dynamite.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -80,20 +81,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BlastPrime.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/blastingcap/BlastPrime.java">
+      <file leaf-file-name="Dispenser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/dispenser/Dispenser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="15" column="38" selection-end-line="129" />
+            <state relative-caret-position="204">
+              <caret line="203" column="17" lean-forward="true" selection-start-line="203" selection-start-column="17" selection-end-line="203" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dispenser.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/dispenser/Dispenser.java">
+      <file leaf-file-name="DynaPrime.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/dynamite/DynaPrime.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="221" column="88" lean-forward="true" selection-start-line="221" selection-start-column="88" selection-end-line="221" selection-end-column="88" />
+            <state relative-caret-position="459">
+              <caret line="95" selection-start-line="95" selection-end-line="96" selection-end-column="86" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dynamite.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/dynamite/Dynamite.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="116" column="58" lean-forward="true" selection-start-line="116" selection-start-column="58" selection-end-line="116" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -613,6 +623,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/C4.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/cord/Cord.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/dispenser/Dispenser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/dynamite/Dynamite.java" />
       </list>
     </option>
   </component>
@@ -697,7 +708,7 @@
               <item name="cat40" type="462c0819:PsiDirectoryNode" />
               <item name="bombrange" type="462c0819:PsiDirectoryNode" />
               <item name="blocks" type="462c0819:PsiDirectoryNode" />
-              <item name="blastingcap" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamite" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Bombrange-Mod" type="b2602c69:ProjectViewProjectNode" />
@@ -1146,8 +1157,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/dispenser/Dispenser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="221" column="88" lean-forward="true" selection-start-line="221" selection-start-column="88" selection-end-line="221" selection-end-column="88" />
+        <state relative-caret-position="204">
+          <caret line="203" column="17" lean-forward="true" selection-start-line="203" selection-start-column="17" selection-end-line="203" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/dynamite/DynaPrime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="95" selection-start-line="95" selection-end-line="96" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/dynamite/Dynamite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="116" column="58" lean-forward="true" selection-start-line="116" selection-start-column="58" selection-end-line="116" selection-end-column="58" />
         </state>
       </provider>
     </entry>
