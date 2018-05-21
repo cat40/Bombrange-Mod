@@ -1,19 +1,7 @@
 package com.cat40.bombrange.blocks.dispenser;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
-
 import com.cat40.bombrange.Main;
 import com.cat40.bombrange.blocks.arrow.ArrowPrime;
-import com.cat40.bombrange.blocks.blastingcap.BlastPrime;
-import com.cat40.bombrange.blocks.c4.Half.HalfPrime;
-import com.cat40.bombrange.blocks.c4.I.IPrime;
-import com.cat40.bombrange.blocks.c4.Quart.QuartPrime;
-import com.cat40.bombrange.blocks.c4.ThreeQuart.ThreeQuartPrime;
-import com.cat40.bombrange.blocks.c4.V.VPrime;
-import com.cat40.bombrange.blocks.c4.X.XPrime;
-import com.cat40.bombrange.blocks.c4.XX.XXPrime;
 import com.cat40.bombrange.blocks.delay.DelayPrime1;
 import com.cat40.bombrange.blocks.delay.DelayPrime10;
 import com.cat40.bombrange.blocks.delay.DelayPrime30;
@@ -22,7 +10,6 @@ import com.cat40.bombrange.blocks.fire.FirePrime;
 import com.cat40.bombrange.blocks.gunpowder.GunpowderPrime;
 import com.cat40.bombrange.blocks.potion.PotionPrime;
 import com.cat40.bombrange.blocks.powder.PowderPrime;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockPistonBase;
@@ -48,6 +35,10 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.IRegistry;
 import net.minecraft.util.RegistryDefaulted;
 import net.minecraft.world.World;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
 
 public class Dispenser extends BlockContainer
 {
@@ -218,13 +209,13 @@ public class Dispenser extends BlockContainer
             		bombx += offset;
             	}
                 Map<String, Entity> bombs = new HashMap<String, Entity>();
-                bombs.put("tile.C4Quart", new QuartPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
+                /*bombs.put("tile.C4Quart", new QuartPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
                 bombs.put("tile.C4Half", new HalfPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
                 bombs.put("tile.C4ThreeQuart", new ThreeQuartPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
                 bombs.put("tile.C41", new IPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
                 bombs.put("tile.C45", new VPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
                 bombs.put("tile.C410", new XPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
-                bombs.put("tile.C420", new XXPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
+                bombs.put("tile.C420", new XXPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));*/
                 bombs.put("tile.Delay1", new DelayPrime1(world, bombx, bomby, bombz));
                 bombs.put("tile.Delay5", new DelayPrime5(world, bombx, bomby, bombz));
                 bombs.put("tile.Delay10", new DelayPrime10(world, bombx, bomby, bombz));
@@ -234,7 +225,7 @@ public class Dispenser extends BlockContainer
                 bombs.put("tile.Potion", new PotionPrime(world, bombx, bomby, bombz));
                 bombs.put("tile.Fire", new FirePrime(world, bombx, bomby, bombz));
                 bombs.put("tile.Bomb", new GunpowderPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
-                bombs.put("tile.Blast", new BlastPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
+                //bombs.put("tile.Blast", new BlastPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
                 if (bombs.containsKey(name))
                 {
                 	Entity entity = bombs.get(name);
