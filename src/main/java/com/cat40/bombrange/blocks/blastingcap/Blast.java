@@ -1,6 +1,7 @@
 package com.cat40.bombrange.blocks.blastingcap;
 
 import com.cat40.bombrange.Main;
+import com.cat40.bombrange.entity.DummyEntity;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -54,7 +55,7 @@ public class Blast extends Block
                 world.spawnEntityInWorld(entitytntprimed);
                 world.playSoundAtEntity(entitytntprimed, "random.fuse", 0.0F, 0.0F);*/
                 float f = 1.250F;
-                world.createExplosion(new BlastPrime(world, (double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5), 1), x, y, z, f, true);
+                world.createExplosion(new DummyEntity(world, (double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5), 1), x, y, z, f, true);
             }
         }
     }
