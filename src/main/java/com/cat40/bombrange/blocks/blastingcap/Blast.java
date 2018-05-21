@@ -1,9 +1,6 @@
 package com.cat40.bombrange.blocks.blastingcap;
 
-import java.util.Random;
-
 import com.cat40.bombrange.Main;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -15,6 +12,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+
+import java.util.Random;
 
 public class Blast extends Block
 {
@@ -45,15 +44,17 @@ public class Blast extends Block
         return p_149691_1_ == 0 ? this.field_150115_b : (p_149691_1_ == 1 ? this.field_150116_a : this.blockIcon);
     }
 */
-    public void primeTnt(World par1World, int par2, int par3, int par4, int par5)
+    public void primeTnt(World world, int x, int y, int z, int par5)
     {
-        if (!par1World.isRemote)
+        if (!world.isRemote)
         {
             if ((par5 & 1) == 1)
             {
-                BlastPrime entitytntprimed = new BlastPrime(par1World, (double)((float)par2 + 0.5F), (double)((float)par3 + 0.5F), (double)((float)par4 + 0.5), 1);
-                par1World.spawnEntityInWorld(entitytntprimed);
-                par1World.playSoundAtEntity(entitytntprimed, "random.fuse", 0.0F, 0.0F);
+                /*BlastPrime entitytntprimed = new BlastPrime(world, (double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5), 1);
+                world.spawnEntityInWorld(entitytntprimed);
+                world.playSoundAtEntity(entitytntprimed, "random.fuse", 0.0F, 0.0F);*/
+                float f = 1.250F;
+                world.createExplosion(new BlastPrime(world, (double)((float)x + 0.5F), (double)((float)y + 0.5F), (double)((float)z + 0.5), 1), x, y, z, f, true);
             }
         }
     }
