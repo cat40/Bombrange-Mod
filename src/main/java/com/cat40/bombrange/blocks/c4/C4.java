@@ -31,8 +31,8 @@ public class C4 extends Block
         setBlockName(textureName);
         assetPath = texturePath + textureName;
         this.power = power;
-
     }
+
     @Override
     /**
      * Gets the block's texture. Args: side, meta
