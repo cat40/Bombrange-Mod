@@ -12,7 +12,7 @@ public class FallingSubstrate extends Entity
 {
     private World world;
     public int fuse = 0;
-    private static final int stoneDist = 5;
+    private static final int stoneDist = 3;
     private int startY;
 
     public FallingSubstrate(World par1World)
