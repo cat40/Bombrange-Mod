@@ -16,9 +16,9 @@ import com.cat40.bombrange.blocks.Turf;
 import com.cat40.bombrange.blocks.arrow.Arrow;
 import com.cat40.bombrange.blocks.arrow.ArrowPrime;
 import com.cat40.bombrange.blocks.blastingcap.Blast;
+import com.cat40.bombrange.blocks.c4.C4;
 import com.cat40.bombrange.blocks.c4.Half.C4_Half;
 import com.cat40.bombrange.blocks.c4.I.C4_1_2;
-import com.cat40.bombrange.blocks.c4.Quart.C4_Quart;
 import com.cat40.bombrange.blocks.c4.ThreeQuart.C4_ThreeQuart;
 import com.cat40.bombrange.blocks.c4.V.C4_5;
 import com.cat40.bombrange.blocks.c4.X.C4_10;
@@ -240,19 +240,20 @@ event.manager.addSound("mod_id:Sparkler.ogg");
   * todo remove entities and make the blocks explode instead of spawning an explosive entity.
   * todo make sandbags fall like gravel and sand
   * todo Use seperate explosives with a longer fuse when dispensed, to allow for condensing and falling into water
+  * todo remove id or figure out why it's irrelevent
   */
  
  		//custom dispenser behavior
  		Bomb = new Gunpowder(idBase, stone, "Bomb").setHardness(10.0F).setStepSound(Block.soundTypeAnvil).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
         GameRegistry.registerBlock(Bomb, "Bomb");
         
-        C4Quart = new C4_Quart(++idBase, bombMat, "C4Quart").setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        C4Half = new C4_Half(++idBase, bombMat, "C4Half").setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        C4ThreeQuart = new C4_ThreeQuart(++idBase, bombMat, "C4ThreeQuart").setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        C41 = new C4_1_2(++idBase, bombMat, "C41").setHardness(10.0F).setResistance(bombres);
-        C45 = new C4_5(++idBase, bombMat, "C45").setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        C410 = new C4_10(++idBase, bombMat, "C410").setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        C420 = new C4_20(++idBase, bombMat, "C420").setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);//*/  
+        C4Quart = new C4(++idBase, bombMat, "C4Quart", C4Power/4).setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        C4Half = new C4(++idBase, bombMat, "C4Half".=, C4Power/2).setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        C4ThreeQuart = new C4(++idBase, bombMat, "C4ThreeQuart", C4Power * 3.0/4.0).setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        C41 = new C4(++idBase, bombMat, "C41", C4Power).setHardness(10.0F).setResistance(bombres);
+        C45 = new C4(++idBase, bombMat, "C45", C4Power*5).setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        C410 = new C4(++idBase, bombMat, "C410", C4Power*10).setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        C420 = new C4(++idBase, bombMat, "C420", C4Power*20).setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);//*/
        // Benchmark = new C4_10(++idBase, bombMat, "benchmark").setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
         GameRegistry.registerBlock(C4Quart, "C4Quart").setStepSound(bombSound);
         GameRegistry.registerBlock(C4Half,  "C4Half").setStepSound(bombSound);
