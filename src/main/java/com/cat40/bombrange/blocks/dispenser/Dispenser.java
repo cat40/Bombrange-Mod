@@ -7,7 +7,6 @@ import com.cat40.bombrange.blocks.delay.DelayPrime10;
 import com.cat40.bombrange.blocks.delay.DelayPrime30;
 import com.cat40.bombrange.blocks.delay.DelayPrime5;
 import com.cat40.bombrange.blocks.fire.FirePrime;
-import com.cat40.bombrange.blocks.gunpowder.GunpowderPrime;
 import com.cat40.bombrange.blocks.potion.PotionPrime;
 import com.cat40.bombrange.blocks.powder.PowderPrime;
 import net.minecraft.block.Block;
@@ -224,7 +223,7 @@ public class Dispenser extends BlockContainer
                 bombs.put("tile.Arrow", new ArrowPrime(world, bombx, bomby, bombz));
                 bombs.put("tile.Potion", new PotionPrime(world, bombx, bomby, bombz));
                 bombs.put("tile.Fire", new FirePrime(world, bombx, bomby, bombz));
-                bombs.put("tile.Bomb", new GunpowderPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
+                // bombs.put("tile.Bomb", new GunpowderPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
                 //bombs.put("tile.Blast", new BlastPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
                 if (bombs.containsKey(name))
                 {

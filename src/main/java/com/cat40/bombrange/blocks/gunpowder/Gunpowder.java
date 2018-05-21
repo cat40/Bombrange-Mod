@@ -1,9 +1,7 @@
 package com.cat40.bombrange.blocks.gunpowder;
 
-import java.util.Random;
-
 import com.cat40.bombrange.Main;
-
+import com.cat40.bombrange.entity.DummyEntity;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -15,6 +13,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+
+import java.util.Random;
 
 public class Gunpowder extends Block
 {
@@ -63,13 +63,11 @@ public class Gunpowder extends Block
     /**
      * Called upon the block being destroyed by an explosion
      */
-    public void onBlockDestroyedByExplosion(World par1World, int par2, int par3, int par4, Explosion par5Explosion)
+    public void onBlockDestroyedByExplosion(World world, int x, int y, int z, Explosion par5Explosion)
     {
-        if (!par1World.isRemote)
+        if (!world.isRemote)
         {
-            GunpowderPrime entitytntprimed = new GunpowderPrime(par1World, (double)((float)par2 + 0.5F), (double)((float)par3 + 0.5F), (double)((float)par4 + 0.5F), Main.fuseLen);
-         //   entitytntprimed.fuse = par1World.rand.nextInt(entitytntprimed.fuse / 4) + entitytntprimed.fuse / 8;
-            par1World.spawnEntityInWorld(entitytntprimed);
+            this.primeTnt(world, x, y, z, 1, null);
         }
     }
 
@@ -84,15 +82,13 @@ public class Gunpowder extends Block
     /**
      * spawns the primed tnt and plays the fuse sound.
      */
-    public void primeTnt(World par1World, int par2, int par3, int par4, int par5, EntityLivingBase par6EntityLivingBase)
+    public void primeTnt(World world, int x, int y, int z, int par5, EntityLivingBase par6EntityLivingBase)
     {
-        if (!par1World.isRemote)
+        if (!world.isRemote)
         {
             if ((par5 & 1) == 1)
             {
-                GunpowderPrime entitytntprimed = new GunpowderPrime(par1World, (double)((float)par2 + 0.5F), (double)((float)par3 + 0.5F), (double)((float)par4 + 0.5F), Main.fuseLen);
-                par1World.spawnEntityInWorld(entitytntprimed);
-                par1World.playSoundAtEntity(entitytntprimed, "random.fuse", 0.0F, 0.0F);
+                world.createExplosion(new DummyEntity(world), x, y, z, 3.0F, true);
             }
         }
     }
