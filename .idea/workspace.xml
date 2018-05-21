@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ed5093c-a0d9-4802-8d5f-3f1c608f1899" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/C4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/C4.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -24,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="248" column="60" selection-start-line="248" selection-start-column="60" selection-end-line="248" selection-end-column="60" />
+            <state relative-caret-position="408">
+              <caret line="255" column="71" lean-forward="true" selection-start-line="255" selection-start-column="71" selection-end-line="255" selection-end-column="71" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -36,11 +36,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="C4.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="C4.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/C4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+            <state relative-caret-position="367">
+              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+              <folding>
+                <element signature="e#3075#3076#0" expanded="true" />
+                <element signature="e#3103#3104#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -627,8 +631,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/substrate/Substrate.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/substrate/FallingSubstrate.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/Quart/C4_Quart.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/C4.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/C4.java" />
       </list>
     </option>
   </component>
@@ -1136,19 +1140,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/C4.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="52" column="9" lean-forward="true" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
+        <state relative-caret-position="408">
+          <caret line="255" column="71" lean-forward="true" selection-start-line="255" selection-start-column="71" selection-end-line="255" selection-end-column="71" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/C4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="248" column="60" selection-start-line="248" selection-start-column="60" selection-end-line="248" selection-end-column="60" />
+        <state relative-caret-position="367">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#3075#3076#0" expanded="true" />
+            <element signature="e#3103#3104#0" expanded="true" />
           </folding>
         </state>
       </provider>
