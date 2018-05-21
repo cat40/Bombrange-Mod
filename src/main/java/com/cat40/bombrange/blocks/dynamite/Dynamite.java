@@ -1,21 +1,20 @@
 package com.cat40.bombrange.blocks.dynamite;
 
-import java.util.Random;
-
 import com.cat40.bombrange.Main;
-
+import com.cat40.bombrange.entity.DummyEntity;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+
+import java.util.Random;
 
 public class Dynamite extends Block
 {
@@ -81,9 +80,7 @@ public class Dynamite extends Block
     {
         if (!par1World.isRemote)
         {
-            DynaPrime entitytntprimed = new DynaPrime(par1World, (double)((float)par2 + 0.5F), (double)((float)par3 + 0.5F), (double)((float)par4 + 0.5F), par5Explosion.getExplosivePlacedBy());
-         //   entitytntprimed.fuse = par1World.rand.nextInt(entitytntprimed.fuse / 4) + entitytntprimed.fuse / 8;
-            par1World.spawnEntityInWorld(entitytntprimed);
+            primeTnt(par1World, par2, par3, par4, 1);
         }
     }
 
@@ -92,21 +89,20 @@ public class Dynamite extends Block
      */
     public void onBlockDestroyedByPlayer(World par1World, int par2, int par3, int par4, int par5)
     {
-        this.primeTnt(par1World, par2, par3, par4, par5, (EntityLivingBase)null);
+        this.primeTnt(par1World, par2, par3, par4, par5);
     }
 
     /**
      * spawns the primed tnt and plays the fuse sound.
      */
-    public void primeTnt(World par1World, int par2, int par3, int par4, int par5, EntityLivingBase par6EntityLivingBase)
+    public void primeTnt(World par1World, int x, int y, int z, int par5)
     {
         if (!par1World.isRemote)
         {
             if ((par5 & 1) == 1)
             {
-                DynaPrime entitytntprimed = new DynaPrime(par1World, (double)((float)par2 + 0.5F), (double)((float)par3 + 0.5F), (double)((float)par4 + 0.5F), par6EntityLivingBase);
-                par1World.spawnEntityInWorld(entitytntprimed);
-                par1World.playSoundAtEntity(entitytntprimed, "random.fuse", 0.0F, 0.0F);
+                float power = 5.0F;
+                par1World.createExplosion(new DummyEntity(par1World), x, y, z, power, true);
             }
         }
     }
@@ -118,7 +114,7 @@ public class Dynamite extends Block
     {
         if (par5EntityPlayer.getCurrentEquippedItem() != null && par5EntityPlayer.getCurrentEquippedItem().getItem() == Main.Lighter)
         {
-            this.primeTnt(par1World, par2, par3, par4, 1, par5EntityPlayer);
+            this.primeTnt(par1World, par2, par3, par4, 1);
             par1World.setBlockToAir(par2, par3, par4);
             par5EntityPlayer.getCurrentEquippedItem().damageItem(1, par5EntityPlayer);
             return true;
@@ -140,7 +136,7 @@ public class Dynamite extends Block
 
             if (entityarrow.isBurning())
             {
-                this.primeTnt(par1World, par2, par3, par4, 1, entityarrow.shootingEntity instanceof EntityLivingBase ? (EntityLivingBase)entityarrow.shootingEntity : null);
+                this.primeTnt(par1World, par2, par3, par4, 1);
                 par1World.setBlockToAir(par2, par3, par4);
             }
         }
