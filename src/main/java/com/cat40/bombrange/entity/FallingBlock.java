@@ -8,8 +8,6 @@ import net.minecraft.world.World;
 
 public class FallingBlock extends Entity
 {
-    private World world;
-    private EntityLivingBase tntPlacedBy;
     public int fuse = 0;
 
     public FallingBlock(World par1World)
@@ -28,36 +26,18 @@ public class FallingBlock extends Entity
         this.motionX = (double)(-((float)Math.sin((double)f)) * 0.02F);
         this.motionY = 0.20000000298023224D;
         this.motionZ = (double)(-((float)Math.cos((double)f)) * 0.02F);
-        //this.fuse = 0.25;
-        this.world=par1World;
         this.prevPosX = par2;
         this.prevPosY = par4;
         this.prevPosZ = par6;
-        //this.tntPlacedBy = par8EntityLivingBase;
     }
 
     protected void entityInit() {}
 
     /**
-     * returns if this entity triggers Block.onEntityWalking on the blocks they walk on. used for spiders and wolves to
-     * prevent them from trampling crops
-     */
-    protected boolean canTriggerWalking()
-    {
-        return false;
-    }
-
-    /**
-     * Returns true if other Entities should be prevented from moving through this Entity.
-     */
-    public boolean canBeCollidedWith()
-    {
-        return !this.isDead;
-    }
-
-    /**
      * Called to update the entity's position/logic.
      */
+    
+    @Override
     public void onUpdate()
     {
         this.fuse ++;
