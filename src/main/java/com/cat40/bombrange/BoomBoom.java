@@ -1,6 +1,5 @@
 package com.cat40.bombrange;
 
-import com.cat40.bombrange.entity.FallingBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.enchantment.EnchantmentProtection;
@@ -15,12 +14,12 @@ import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 import net.minecraftforge.event.ForgeEventFactory;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Random;
 
 public class BoomBoom extends Explosion {
-    private static HashMap<Block, FallingBlock> blocks = new HashMap<Block, FallingBlock>() // if this doesn't work, can make non static and find all blocks that are loaded in the world at the time of the explosion
-    {{
-    }};
     //public boolean isFlaming;
     //public boolean isSmoking = true;
     private int field_77289_h = 16;
