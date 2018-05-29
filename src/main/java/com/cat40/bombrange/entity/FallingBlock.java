@@ -1,26 +1,27 @@
 package com.cat40.bombrange.entity;
 
-import com.cat40.bombrange.Main;
+import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 
 public class FallingBlock extends Entity
 {
     public int fuse = 0;
+    private Block baseBlock;
 
-    public FallingBlock(World par1World)
+    public FallingBlock(World par1World, Block baseBlock)
     {
         super(par1World);
         this.preventEntitySpawning = true;
         this.setSize(0.98F, 0.98F);
         this.yOffset = this.height / 2.0F;
+        this.baseBlock = baseBlock;
     }
 
-    public FallingBlock(World par1World, double par2, double par4, double par6)//EntityLivingBase par8EntityLivingBase
+    public FallingBlock(World par1World, double par2, double par4, double par6, Block baseBlock)//EntityLivingBase par8EntityLivingBase
     {
-        this(par1World);
+        this(par1World, baseBlock);
         this.setPosition(par2, par4, par6);
         float f = (float)(Math.random() * Math.PI * 2.0D);
         this.motionX = (double)(-((float)Math.sin((double)f)) * 0.02F);
@@ -29,14 +30,20 @@ public class FallingBlock extends Entity
         this.prevPosX = par2;
         this.prevPosY = par4;
         this.prevPosZ = par6;
+        this.baseBlock = baseBlock;
     }
 
     protected void entityInit() {}
 
+    public Block getBlock()
+    {
+        return baseBlock;
+    }
+
     /**
      * Called to update the entity's position/logic.
      */
-    
+
     @Override
     public void onUpdate()
     {
@@ -55,7 +62,7 @@ public class FallingBlock extends Entity
             this.motionX *= 0.699999988079071D;
             this.motionZ *= 0.699999988079071D;
             this.motionY *= -0.5D;
-            this.worldObj.setBlock((int) this.posX, (int) this.posY, (int) this.posZ, errotr);
+            this.worldObj.setBlock((int) this.posX, (int) this.posY, (int) this.posZ, baseBlock);
         }
 
     }
