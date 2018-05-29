@@ -85,7 +85,7 @@ public class MiningBoomBoom extends Explosion {
                 if (block.getMaterial() != Material.air) {
                     if (block.canDropFromExplosion(this)) {
                         if(badBlocks.contains(block))
-                            block.dropBlockAsItemWithChance(this.worldObj, i, j, k, this.worldObj.getBlockMetadata(i, j, k), 1.0F / this.explosionSize, 0);
+                            block.dropBlockAsItemWithChance(this.worldObj, i, j, k, this.worldObj.getBlockMetadata(i, j, k), 0, 0); //1.0F / this.explosionSize, 0);
                         else
                             block.dropBlockAsItemWithChance(this.worldObj, i, j, k, this.worldObj.getBlockMetadata(i, j, k), 1.0F, 0);
                             //block.dropBlockAsItem(this.worldObj, i, j, k, 1, 1);
