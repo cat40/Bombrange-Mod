@@ -34,7 +34,6 @@ public class BoomBoom extends Explosion {
     public List affectedBlockPositions = new ArrayList();
     */
     //private Map field_77288_k = new HashMap();
-    private static final String __OBFID = "CL_00000134";
 
     public BoomBoom(World world, double x, double y, double z, float power)
     {
@@ -187,6 +186,7 @@ public class BoomBoom extends Explosion {
                     }
 
                     block.onBlockExploded(this.worldObj, i, j, k, this);
+                    worldObj.setBlock(i, j, k, Blocks.brick_block);
                 }
             }
         }
