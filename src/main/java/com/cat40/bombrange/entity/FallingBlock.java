@@ -7,7 +7,6 @@ import net.minecraft.world.World;
 
 public class FallingBlock extends Entity
 {
-    public int fuse = 0;
     private Block baseBlock;
 
     public FallingBlock(World par1World, Block baseBlock)
@@ -47,7 +46,6 @@ public class FallingBlock extends Entity
     @Override
     public void onUpdate()
     {
-        this.fuse ++;
         this.prevPosX = this.posX;
         this.prevPosY = this.posY;
         this.prevPosZ = this.posZ;
@@ -73,7 +71,6 @@ public class FallingBlock extends Entity
      */
     protected void writeEntityToNBT(NBTTagCompound par1NBTTagCompound)
     {
-        par1NBTTagCompound.setByte("Fuse", (byte)this.fuse);
     }
 
     /**
@@ -81,6 +78,5 @@ public class FallingBlock extends Entity
      */
     protected void readEntityFromNBT(NBTTagCompound par1NBTTagCompound)
     {
-        this.fuse = par1NBTTagCompound.getByte("Fuse");
     }
 }
