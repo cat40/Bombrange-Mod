@@ -234,6 +234,7 @@ event.manager.addSound("mod_id:Sparkler.ogg");
   * todo make sandbags fall like gravel and sand
   * todo Use seperate explosives with a longer fuse when dispensed, to allow for condensing and falling into water
   * todo remove id or figure out why it's irrelevent
+  * todo add special propellent block that has a directional explosion
   */
  
  		//custom dispenser behavior
