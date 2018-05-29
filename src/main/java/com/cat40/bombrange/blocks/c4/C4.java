@@ -1,7 +1,7 @@
 package com.cat40.bombrange.blocks.c4;
 
+import com.cat40.bombrange.BoomBoom;
 import com.cat40.bombrange.Main;
-import com.cat40.bombrange.entity.DummyEntity;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -48,7 +48,10 @@ public class C4 extends Block
         {
             if ((par5 & 1) == 1)
             {
-                world.createExplosion(new DummyEntity(world), x, y, z, (float) this.power, true);
+                //world.createExplosion(new DummyEntity(world), x, y, z, (float) this.power, true);
+                BoomBoom boom = new BoomBoom(world, x, y, z, (int) this.power);
+                boom.doExplosionA();
+                boom.doExplosionB(true);
             }
         }
     }

@@ -8,6 +8,7 @@ import net.minecraft.world.World;
 public class FallingBlock extends Entity
 {
     private Block baseBlock;
+    public int fuse = 0;
 
     public FallingBlock(World par1World, Block baseBlock)
     {
@@ -46,6 +47,7 @@ public class FallingBlock extends Entity
     @Override
     public void onUpdate()
     {
+        fuse++;
         this.prevPosX = this.posX;
         this.prevPosY = this.posY;
         this.prevPosZ = this.posZ;
