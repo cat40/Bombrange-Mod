@@ -1,6 +1,6 @@
 package com.cat40.bombrange.blocks.c4;
 
-import com.cat40.bombrange.BoomBoom;
+import com.cat40.bombrange.explosions.SmartBoomBoom;
 import com.cat40.bombrange.Main;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -49,7 +49,7 @@ public class C4 extends Block
             if ((par5 & 1) == 1)
             {
                 //world.createExplosion(new DummyEntity(world), x, y, z, (float) this.power, true);
-                BoomBoom boom = new BoomBoom(world, x, y, z, (int) this.power);
+                SmartBoomBoom boom = new SmartBoomBoom(world, x, y, z, (int) this.power);
                 boom.doExplosionA();
                 boom.doExplosionB(true);
             }

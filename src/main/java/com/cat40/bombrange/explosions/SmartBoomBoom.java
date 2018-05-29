@@ -19,7 +19,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
-public class BoomBoom extends Explosion {
+public class SmartBoomBoom extends Explosion {
     //public boolean isFlaming;
     //public boolean isSmoking = true;
     private int field_77289_h = 16;
@@ -36,12 +36,12 @@ public class BoomBoom extends Explosion {
     */
     //private Map field_77288_k = new HashMap();
 
-    public BoomBoom(World world, double x, double y, double z, float power)
+    public SmartBoomBoom(World world, double x, double y, double z, float power)
     {
         this(world, null, x, y, z, power);
     }
 
-    public BoomBoom(World world, Entity entity, double x, double y, double z, float power)
+    public SmartBoomBoom(World world, Entity entity, double x, double y, double z, float power)
     {
         super(world, entity, x, y, z, power);
         this.worldObj = world;
