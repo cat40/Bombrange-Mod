@@ -32,6 +32,7 @@ tile.Dispense.name=Bomb Dispenser
 tile.Tnt.name=TNT bomb
 tile.Sandbag.name=Sand Bag
 tile.Substrate.name=Substrate
+tile.MiningExplosive.name=Mining Explosive
 
 item.Lighter.name=Fuse Lighter
 item.Plastic.name=Plastic

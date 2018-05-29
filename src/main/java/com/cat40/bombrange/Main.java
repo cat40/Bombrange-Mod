@@ -22,6 +22,7 @@ import com.cat40.bombrange.blocks.cord.CordList;
 import com.cat40.bombrange.blocks.delay.*;
 import com.cat40.bombrange.blocks.dispenser.Dispenser;
 import com.cat40.bombrange.blocks.dynamite.Dynamite;
+import com.cat40.bombrange.blocks.explosives.MiningExplosive;
 import com.cat40.bombrange.blocks.fire.Fire;
 import com.cat40.bombrange.blocks.fire.FirePrime;
 import com.cat40.bombrange.blocks.gunpowder.Gunpowder;
@@ -118,6 +119,7 @@ public static Block Dispense;
 public static Block Tnt;
 public static Block Sandbag;
 public static Block Substrate;
+public static Block Mining;
 //public static Block StructOldCannon;
 
 public static Material stone = Material.rock;
@@ -298,6 +300,9 @@ event.manager.addSound("mod_id:Sparkler.ogg");
         
         Tnt = new Tnt(++idBase, bombMat, "Tnt").setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
         GameRegistry.registerBlock(Tnt, "Tnt");
+
+        Mining = new MiningExplosive(++idBase, bombMat, "MiningExplosive", C4Power).setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
+        GameRegistry.registerBlock(Mining, "MiningExplosive");
         
         /*FireLarge = new LargeFire(++idBase, bombMat, "FireLarge").setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
         GameRegistry.registerBlock(FireLarge, "FireLarge");*/
