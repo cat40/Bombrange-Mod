@@ -188,8 +188,7 @@ public class BoomBoom extends Explosion {
                     }
 
                     block.onBlockExploded(this.worldObj, i, j, k, this);
-                    worldObj.spawnEntityInWorld(new FallingBlock(worldObj, i, j, k, block));
-                    // worldObj.setBlock(i, j, k, Blocks.brick_block);
+                    // worldObj.spawnEntityInWorld(new FallingBlock(worldObj, i, j, k, block));
                 }
             }
         }
