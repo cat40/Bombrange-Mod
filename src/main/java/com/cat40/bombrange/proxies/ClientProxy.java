@@ -15,6 +15,8 @@ import com.cat40.bombrange.blocks.substrate.FallingSubstrate;
 import com.cat40.bombrange.blocks.substrate.RenderFallingSubstrate;
 import com.cat40.bombrange.blocks.tracer.RenderTracerPrime;
 import com.cat40.bombrange.blocks.tracer.TracerPrime;
+import com.cat40.bombrange.entity.FallingBlock;
+import com.cat40.bombrange.entity.RenderFallingBlock;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class ClientProxy extends CommonProxy
@@ -32,5 +34,6 @@ public class ClientProxy extends CommonProxy
 		RenderingRegistry.registerEntityRenderingHandler(PotionPrime.class, new RenderPotionPrime());
 		RenderingRegistry.registerEntityRenderingHandler(LargeFirePrime.class, new RenderLargeFirePrime());
 		RenderingRegistry.registerEntityRenderingHandler(FallingSubstrate.class, new RenderFallingSubstrate());
+		RenderingRegistry.registerEntityRenderingHandler(FallingBlock.class, new RenderFallingBlock());
 	}
 }
