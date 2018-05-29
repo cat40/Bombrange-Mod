@@ -18,7 +18,7 @@ public abstract class Explosive extends Block
     private String assetPath;
     private IIcon field_150116_a;
     private IIcon field_150115_b;
-    private double power;
+    double power;
 
     @SideOnly(Side.CLIENT)
     public Explosive(int id, Material material, String textureName, double power)

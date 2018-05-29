@@ -236,6 +236,7 @@ event.manager.addSound("mod_id:Sparkler.ogg");
   * todo remove id or figure out why it's irrelevent
   * todo add special propellent block that has a directional explosion
   * todo add mining explosives that drop everything, or everything but stone and dirt.
+  * todo add explosive that only destroys stone (and drops it all)
   */
  
  		//custom dispenser behavior
