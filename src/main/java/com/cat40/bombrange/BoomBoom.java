@@ -18,7 +18,9 @@ import net.minecraftforge.event.ForgeEventFactory;
 import java.util.*;
 
 public class BoomBoom extends Explosion {
-    private static HashMap<Block, FallingBlock> blocks = new HashMap<Block, FallingBlock>();
+    private static HashMap<Block, FallingBlock> blocks = new HashMap<Block, FallingBlock>() // if this doesn't work, can make non static and find all blocks that are loaded in the world at the time of the explosion
+    {{
+    }};
     //public boolean isFlaming;
     //public boolean isSmoking = true;
     private int field_77289_h = 16;
@@ -186,7 +188,8 @@ public class BoomBoom extends Explosion {
                     }
 
                     block.onBlockExploded(this.worldObj, i, j, k, this);
-                    worldObj.setBlock(i, j, k, Blocks.brick_block);
+                    worldObj.spawnEntityInWorld(new FallingBlock(worldObj, i, j, k, block));
+                    // worldObj.setBlock(i, j, k, Blocks.brick_block);
                 }
             }
         }
