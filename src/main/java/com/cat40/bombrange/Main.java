@@ -229,8 +229,7 @@ event.manager.addSound("mod_id:Sparkler.ogg");
   * C4-20 lbs -57.78
   * Minecraft Gunpoweder: 3 blast power
   * Relistic Gunpowder: 4,000,000 blast power
-  * todo condense all explosives into one class which has arguements for entity spawned. (think entity type is Entity
-  * todo Condense all explosive entities into one class wich has argument for blast power.
+  * todo condense all explosives into one class with variable power
   * todo remove entities and make the blocks explode instead of spawning an explosive entity.
   * todo make sandbags fall like gravel and sand
   * todo Use seperate explosives with a longer fuse when dispensed, to allow for condensing and falling into water
