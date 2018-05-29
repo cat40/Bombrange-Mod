@@ -1,5 +1,6 @@
 package com.cat40.bombrange;
 
+import com.cat40.bombrange.entity.FallingBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.enchantment.EnchantmentProtection;
@@ -17,6 +18,7 @@ import net.minecraftforge.event.ForgeEventFactory;
 import java.util.*;
 
 public class BoomBoom extends Explosion {
+    private static HashMap<Block, FallingBlock> blocks = new HashMap<Block, FallingBlock>();
     //public boolean isFlaming;
     //public boolean isSmoking = true;
     private int field_77289_h = 16;
