@@ -34,6 +34,7 @@ tile.Sandbag.name=Sand Bag
 tile.Substrate.name=Substrate
 tile.MiningExplosive.name=Mining Explosive
 tile.DeforestationExplosive.name=Deforestation Explosive
+tile.StoneExplosive.name=Stone Explosive
 
 item.Lighter.name=Fuse Lighter
 item.Plastic.name=Plastic

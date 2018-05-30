@@ -23,6 +23,11 @@ public class StoneBoomBoom extends Explosion {
         this.worldObj = world;
     }
 
+    public StoneBoomBoom(World world, double x, double y, double z, float power)
+    {
+        this(world, null, x, y, z, power);
+    }
+
     @Override
     public void doExplosionB(boolean p_77279_1_) {
         this.worldObj.playSoundEffect(this.explosionX, this.explosionY, this.explosionZ, "random.explode", 4.0F, (1.0F + (this.worldObj.rand.nextFloat() - this.worldObj.rand.nextFloat()) * 0.2F) * 0.7F);

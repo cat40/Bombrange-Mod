@@ -15,18 +15,13 @@ import com.cat40.bombrange.blocks.ReGlass;
 import com.cat40.bombrange.blocks.Turf;
 import com.cat40.bombrange.blocks.arrow.Arrow;
 import com.cat40.bombrange.blocks.arrow.ArrowPrime;
-import com.cat40.bombrange.blocks.explosives.Blast;
-import com.cat40.bombrange.blocks.explosives.C4;
 import com.cat40.bombrange.blocks.cord.Cord;
 import com.cat40.bombrange.blocks.cord.CordList;
 import com.cat40.bombrange.blocks.delay.*;
 import com.cat40.bombrange.blocks.dispenser.Dispenser;
-import com.cat40.bombrange.blocks.explosives.Dynamite;
-import com.cat40.bombrange.blocks.explosives.DeforestationExplosive;
-import com.cat40.bombrange.blocks.explosives.MiningExplosive;
+import com.cat40.bombrange.blocks.explosives.*;
 import com.cat40.bombrange.blocks.fire.Fire;
 import com.cat40.bombrange.blocks.fire.FirePrime;
-import com.cat40.bombrange.blocks.explosives.Gunpowder;
 import com.cat40.bombrange.blocks.largefire.LargeFirePrime;
 import com.cat40.bombrange.blocks.potion.Potion;
 import com.cat40.bombrange.blocks.potion.PotionPrime;
@@ -122,6 +117,7 @@ public static Block Sandbag;
 public static Block Substrate;
 public static Block Mining;
 public static Block Deforestation;
+public static Block stoneExplosive;
 //public static Block StructOldCannon;
 
 public static Material stone = Material.rock;
@@ -241,6 +237,7 @@ event.manager.addSound("mod_id:Sparkler.ogg");
   * todo add special propellent block that has a directional explosion
   * todo add mining explosives that drop everything, or everything but stone and dirt.
   * todo add explosive that only destroys stone (and drops it all)
+  * todo make deforestation explosive more of a globe instead of a series of rays
   */
  
  		//custom dispenser behavior
@@ -306,8 +303,11 @@ event.manager.addSound("mod_id:Sparkler.ogg");
         Mining = new MiningExplosive(++idBase, bombMat, "MiningExplosive", C4Power).setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
         GameRegistry.registerBlock(Mining, "MiningExplosive");
 
-        Deforestation = new DeforestationExplosive(++idBase, bombMat, "DeforestationExplosive", C4Power).setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
+        Deforestation = new DeforestationExplosive(++idBase, bombMat, "DeforestationExplosive", 20*C4Power).setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
         GameRegistry.registerBlock(Deforestation, "DeforestationExplosive");
+
+        stoneExplosive = new StoneExplosive(++idBase, bombMat, "StoneExplosive", C4Power).setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
+        GameRegistry.registerBlock(stoneExplosive, "StoneExplosive");
         
         /*FireLarge = new LargeFire(++idBase, bombMat, "FireLarge").setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
         GameRegistry.registerBlock(FireLarge, "FireLarge");*/
