@@ -32,6 +32,7 @@ public class DirectionalBoomBoom extends Explosion {
         this.worldObj = world;
     }
 
+    @Override
     public void doExplosionA() {
         float f = this.explosionSize;
         HashSet hashset = new HashSet();

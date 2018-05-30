@@ -230,7 +230,6 @@ event.manager.addSound("mod_id:Sparkler.ogg");
   * Minecraft Gunpoweder: 3 blast power
   * Relistic Gunpowder: 4,000,000 blast power
   * todo condense all explosives into one class with variable power
-  * todo remove entities and make the blocks explode instead of spawning an explosive entity.
   * todo make sandbags fall like gravel and sand
   * todo Use seperate explosives with a longer fuse when dispensed, to allow for condensing and falling into water
   * todo remove id or figure out why it's irrelevent
