@@ -5,7 +5,7 @@
  */
 package com.cat40.cheaparrows;
 
-import com.cat40.bombrange.proxies.CommonProxy;
+import com.cat40.cheaparrows.proxies.CommonProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
@@ -73,6 +73,38 @@ event.manager.addSound("mod_id:Sparkler.ogg");
             'S', Items.stick,
             'F', Items.feather);
 
+		GameRegistry.addRecipe(new ItemStack(Items.arrow, 4),
+				"C",
+				"S",
+				"F",
+				'C', Blocks.cobblestone,
+				'S', Items.stick,
+				'F', Items.wheat);
+
+		GameRegistry.addRecipe(new ItemStack(Items.arrow, 4),
+				"C",
+				"S",
+				"F",
+				'C', Blocks.cobblestone,
+				'S', Items.stick,
+				'F', Blocks.sapling);
+
+		GameRegistry.addRecipe(new ItemStack(Items.arrow, 4),
+				"C",
+				"S",
+				"F",
+				'C', Items.flint,
+				'S', Items.stick,
+				'F', Items.wheat);
+
+		GameRegistry.addRecipe(new ItemStack(Items.arrow, 4),
+				"C",
+				"S",
+				"F",
+				'C', Items.flint,
+				'S', Items.stick,
+				'F', Blocks.sapling);
+
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
 
 	
@@ -84,5 +116,5 @@ event.manager.addSound("mod_id:Sparkler.ogg");
 
 	
 	}
-	
+
 }
