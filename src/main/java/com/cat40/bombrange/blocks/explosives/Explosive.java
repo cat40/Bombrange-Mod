@@ -14,10 +14,10 @@ import java.util.Random;
 public abstract class Explosive extends Block
 {
 
-    private String texturePath = Main.modid;
-    private String assetPath;
-    private IIcon field_150116_a;
-    private IIcon field_150115_b;
+    String texturePath = Main.modid;
+    String assetPath;
+    IIcon field_150116_a;
+    IIcon field_150115_b;
     double power;
 
     @SideOnly(Side.CLIENT)
@@ -110,8 +110,8 @@ public abstract class Explosive extends Block
     @Override
     public void registerBlockIcons(IIconRegister p_149651_1_)
     {
-        this.blockIcon = p_149651_1_.registerIcon(assetPath + "_side");
-        this.field_150116_a = p_149651_1_.registerIcon(texturePath + "C4" + "_top");
-        this.field_150115_b = p_149651_1_.registerIcon(texturePath + "C4" + "_bottom");
+        this.blockIcon = p_149651_1_.registerIcon(texturePath+"_side");
+        this.field_150116_a = p_149651_1_.registerIcon(texturePath+"_top");
+        this.field_150115_b = p_149651_1_.registerIcon(texturePath + "_bottom");
     }
 }

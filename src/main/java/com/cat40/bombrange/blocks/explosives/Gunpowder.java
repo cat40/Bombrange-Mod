@@ -31,6 +31,8 @@ public class Gunpowder extends Block
         texturePath += textureName;
         thisBlockID = par1;
     }
+
+    @Override
     public void registerBlockIcons(IIconRegister iconRegister)
     {
         this.blockIcon = iconRegister.registerIcon(texturePath);
@@ -39,6 +41,7 @@ public class Gunpowder extends Block
     /**
      * Called whenever the block is added into the world. Args: world, x, y, z
      */
+    @Override
     public void onBlockAdded(World par1World, int par2, int par3, int par4)
     {
         super.onBlockAdded(par1World, par2, par3, par4);
@@ -55,6 +58,7 @@ public class Gunpowder extends Block
     /**
      * Returns the quantity of items to drop on block destruction.
      */
+    @Override
     public int quantityDropped(Random par1Random)
     {
         return 1;
@@ -63,6 +67,7 @@ public class Gunpowder extends Block
     /**
      * Called upon the block being destroyed by an explosion
      */
+    @Override
     public void onBlockDestroyedByExplosion(World world, int x, int y, int z, Explosion par5Explosion)
     {
         if (!world.isRemote)
@@ -74,6 +79,7 @@ public class Gunpowder extends Block
     /**
      * Called right before the block is destroyed by a player.  Args: world, x, y, z, metaData
      */
+    @Override
     public void onBlockDestroyedByPlayer(World par1World, int par2, int par3, int par4, int par5)
     {
         this.primeTnt(par1World, par2, par3, par4, par5, (EntityLivingBase)null);
@@ -96,6 +102,7 @@ public class Gunpowder extends Block
     /**
      * Called upon block activation (right click on the block.)
      */
+    @Override
     public boolean onBlockActivated(World par1World, int par2, int par3, int par4, EntityPlayer par5EntityPlayer, int par6, float par7, float par8, float par9)
     {
         if (par5EntityPlayer.getCurrentEquippedItem() != null && par5EntityPlayer.getCurrentEquippedItem().getItem() == Main.Lighter)
@@ -114,6 +121,7 @@ public class Gunpowder extends Block
     /**
      * Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity
      */
+    @Override
     public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity)
     {
         if (par5Entity instanceof EntityArrow && !par1World.isRemote)
@@ -131,6 +139,7 @@ public class Gunpowder extends Block
     /**
      * Return whether this block can drop from an explosion.
      */
+    @Override
     public boolean canDropFromExplosion(Explosion par1Explosion)
     {
         return false;
