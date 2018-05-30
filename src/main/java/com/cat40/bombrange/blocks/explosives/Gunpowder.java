@@ -19,7 +19,9 @@ public class Gunpowder extends ActivatableExplosive
     @Override
     public void registerBlockIcons(IIconRegister iconRegister)
     {
-        this.blockIcon = iconRegister.registerIcon(texturePath);
+        this.blockIcon = iconRegister.registerIcon(this.assetPath);
+        this.field_150116_a = iconRegister.registerIcon(this.assetPath);
+        this.field_150115_b = iconRegister.registerIcon(this.assetPath);
     }
 
     public void blowUp(World world, int x, int y, int z)
