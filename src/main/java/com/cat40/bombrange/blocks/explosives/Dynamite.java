@@ -1,4 +1,4 @@
-package com.cat40.bombrange.blocks.gunpowder;
+package com.cat40.bombrange.blocks.explosives;
 
 import com.cat40.bombrange.Main;
 import com.cat40.bombrange.entity.DummyEntity;
@@ -8,32 +8,34 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class Gunpowder extends Block
+public class Dynamite extends Block
 {
     private String texturePath = Main.modid;  
     private int thisBlockID;
+    private IIcon field_150116_a;
+    private IIcon field_150115_b;
     
 	@SideOnly(Side.CLIENT)
-    public Gunpowder (int par1, Material blockMaterial, String textureName)
-    {
+    public Dynamite (int par1, Material blockMaterial, String textureName)
+	{        
         super(blockMaterial);
         this.setCreativeTab(Main.CreativeTabMod.tabBomb);
-                setBlockName(textureName);
-                this.setHarvestLevel("pickaxe", 1);
+                this.setBlockName(textureName);
+                this.setHarvestLevel("pickaxe",  1);
         texturePath += textureName;
         thisBlockID = par1;
     }
-    public void registerBlockIcons(IIconRegister iconRegister)
+    public IIcon getIcon(int p_149691_1_, int p_149691_2_)
     {
-        this.blockIcon = iconRegister.registerIcon(texturePath);
+        return p_149691_1_ == 0 ? this.field_150115_b : (p_149691_1_ == 1 ? this.field_150116_a : this.blockIcon);
     }
 
     /**
@@ -42,6 +44,12 @@ public class Gunpowder extends Block
     public void onBlockAdded(World par1World, int par2, int par3, int par4)
     {
         super.onBlockAdded(par1World, par2, par3, par4);
+
+        if (par1World.isBlockIndirectlyGettingPowered(par2, par3, par4))
+        {
+            this.onBlockDestroyedByPlayer(par1World, par2, par3, par4, 1);
+            par1World.setBlockToAir(par2, par3, par4);
+        }
     }
 
     /**
@@ -50,6 +58,11 @@ public class Gunpowder extends Block
      */
     public void onNeighborBlockChange(World par1World, int par2, int par3, int par4, int par5)
     {
+        if (par1World.isBlockIndirectlyGettingPowered(par2, par3, par4))
+        {
+            this.onBlockDestroyedByPlayer(par1World, par2, par3, par4, 1);
+            par1World.setBlockToAir(par2, par3, par4);
+        }
     }
 
     /**
@@ -63,11 +76,11 @@ public class Gunpowder extends Block
     /**
      * Called upon the block being destroyed by an explosion
      */
-    public void onBlockDestroyedByExplosion(World world, int x, int y, int z, Explosion par5Explosion)
+    public void onBlockDestroyedByExplosion(World par1World, int par2, int par3, int par4, Explosion par5Explosion)
     {
-        if (!world.isRemote)
+        if (!par1World.isRemote)
         {
-            this.primeTnt(world, x, y, z, 1, null);
+            primeTnt(par1World, par2, par3, par4, 1);
         }
     }
 
@@ -76,19 +89,20 @@ public class Gunpowder extends Block
      */
     public void onBlockDestroyedByPlayer(World par1World, int par2, int par3, int par4, int par5)
     {
-        this.primeTnt(par1World, par2, par3, par4, par5, (EntityLivingBase)null);
+        this.primeTnt(par1World, par2, par3, par4, par5);
     }
 
     /**
      * spawns the primed tnt and plays the fuse sound.
      */
-    public void primeTnt(World world, int x, int y, int z, int par5, EntityLivingBase par6EntityLivingBase)
+    public void primeTnt(World par1World, int x, int y, int z, int par5)
     {
-        if (!world.isRemote)
+        if (!par1World.isRemote)
         {
             if ((par5 & 1) == 1)
             {
-                world.createExplosion(new DummyEntity(world), x, y, z, 3.0F, true);
+                float power = 5.0F;
+                par1World.createExplosion(new DummyEntity(par1World), x, y, z, power, true);
             }
         }
     }
@@ -100,7 +114,7 @@ public class Gunpowder extends Block
     {
         if (par5EntityPlayer.getCurrentEquippedItem() != null && par5EntityPlayer.getCurrentEquippedItem().getItem() == Main.Lighter)
         {
-            this.primeTnt(par1World, par2, par3, par4, 1, par5EntityPlayer);
+            this.primeTnt(par1World, par2, par3, par4, 1);
             par1World.setBlockToAir(par2, par3, par4);
             par5EntityPlayer.getCurrentEquippedItem().damageItem(1, par5EntityPlayer);
             return true;
@@ -122,7 +136,7 @@ public class Gunpowder extends Block
 
             if (entityarrow.isBurning())
             {
-                this.primeTnt(par1World, par2, par3, par4, 1, entityarrow.shootingEntity instanceof EntityLivingBase ? (EntityLivingBase)entityarrow.shootingEntity : null);
+                this.primeTnt(par1World, par2, par3, par4, 1);
                 par1World.setBlockToAir(par2, par3, par4);
             }
         }
@@ -141,5 +155,11 @@ public class Gunpowder extends Block
      * When this method is called, your block should register all the icons it needs with the given IconRegister. This
      * is the only chance you get to register icons.
      */
+    public void registerBlockIcons(IIconRegister p_149651_1_)
+    {
+        this.blockIcon = p_149651_1_.registerIcon(texturePath+"_side");
+        this.field_150116_a = p_149651_1_.registerIcon(texturePath+"_top");
+        this.field_150115_b = p_149651_1_.registerIcon(texturePath + "_bottom");
+    }
 
 }

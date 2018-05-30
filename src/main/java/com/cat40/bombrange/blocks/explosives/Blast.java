@@ -1,4 +1,4 @@
-package com.cat40.bombrange.blocks.blastingcap;
+package com.cat40.bombrange.blocks.explosives;
 
 import com.cat40.bombrange.Main;
 import com.cat40.bombrange.entity.DummyEntity;

@@ -1,4 +1,4 @@
-package com.cat40.bombrange.blocks.c4;
+package com.cat40.bombrange.blocks.explosives;
 
 import com.cat40.bombrange.explosions.SmartBoomBoom;
 import com.cat40.bombrange.Main;
