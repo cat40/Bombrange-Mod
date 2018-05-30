@@ -2,7 +2,6 @@ package com.cat40.bombrange.blocks.explosives;
 
 import com.cat40.bombrange.explosions.DeforestationBoomBoom;
 import net.minecraft.block.material.Material;
-import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 
 public class DeforestationExplosive extends Explosive {
@@ -14,8 +13,6 @@ public class DeforestationExplosive extends Explosive {
 
     public void blowUp(World world, int x, int y, int z)
     {
-        Explosion boom = new DeforestationBoomBoom(world, x, y, z, (int) this.power);
-        boom.doExplosionA();
-        boom.doExplosionB(true);
+        super.useExplosion(new DeforestationBoomBoom(world, x, y, z, (int) this.power));
     }
 }

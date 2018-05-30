@@ -51,6 +51,12 @@ public abstract class Explosive extends Block
         }
     }
 
+    void useExplosion(Explosion boom)
+    {
+        boom.doExplosionA();
+        boom.doExplosionB(true);
+    }
+
     public abstract void blowUp(World world, int x, int y, int z);
 
     @Override
