@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ed5093c-a0d9-4802-8d5f-3f1c608f1899" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/DeforestationExplosive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/DeforestationExplosive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Explosive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Explosive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Blast.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Blast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Gunpowder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Gunpowder.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -38,40 +38,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MiningExplosive.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/MiningExplosive.java">
+      <file leaf-file-name="Blast.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Blast.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" selection-start-line="20" selection-end-line="21" selection-end-column="32" />
+            <state relative-caret-position="374">
+              <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#768#769#0" expanded="true" />
+                <element signature="e#824#825#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MiningBoomBoom.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/explosions/MiningBoomBoom.java">
+      <file leaf-file-name="C4.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/C4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1955">
-              <caret line="115" column="5" selection-start-line="29" selection-end-line="115" selection-end-column="5" />
+            <state relative-caret-position="221">
+              <caret line="18" selection-start-line="18" selection-end-line="21" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#780#781#0" expanded="true" />
-                <element signature="e#829#830#0" expanded="true" />
+                <element signature="e#789#790#0" expanded="true" />
+                <element signature="e#844#845#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeforestationBoomBoom.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/explosions/DeforestationBoomBoom.java">
+      <file leaf-file-name="Explosive.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Explosive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="81" selection-start-line="81" selection-end-line="81" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="724">
+              <caret line="100" column="7" lean-forward="true" selection-start-line="100" selection-start-column="7" selection-end-line="100" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -79,8 +76,8 @@
       <file leaf-file-name="DeforestationExplosive.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/DeforestationExplosive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            <state relative-caret-position="255">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="88" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,43 +85,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SmartBoomBoom.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/explosions/SmartBoomBoom.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="42" selection-start-line="42" selection-end-line="113" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1429#1430#0" expanded="true" />
-                <element signature="e#1478#1479#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DirectionalBoomBoom.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/explosions/DirectionalBoomBoom.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="37" selection-end-line="121" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="C4.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/C4.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="51" selection-start-line="51" selection-end-line="53" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Explosive.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Explosive.java">
+      <file leaf-file-name="Dynamite.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Dynamite.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+              <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gunpowder.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Gunpowder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActivatableExplosive.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/ActivatableExplosive.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-663">
+              <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -649,7 +635,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/dynamite/Dynamite.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/gunpowder/Gunpowder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/dispenser/Dispenser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/C4.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/entity/RenderFallingBlock.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/entity/FallingBlock.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/proxies/ClientProxy.java" />
@@ -660,9 +645,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/explosions/MiningBoomBoom.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/explosions/DeforestationBoomBoom.java" />
         <option value="$PROJECT_DIR$/src/main/java/assets/bombrange/lang/en_US.lang" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/DeforestationExplosive.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/C4.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/C4.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Explosive.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Dynamite.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/ActivatableExplosive.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Blast.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Gunpowder.java" />
       </list>
     </option>
   </component>
@@ -900,12 +891,12 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5072917" side_tool="true" visible="true" weight="0.21572796" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49270833" visible="true" weight="0.21572796" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49270833" visible="true" weight="0.21572796" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23333333" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23333333" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4953125" weight="0.05526036" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -926,13 +917,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2890">
-          <caret line="170" selection-start-line="170" selection-end-line="170" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/proxies/CommonProxy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1062,30 +1046,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/blastingcap/Blast.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="44" column="33" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/blastingcap/BlastPrime.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/dynamite/DynaPrime.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/dynamite/Dynamite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1666">
-          <caret line="115" column="9" selection-start-line="115" selection-start-column="9" selection-end-line="115" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/gunpowder/GunpowderPrime.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/gunpowder/Gunpowder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="76" column="96" selection-start-line="76" selection-start-column="96" selection-end-line="76" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/tnt/Tnt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-289">
@@ -1183,13 +1146,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/c4/C4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="51" selection-start-line="51" selection-end-line="53" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar!/net/minecraft/world/World.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
@@ -1229,20 +1185,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/DeforestationExplosive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/assets/bombrange/lang/en_US.lang">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/DeforestationExplosive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="88" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1257,10 +1213,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Explosive.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Dynamite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/ActivatableExplosive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-663">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Explosive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="724">
+          <caret line="100" column="7" lean-forward="true" selection-start-line="100" selection-start-column="7" selection-end-line="100" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/C4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" selection-start-line="18" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#844#845#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Blast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding>
+            <element signature="e#768#769#0" expanded="true" />
+            <element signature="e#824#825#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Gunpowder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
