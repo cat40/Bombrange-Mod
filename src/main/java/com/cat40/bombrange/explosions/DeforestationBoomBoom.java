@@ -154,12 +154,17 @@ public class DeforestationBoomBoom extends Explosion {
                 for(z=0; z<=r; z++) // 1st quadrant of circle
                 {
                     x = (int) Math.sqrt(Math.pow(subr, 2) + Math.pow(z, 2));
-                    int thisx = x + (int) this.explosionX;
-                    int thisy = y + (int) this.explosionY;
-                    int thisz = z + (int) this.explosionZ;
                     // block = worldObj.getBlock(x, y, z);
                     // block.onBlockExploded(worldObj, x, y, z, this);
-                    worldObj.setBlock(thisx, thisy, thisz, Blocks.brick_block);
+                    // todo find a way to put this in a for loop
+                    worldObj.setBlock(x + (int) this.explosionX, y + (int) this.explosionY, z + (int) this.explosionZ, Blocks.brick_block);
+                    worldObj.setBlock(x + (int) this.explosionX, y + (int) this.explosionY, -z + (int) this.explosionZ, Blocks.brick_block);
+                    worldObj.setBlock(x + (int) this.explosionX, -y + (int) this.explosionY, z + (int) this.explosionZ, Blocks.brick_block);
+                    worldObj.setBlock(x + (int) this.explosionX, -y + (int) this.explosionY, -z + (int) this.explosionZ, Blocks.brick_block);
+                    worldObj.setBlock(-x + (int) this.explosionX, y + (int) this.explosionY, z + (int) this.explosionZ, Blocks.brick_block);
+                    worldObj.setBlock(-x + (int) this.explosionX, y + (int) this.explosionY, -z + (int) this.explosionZ, Blocks.brick_block);
+                    worldObj.setBlock(-x + (int) this.explosionX, -y + (int) this.explosionY, z + (int) this.explosionZ, Blocks.brick_block);
+                    worldObj.setBlock(-x + (int) this.explosionX, -y + (int) this.explosionY, -z + (int) this.explosionZ, Blocks.brick_block);
                 }
             }
         }
