@@ -145,7 +145,7 @@ public class DeforestationBoomBoom extends Explosion {
          *          go from the bottom of the circle to the top (use equation of a circle at 0, 0 to get x given z
          *      repeart for negative ys
          */
-        for(int r=0; r<=this.explosionSize; r++)
+        for(int r=0; r<=10; r++)
         {
             // iterate up the y axis, and determine the xs based upon the y
             for(y=0; y<=r; y++) // upper semisphere
@@ -154,9 +154,12 @@ public class DeforestationBoomBoom extends Explosion {
                 for(z=0; z<=r; z++) // 1st quadrant of circle
                 {
                     x = (int) Math.sqrt(Math.pow(subr, 2) + Math.pow(z, 2));
+                    int thisx = x + (int) this.explosionX;
+                    int thisy = y + (int) this.explosionY;
+                    int thisz = z + (int) this.explosionZ;
                     // block = worldObj.getBlock(x, y, z);
                     // block.onBlockExploded(worldObj, x, y, z, this);
-                    worldObj.setBlock(x, y, z, Blocks.brick_block);
+                    worldObj.setBlock(thisx, thisy, thisz, Blocks.brick_block);
                 }
             }
         }
