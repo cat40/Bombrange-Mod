@@ -150,7 +150,7 @@ public class DeforestationBoomBoom extends Explosion {
             // iterate up the y axis, and determine the xs based upon the y
             for(y=0; y<=r; y++) // upper semisphere
             {
-                int subr = r - y;
+                int subr = (int) Math.sqrt(Math.pow(r, 2) + Math.pow(y, 2));
                 for(z=0; z<=r; z++) // 1st quadrant of circle
                 {
                     x = (int) Math.sqrt(Math.pow(subr, 2) + Math.pow(z, 2));
