@@ -154,7 +154,7 @@ public class DeforestationBoomBoom extends Explosion {
                     int a = (int) Math.pow(-1, i / 4);
                     int b = (int) Math.pow(-1, i / 2);
                     int c = (int) Math.pow(-1, i);
-                    worldObj.setBlockToAir(a * x + (int) this.explosionX, b * y + (int) this.explosionY, c * (int) (z+0.5) + (int) this.explosionZ);
+                    worldObj.setBlockToAir(a * x + (int) (this.explosionX + 0.5), b * y + (int) (this.explosionY + 0.5), c * (int) (z+0.5) + (int) (this.explosionZ + 0.5));
                     //worldObj.setBlock(a * x + (int) this.explosionX, b * y + (int) this.explosionY, c * z + (int) this.explosionZ, Blocks.brick_block);
                 }
             }

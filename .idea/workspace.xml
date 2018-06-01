@@ -97,8 +97,8 @@
       <file leaf-file-name="DeforestationBoomBoom.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/explosions/DeforestationBoomBoom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="155" column="50" lean-forward="true" selection-start-line="155" selection-start-column="50" selection-end-line="155" selection-end-column="50" />
+            <state relative-caret-position="455">
+              <caret line="153" column="54" lean-forward="true" selection-start-line="153" selection-start-column="54" selection-end-line="153" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1281,8 +1281,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/explosions/DeforestationBoomBoom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="155" column="50" lean-forward="true" selection-start-line="155" selection-start-column="50" selection-end-line="155" selection-end-column="50" />
+        <state relative-caret-position="455">
+          <caret line="153" column="54" lean-forward="true" selection-start-line="153" selection-start-column="54" selection-end-line="153" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
