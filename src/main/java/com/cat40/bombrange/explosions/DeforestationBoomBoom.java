@@ -22,7 +22,7 @@ public class DeforestationBoomBoom extends Explosion {
     private World worldObj;
     private int field_77289_h = 16;
     private static Random explosionRNG = new Random();
-    private int radius = 50;
+    private int radius = 25;
 
     public DeforestationBoomBoom(World world, double x, double y, double z, float power)
     {
@@ -162,7 +162,7 @@ public class DeforestationBoomBoom extends Explosion {
                         if(block.isWood(this.worldObj, cordx, cordy, cordz) || block.isLeaves(this.worldObj, cordx, cordy, cordz))
                         {
                             block.onBlockExploded(this.worldObj, cordx, cordy, cordz, this);
-                            //this.worldObj.setBlockToAir(cordx, cordy, cordz);
+                            this.worldObj.setBlockToAir(cordx, cordy, cordz);
                         }
                         //worldObj.setBlockToAir(a * x + (int) (this.explosionX + 0.5), b * y + (int) (this.explosionY + 0.5), c * (int) (z + 0.5) + (int) (this.explosionZ + 0.5));
                         /*worldObj.setBlock(a * (int) (x+.5) + (int) this.explosionX,
