@@ -4,7 +4,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.enchantment.EnchantmentProtection;
 import net.minecraft.entity.Entity;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
@@ -147,7 +146,7 @@ public class DeforestationBoomBoom extends Explosion {
         for(int r=0; r<=10; r++)
         {
             int y = 0;
-            for(int z=0; z<=r; z++)
+            for(double z=0; z<=r; z+= 0.1)
             {
                 int x = (int) (Math.sqrt(-Math.pow(z, 2) + Math.pow(r, 2)) + 0.5);
                 for (int i = 0; i < 8; i++)
@@ -155,7 +154,8 @@ public class DeforestationBoomBoom extends Explosion {
                     int a = (int) Math.pow(-1, i / 4);
                     int b = (int) Math.pow(-1, i / 2);
                     int c = (int) Math.pow(-1, i);
-                    worldObj.setBlock(a * x + (int) this.explosionX, b * y + (int) this.explosionY, c * z + (int) this.explosionZ, Blocks.brick_block);
+                    worldObj.setBlockToAir(a * x + (int) this.explosionX, b * y + (int) this.explosionY, c * (int) (z+0.5) + (int) this.explosionZ);
+                    //worldObj.setBlock(a * x + (int) this.explosionX, b * y + (int) this.explosionY, c * z + (int) this.explosionZ, Blocks.brick_block);
                 }
             }
         }
