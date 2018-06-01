@@ -135,7 +135,6 @@ public class DeforestationBoomBoom extends Explosion {
         }
 
         Block block;
-        int x, y, z;
         /**
          * how this should work:
          * for each radius:
@@ -147,24 +146,16 @@ public class DeforestationBoomBoom extends Explosion {
          */
         for(int r=0; r<=10; r++)
         {
-            // iterate up the y axis, and determine the xs based upon the y
-            for(y=0; y<=r; y++) // upper semisphere
+            int y = 0;
+            for(int z=0; z<=r; z++)
             {
-                int subr = (int) Math.sqrt(Math.pow(r, 2) + Math.pow(y, 2));
-                for(z=0; z<=r; z++) // 1st quadrant of circle
+                int x = (int) (Math.sqrt(-Math.pow(z, 2) + Math.pow(r, 2)) + 0.5);
+                for (int i = 0; i < 8; i++)
                 {
-                    x = (int) Math.sqrt(Math.pow(subr, 2) + Math.pow(z, 2));
-                    // block = worldObj.getBlock(x, y, z);
-                    // block.onBlockExploded(worldObj, x, y, z, this);
-                    // todo find a way to put this in a for loop
-                    worldObj.setBlock(x + (int) this.explosionX, y + (int) this.explosionY, z + (int) this.explosionZ, Blocks.brick_block);
-                    worldObj.setBlock(x + (int) this.explosionX, y + (int) this.explosionY, -z + (int) this.explosionZ, Blocks.brick_block);
-                    worldObj.setBlock(x + (int) this.explosionX, -y + (int) this.explosionY, z + (int) this.explosionZ, Blocks.brick_block);
-                    worldObj.setBlock(x + (int) this.explosionX, -y + (int) this.explosionY, -z + (int) this.explosionZ, Blocks.brick_block);
-                    worldObj.setBlock(-x + (int) this.explosionX, y + (int) this.explosionY, z + (int) this.explosionZ, Blocks.brick_block);
-                    worldObj.setBlock(-x + (int) this.explosionX, y + (int) this.explosionY, -z + (int) this.explosionZ, Blocks.brick_block);
-                    worldObj.setBlock(-x + (int) this.explosionX, -y + (int) this.explosionY, z + (int) this.explosionZ, Blocks.brick_block);
-                    worldObj.setBlock(-x + (int) this.explosionX, -y + (int) this.explosionY, -z + (int) this.explosionZ, Blocks.brick_block);
+                    int a = (int) Math.pow(-1, i / 4);
+                    int b = (int) Math.pow(-1, i / 2);
+                    int c = (int) Math.pow(-1, i);
+                    worldObj.setBlock(a * x + (int) this.explosionX, b * y + (int) this.explosionY, c * z + (int) this.explosionZ, Blocks.brick_block);
                 }
             }
         }
