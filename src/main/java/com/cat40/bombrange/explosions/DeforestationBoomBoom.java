@@ -4,7 +4,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.enchantment.EnchantmentProtection;
 import net.minecraft.entity.Entity;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
@@ -23,6 +22,7 @@ public class DeforestationBoomBoom extends Explosion {
     private World worldObj;
     private int field_77289_h = 16;
     private static Random explosionRNG = new Random();
+    private int radius = 50;
 
     public DeforestationBoomBoom(World world, double x, double y, double z, float power)
     {
@@ -133,8 +133,6 @@ public class DeforestationBoomBoom extends Explosion {
         } else {
             this.worldObj.spawnParticle("largeexplode", this.explosionX, this.explosionY, this.explosionZ, 1.0D, 0.0D, 0.0D);
         }
-
-        Block block;
         /**
          * how this should work:
          * for each radius:
@@ -144,7 +142,7 @@ public class DeforestationBoomBoom extends Explosion {
          *          go from the bottom of the circle to the top (use equation of a circle at 0, 0 to get x given z
          *      repeart for negative ys
          */
-        for(int r=0; r<=10; r++)
+        for(int r=0; r<=this.radius; r++)
         {
             for(double y=0; y<=r; y+=0.05)
             {
@@ -157,11 +155,20 @@ public class DeforestationBoomBoom extends Explosion {
                         int a = (int) Math.pow(-1, i / 4);
                         int b = (int) Math.pow(-1, i / 2);
                         int c = (int) Math.pow(-1, i);
+                        int cordx = a * (int) (x+.5) + (int) this.explosionX;
+                        int cordy = b * (int) (y+.5) + (int) this.explosionY;
+                        int cordz = c * (int) (z+.5) + (int) this.explosionZ;
+                        Block block = this.worldObj.getBlock(cordx, cordy, cordz);
+                        if(block.isWood(this.worldObj, cordx, cordy, cordz) || block.isLeaves(this.worldObj, cordx, cordy, cordz))
+                        {
+                            block.onBlockExploded(this.worldObj, cordx, cordy, cordz, this);
+                            //this.worldObj.setBlockToAir(cordx, cordy, cordz);
+                        }
                         //worldObj.setBlockToAir(a * x + (int) (this.explosionX + 0.5), b * y + (int) (this.explosionY + 0.5), c * (int) (z + 0.5) + (int) (this.explosionZ + 0.5));
-                        worldObj.setBlock(a * (int) (x+.5) + (int) this.explosionX,
+                        /*worldObj.setBlock(a * (int) (x+.5) + (int) this.explosionX,
                                 b * (int) (y+.5) + (int) this.explosionY,
                                 c * (int) (z+.5) + (int) this.explosionZ,
-                                Blocks.brick_block);
+                                Blocks.brick_block);*/
                     }
                 }
             }
