@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.enchantment.EnchantmentProtection;
 import net.minecraft.entity.Entity;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.MathHelper;
@@ -145,17 +146,23 @@ public class DeforestationBoomBoom extends Explosion {
          */
         for(int r=0; r<=10; r++)
         {
-            int y = 0;
-            for(double z=0; z<=r; z+= 0.1)
+            for(double y=0; y<=r; y+=0.05)
             {
-                int x = (int) (Math.sqrt(-Math.pow(z, 2) + Math.pow(r, 2)) + 0.5);
-                for (int i = 0; i < 8; i++)
+                double subr = Math.sqrt(Math.pow(r, 2) - Math.pow(y, 2));
+                for (double z = 0; z <= subr; z += 0.05)
                 {
-                    int a = (int) Math.pow(-1, i / 4);
-                    int b = (int) Math.pow(-1, i / 2);
-                    int c = (int) Math.pow(-1, i);
-                    worldObj.setBlockToAir(a * x + (int) (this.explosionX + 0.5), b * y + (int) (this.explosionY + 0.5), c * (int) (z+0.5) + (int) (this.explosionZ + 0.5));
-                    //worldObj.setBlock(a * x + (int) this.explosionX, b * y + (int) this.explosionY, c * z + (int) this.explosionZ, Blocks.brick_block);
+                    int x = (int) (Math.sqrt(-Math.pow(z, 2) + Math.pow(subr, 2)) + 0.5);
+                    for (int i = 0; i < 8; i++)
+                    {
+                        int a = (int) Math.pow(-1, i / 4);
+                        int b = (int) Math.pow(-1, i / 2);
+                        int c = (int) Math.pow(-1, i);
+                        //worldObj.setBlockToAir(a * x + (int) (this.explosionX + 0.5), b * y + (int) (this.explosionY + 0.5), c * (int) (z + 0.5) + (int) (this.explosionZ + 0.5));
+                        worldObj.setBlock(a * (int) (x+.5) + (int) this.explosionX,
+                                b * (int) (y+.5) + (int) this.explosionY,
+                                c * (int) (z+.5) + (int) this.explosionZ,
+                                Blocks.brick_block);
+                    }
                 }
             }
         }
