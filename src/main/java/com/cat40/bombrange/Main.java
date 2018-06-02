@@ -83,7 +83,6 @@ public class Main {
 public static String modid_without_colon = "bombrange";
 public static String modid = modid_without_colon + ":";
 /* Explosives */
-public static List<Block> explosives = new ArrayList<Block>();
 public static Block bomb;
 public static Block c41;
 public static Block c45;
@@ -119,6 +118,34 @@ public static Block mining;
 public static Block deforestation;
 public static Block stoneExplosive;
 public static Block blastingCap;
+public static List<Block> explosives = new ArrayList<Block>(){{ // todo replace this with a type check if the block is extension of Explosive
+    add(Blocks.tnt);
+    add(bomb);
+    add(c41);
+    add(c45);
+    add(c410);
+    add(c420);
+    add(dyno);
+    add(cord);
+    add(c4Quart);
+    add(c4Half);
+    add(c4ThreeQuart);
+    add(powder);
+    add(delay1);
+    add(delay5);
+    add(delay10);
+    add(delay30);
+    add(arrow);
+    add(fire);
+    add(potion);
+    add(fireLarge);
+    add(tracer);
+    add(tnt);
+    add(mining);
+    add(deforestation);
+    add(stoneExplosive);
+    add(blastingCap);
+}};
 //public static Block StructOldCannon;
 
 public static Material stone = Material.rock;
