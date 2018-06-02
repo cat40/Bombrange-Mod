@@ -6,6 +6,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 
 public class BlastingCap extends ActivatableExplosive
@@ -26,19 +27,21 @@ public class BlastingCap extends ActivatableExplosive
 
     public void blowUp(World world, int x, int y, int z)
     {
-        for (int i = 0; i < 8; i++)
+        for(int b=-1; b<=1; b++)
         {
-            int a = (int) Math.pow(-1, i / 4);
-            int b = (int) Math.pow(-1, i / 2);
-            int c = (int) Math.pow(-1, i);
-            Block block = world.getBlock(a*x, b*y, c*z);
-            if(block.getMaterial() == Main.bombMat)
+            for (int i = 0; i < 8; i++)
             {
-                block.onBlockDestroyedByExplosion(world, a*x, b*y, c*z, null);
-                world.setBlockToAir(a*x, b*y, c*z);
+                int a = (int) Math.pow(-1, i / 4);
+                //int b = (int) Math.pow(-1, i / 2);
+                int c = (int) Math.pow(-1, i);
+                Block block = world.getBlock(a + x, b + y, c + z);
+                if (block.getMaterial() == Main.bombMat || true)
+                {
+                    world.setBlock(a + x, b + y, c + z, Blocks.brick_block);
+                    //block.onBlockDestroyedByExplosion(world, a*x, b*y, c*z, null);
+                    //world.setBlockToAir(a*x, b*y, c*z);
+                }
             }
-
-
         }
     }
 }
