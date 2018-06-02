@@ -15,6 +15,6 @@ public class MyCreativeTabs extends CreativeTabs
 	@SideOnly(Side.CLIENT)
 	public Item getTabIconItem()
 	{
-		return Main.Lighter;
+		return Main.lighter;
 	}
 }

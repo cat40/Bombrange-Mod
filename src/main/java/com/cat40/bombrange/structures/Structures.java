@@ -32,7 +32,7 @@ public class Structures
 		//this.test = new StructurePart[] {new StructurePart(Blocks.obsidian, 0, 0, 0)};
 		int x = 0;
 		// start planks at x=3
-		this.cannonOldObsidian = new StructurePart(Main.MovableObsidian, new int[][]   {{3, 2, x},
+		this.cannonOldObsidian = new StructurePart(Main.movableObsidian, new int[][]   {{3, 2, x},
 																					    {4, 2, x},
 																						{5, 2, x},
 																						{3, 3, x},

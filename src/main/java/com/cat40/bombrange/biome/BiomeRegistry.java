@@ -17,7 +17,7 @@ public class BiomeRegistry
 	
 	public static void initializeBiome()
 	{
-		BombRange = new BiomeGenBombRange(137).setBiomeName("The Bomb Range");
+		BombRange = new BiomeGenBombRange(137).setBiomeName("The bomb Range");
 		
 	}
 

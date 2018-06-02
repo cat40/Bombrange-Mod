@@ -84,7 +84,7 @@ public class TracerPrime extends Entity
             this.motionX *= 0.699999988079071D;
             this.motionZ *= 0.699999988079071D;
             this.motionY *= -0.5D;
-            this.worldObj.setBlock((int) this.posX, (int) this.posY, (int) this.posZ, Main.TracerUsed);
+            this.worldObj.setBlock((int) this.posX, (int) this.posY, (int) this.posZ, Main.tracerUsed);
         }
 
     }

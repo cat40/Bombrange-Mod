@@ -61,9 +61,12 @@ import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.util.EnumHelper;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 /* 	MOD INFO */
-	@Mod(modid = "bombrange", name = "Bomb Range Mod", version = "0.2.0")
+	@Mod(modid = "bombrange", name = "bomb Range Mod", version = "0.2.0")
 	//@NetworkMod(clientSideRequired=true, serverSideRequired=false)	
 
 
@@ -80,43 +83,40 @@ public class Main {
 public static String modid_without_colon = "bombrange";
 public static String modid = modid_without_colon + ":";
 /* Explosives */
-public static Block Bomb;
-public static Block C41;
-public static Block C45;
-public static Block C410;
-public static Block C420;
-public static Block Dyno;
-public static Block C4mine;
-public static Block Turf;
-public static Block Blast;
-public static Block Cord;
-public static Block Concrete;
-public static Block ReConcrete;
-public static Block SteelBlock;
-public static Block ReGlass;
-public static Block C4Quart;
-public static Block C4Half;
-public static Block C4ThreeQuart;
-public static Block C41_2;
-public static Block Powder;
-public static Block Delay1;
-public static Block Delay5;
-public static Block Delay10;
-public static Block Delay30;
-public static Block Arrow;
-public static Block Fire;
-public static Block Potion;
-public static Block FireLarge;
-public static Block Tracer;
-public static Block TracerUsed;
-public static Block MovableObsidian;
-public static Block Benchmark;
-public static Block Dispense;
-public static Block Tnt;
-public static Block Sandbag;
-public static Block Substrate;
-public static Block Mining;
-public static Block Deforestation;
+public static List<Block> explosives = new ArrayList<Block>();
+public static Block bomb;
+public static Block c41;
+public static Block c45;
+public static Block c410;
+public static Block c420;
+public static Block dyno;
+public static Block turf;
+public static Block blast;
+public static Block cord;
+public static Block concrete;
+public static Block reConcrete;
+public static Block reGlass;
+public static Block c4Quart;
+public static Block c4Half;
+public static Block c4ThreeQuart;
+public static Block powder;
+public static Block delay1;
+public static Block delay5;
+public static Block delay10;
+public static Block delay30;
+public static Block arrow;
+public static Block fire;
+public static Block potion;
+public static Block fireLarge;
+public static Block tracer;
+public static Block tracerUsed;
+public static Block movableObsidian;
+public static Block dispense;
+public static Block tnt;
+public static Block sandbag;
+public static Block substrate;
+public static Block mining;
+public static Block deforestation;
 public static Block stoneExplosive;
 public static Block blastingCap;
 //public static Block StructOldCannon;
@@ -124,13 +124,13 @@ public static Block blastingCap;
 public static Material stone = Material.rock;
 public static Material bombMat = new Material(null); //Material.rock;
 
-public static Item Lighter;
-public static Item CIron;
-public static Item Steel;
-public static Item SteelBar;
-public static Item Plastic;
-public static Item BlastHead, BlastShirt, BlastPants, BlastShoes;
-public static Item WoolHat, WoolShirt, WoolPants, WoolShoes;
+public static Item lighter;
+public static Item cIron;
+public static Item steel;
+public static Item steelBar;
+public static Item plastic;
+public static Item blastHead, blastShirt, blastPants, blastShoes;
+public static Item woolHat, woolShirt, woolPants, woolShoes;
 
 // constants
 public static float bombres = 3.0F;
@@ -155,10 +155,10 @@ public static  BiomeGenBase BombRange;
 
 /* entities */
 public int EntityID = EntityRegistry.findGlobalUniqueEntityId();
-CordList[] cordNames = {new CordList("1 Second Delay Primed", this.Delay1),
-						new CordList("5 Second Delay Primed", this.Delay5),
-						new CordList("10 Second Delay Primed", this.Delay10),
-						new CordList("30 Second Delay Primed", this.Delay30)};
+CordList[] cordNames = {new CordList("1 Second Delay Primed", this.delay1),
+						new CordList("5 Second Delay Primed", this.delay5),
+						new CordList("10 Second Delay Primed", this.delay10),
+						new CordList("30 Second Delay Primed", this.delay30)};
 
 
 /* Creative tabs */
@@ -210,7 +210,7 @@ event.manager.addSound("mod_id:Sparkler.ogg");
 /*       public static CreativeTabs MyCreativeTab_1 = new CreativeTabs("MyCreativeTab_1")
         {
             public ItemStack getIconItemStack() {
-                return new ItemStack(Lighter, 1, 0);   // Icon, Stack Size, Tab Position
+                return new ItemStack(lighter, 1, 0);   // Icon, Stack Size, Tab Position
             }
         };
     */     
@@ -222,7 +222,7 @@ event.manager.addSound("mod_id:Sparkler.ogg");
      */
  /** Explosives
   * Minecraft Dynamite(5001)-5 blast power
-    * Minecraft nitroglycerin (LIQUID)-6.4 Blast power
+    * Minecraft nitroglycerin (LIQUID)-6.4 blast power
    * Minecraft C4 6.3 blast power
   * Relistic C4 -10 lbs 28.53 blast power
   * relistic c4- 1lbs -2.85
@@ -238,164 +238,165 @@ event.manager.addSound("mod_id:Sparkler.ogg");
   * todo add mining explosives that drop everything, or everything but stone and dirt.
   * todo add explosive that only destroys stone (and drops it all)
   * todo make deforestation explosive more of a globe instead of a series of rays
+  * todo modify powder explosion to make more smoke
   */
  
  		//custom dispenser behavior
- 		Bomb = new Gunpowder(idBase, stone, "Bomb").setHardness(10.0F).setStepSound(Block.soundTypeAnvil).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerBlock(Bomb, "Bomb");
+ 		bomb = new Gunpowder(idBase, stone, "bomb").setHardness(10.0F).setStepSound(Block.soundTypeAnvil).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerBlock(bomb, "bomb");
         
-        C4Quart = new C4(++idBase, bombMat, "C4Quart", C4Power/4).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        C4Half = new C4(++idBase, bombMat, "C4Half", C4Power/2).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        C4ThreeQuart = new C4(++idBase, bombMat, "C4ThreeQuart", C4Power * 3.0/4.0).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        C41 = new C4(++idBase, bombMat, "C41", C4Power);
-        C45 = new C4(++idBase, bombMat, "C45", C4Power*5).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        C410 = new C4(++idBase, bombMat, "C410", C4Power*10).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        C420 = new C4(++idBase, bombMat, "C420", C4Power*20).setCreativeTab(Main.CreativeTabMod.tabBomb);//*/
+        c4Quart = new C4(++idBase, bombMat, "c4Quart", C4Power/4).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        c4Half = new C4(++idBase, bombMat, "c4Half", C4Power/2).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        c4ThreeQuart = new C4(++idBase, bombMat, "c4ThreeQuart", C4Power * 3.0/4.0).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        c41 = new C4(++idBase, bombMat, "c41", C4Power);
+        c45 = new C4(++idBase, bombMat, "c45", C4Power*5).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        c410 = new C4(++idBase, bombMat, "c410", C4Power*10).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        c420 = new C4(++idBase, bombMat, "c420", C4Power*20).setCreativeTab(Main.CreativeTabMod.tabBomb);//*/
        // Benchmark = new C4_10(++idBase, bombMat, "benchmark").setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerBlock(C4Quart, "C4Quart");
-        GameRegistry.registerBlock(C4Half,  "C4Half");
-        GameRegistry.registerBlock(C4ThreeQuart, "C4ThreeQuart");
-        GameRegistry.registerBlock(C41, "C41");
-        GameRegistry.registerBlock(C45, "C45");
-        GameRegistry.registerBlock(C410, "C410");
-        GameRegistry.registerBlock(C420, "C420");
+        GameRegistry.registerBlock(c4Quart, "c4Quart");
+        GameRegistry.registerBlock(c4Half,  "c4Half");
+        GameRegistry.registerBlock(c4ThreeQuart, "c4ThreeQuart");
+        GameRegistry.registerBlock(c41, "c41");
+        GameRegistry.registerBlock(c45, "c45");
+        GameRegistry.registerBlock(c410, "c410");
+        GameRegistry.registerBlock(c420, "c420");
        // GameRegistry.registerBlock(Benchmark, "Benchmark").setStepSound(bombSound);
         
-        Powder = new Powder(++idBase, bombMat, "Powder").setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerBlock(Powder, "Powder");
+        powder = new Powder(++idBase, bombMat, "powder").setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerBlock(powder, "powder");
 
-        Dyno = new Dynamite(++idBase, bombMat, "Dyno").setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerBlock(Dyno, "Dyno");
+        dyno = new Dynamite(++idBase, bombMat, "dyno").setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerBlock(dyno, "dyno");
 
-        Turf = new Turf(++idBase, bombMat, "Turf").setResistance(150).setStepSound(Block.soundTypeGravel).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerBlock(Turf, "Turf");
+        turf = new Turf(++idBase, bombMat, "turf").setResistance(150).setStepSound(Block.soundTypeGravel).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerBlock(turf, "turf");
         
-        Blast = new Blast(++idBase, bombMat, "Blast").setStepSound(bombSound).setResistance(0.5F).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerBlock(Blast,  "Blast");
+        blast = new Blast(++idBase, bombMat, "blast").setStepSound(bombSound).setResistance(0.5F).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerBlock(blast,  "blast");
         
-        Cord = new Cord(++idBase, bombMat, "Cord").setStepSound(Block.soundTypeGrass).setResistance(0.1F).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerBlock(Cord,  "Cord");
+        cord = new Cord(++idBase, bombMat, "cord").setStepSound(Block.soundTypeGrass).setResistance(0.1F).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerBlock(cord,  "cord");
         
-        Delay1 = new Delay1(++idBase, bombMat, "Delay1", 1*20).setStepSound(Block.soundTypeGrass).setResistance(0.1F).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerBlock(Delay1,  "Delay1");
+        delay1 = new Delay1(++idBase, bombMat, "delay1", 1*20).setStepSound(Block.soundTypeGrass).setResistance(0.1F).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerBlock(delay1,  "delay1");
         
-        Delay5 = new Delay5(++idBase, bombMat, "Delay5").setStepSound(Block.soundTypeGrass).setResistance(0.1F).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerBlock(Delay5,  "Delay5");
+        delay5 = new Delay5(++idBase, bombMat, "delay5").setStepSound(Block.soundTypeGrass).setResistance(0.1F).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerBlock(delay5,  "delay5");
         
-        Delay10 = new Delay10(++idBase, bombMat, "Delay10", 10*20).setStepSound(Block.soundTypeGrass).setResistance(0.1F).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerBlock(Delay10,  "Delay10");
+        delay10 = new Delay10(++idBase, bombMat, "delay10", 10*20).setStepSound(Block.soundTypeGrass).setResistance(0.1F).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerBlock(delay10,  "delay10");
         
-        Delay30 = new Delay30(++idBase, bombMat, "Delay30", 30*20).setStepSound(Block.soundTypeGrass).setResistance(0.1F).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerBlock(Delay30,  "Delay30");
+        delay30 = new Delay30(++idBase, bombMat, "delay30", 30*20).setStepSound(Block.soundTypeGrass).setResistance(0.1F).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerBlock(delay30,  "delay30");
         
-        Arrow = new Arrow(++idBase, bombMat, "Arrow").setStepSound(bombSound).setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerBlock(Arrow,  "Arrow");
+        arrow = new Arrow(++idBase, bombMat, "arrow").setStepSound(bombSound).setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerBlock(arrow,  "arrow");
         
-        Fire = new Fire(++idBase, bombMat, "Fire").setStepSound(bombSound).setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerBlock(Fire, "Fire");
+        fire = new Fire(++idBase, bombMat, "fire").setStepSound(bombSound).setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerBlock(fire, "fire");
         
-        Potion = new Potion(++idBase, bombMat, "Potion").setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
-        GameRegistry.registerBlock(Potion, "Potion");
+        potion = new Potion(++idBase, bombMat, "potion").setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
+        GameRegistry.registerBlock(potion, "potion");
         
-        Tnt = new Tnt(++idBase, bombMat, "Tnt").setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
-        GameRegistry.registerBlock(Tnt, "Tnt");
+        tnt = new Tnt(++idBase, bombMat, "tnt").setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
+        GameRegistry.registerBlock(tnt, "tnt");
 
-        Mining = new MiningExplosive(++idBase, bombMat, "MiningExplosive", C4Power).setStepSound(bombSound);
-        GameRegistry.registerBlock(Mining, "MiningExplosive");
+        mining = new MiningExplosive(++idBase, bombMat, "miningExplosive", C4Power).setStepSound(bombSound);
+        GameRegistry.registerBlock(mining, "miningExplosive");
 
-        Deforestation = new DeforestationExplosive(++idBase, bombMat, "DeforestationExplosive", 20*C4Power);
-        GameRegistry.registerBlock(Deforestation, "DeforestationExplosive");
+        deforestation = new DeforestationExplosive(++idBase, bombMat, "deforestationExplosive", 20*C4Power);
+        GameRegistry.registerBlock(deforestation, "deforestationExplosive");
 
-        stoneExplosive = new StoneExplosive(++idBase, bombMat, "StoneExplosive", C4Power);
-        GameRegistry.registerBlock(stoneExplosive, "StoneExplosive");
+        stoneExplosive = new StoneExplosive(++idBase, bombMat, "stoneExplosive", C4Power);
+        GameRegistry.registerBlock(stoneExplosive, "stoneExplosive");
 
-        blastingCap = new BlastingCap(++idBase, bombMat, "BlastingCap");
-        GameRegistry.registerBlock(blastingCap, "BlastingCap");
+        blastingCap = new BlastingCap(++idBase, bombMat, "blastingCap");
+        GameRegistry.registerBlock(blastingCap, "blastingCap");
         
-        /*FireLarge = new LargeFire(++idBase, bombMat, "FireLarge").setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
-        GameRegistry.registerBlock(FireLarge, "FireLarge");*/
-        //TODO FireLarge is spawning fireballs about every second (but only calls the method in the entity class once)
+        /*fireLarge = new LargeFire(++idBase, bombMat, "fireLarge").setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
+        GameRegistry.registerBlock(fireLarge, "fireLarge");*/
+        //TODO fireLarge is spawning fireballs about every second (but only calls the method in the entity class once)
         //Fireballs are not exploding or lighting fires.
         
-        Lighter = new Lighter(++idBase, OneUse, "Lighter").setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerItem(Lighter, "Lighter");
-        //LanguageRegistry.addName(Lighter, "Fuse Lighter"); 
+        lighter = new Lighter(++idBase, OneUse, "lighter").setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerItem(lighter, "lighter");
+        //LanguageRegistry.addName(lighter, "Fuse lighter");
         
-        Concrete = new GenericBlock(++idBase, Material.rock, "Concrete", "Pickaxe", 2).setResistance(50).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerBlock(Concrete, "Concrete");
+        concrete = new GenericBlock(++idBase, Material.rock, "concrete", "Pickaxe", 2).setResistance(50).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerBlock(concrete, "concrete");
         
-        ReConcrete = new GenericBlock(++idBase, Material.rock, "ReConcrete", "Pickaxe", 2).setResistance(70).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerBlock(ReConcrete, "ReConcrete");
+        reConcrete = new GenericBlock(++idBase, Material.rock, "reConcrete", "Pickaxe", 2).setResistance(70).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerBlock(reConcrete, "reConcrete");
 
-        Sandbag = new GenericBlock(++idBase, Material.sand, "Sandbag", "Shovel", 0).setResistance(45).setStepSound(Block.soundTypeGravel);
-        GameRegistry.registerBlock(Sandbag, "Sandbag"); // todo add a texture for this
+        sandbag = new GenericBlock(++idBase, Material.sand, "sandbag", "Shovel", 0).setResistance(45).setStepSound(Block.soundTypeGravel);
+        GameRegistry.registerBlock(sandbag, "sandbag"); // todo add a texture for this
         
-        Steel = new GenericItem(++idBase, "Steel").setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerItem(Steel, "Steel");
+        steel = new GenericItem(++idBase, "steel").setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerItem(steel, "steel");
         
-        CIron = new GenericItem(++idBase, "CIron").setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerItem(CIron,  "CIron");
+        cIron = new GenericItem(++idBase, "cIron").setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerItem(cIron,  "cIron");
         
-        SteelBar = new GenericItem(++idBase, "SteelBar").setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerItem(SteelBar, "SteelBar");
+        steelBar = new GenericItem(++idBase, "steelBar").setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerItem(steelBar, "steelBar");
         
-        ReGlass = new ReGlass(++idBase, Material.glass, "ReGlass", "Pickaxe", 0).setResistance(45).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerBlock(ReGlass, "ReGlass");
+        reGlass = new ReGlass(++idBase, Material.glass, "reGlass", "Pickaxe", 0).setResistance(45).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerBlock(reGlass, "reGlass");
         
-        Plastic = new GenericItem(++idBase, "Plastic").setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerItem(Plastic,  "Plastic");
+        plastic = new GenericItem(++idBase, "plastic").setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerItem(plastic,  "plastic");
         
-        Dispense = new Dispenser(++idBase).setResistance(indestructable).setStepSound(Block.soundTypeStone).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerBlock(Dispense, "Dispense");
-        //GameRegistry.registerTileEntity(Dispenser.class, "Dispense");
+        dispense = new Dispenser(++idBase).setResistance(indestructable).setStepSound(Block.soundTypeStone).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerBlock(dispense, "dispense");
+        //GameRegistry.registerTileEntity(Dispenser.class, "dispense");
         
-        Tracer = new Tracer(++idBase, Material.rock, "Tracer").setResistance(bombres).setStepSound(bombSound);//
-        GameRegistry.registerBlock(Tracer, "Tracer");
+        tracer = new Tracer(++idBase, Material.rock, "tracer").setResistance(bombres).setStepSound(bombSound);//
+        GameRegistry.registerBlock(tracer, "tracer");
         
-        TracerUsed = new TracerUsed(++idBase, Material.rock, "Tracer").setResistance(bombres).setStepSound(bombSound).setLightLevel(0.5F);
-        GameRegistry.registerBlock(TracerUsed, "TracerUsed");
+        tracerUsed = new TracerUsed(++idBase, Material.rock, "tracer").setResistance(bombres).setStepSound(bombSound).setLightLevel(0.5F);
+        GameRegistry.registerBlock(tracerUsed, "tracerUsed");
         
-        MovableObsidian = new MovableObsidian(++idBase, Material.rock, "pickaxe", 3).setResistance(9999F).setStepSound(Block.soundTypeStone);
-        GameRegistry.registerBlock(MovableObsidian, "MovableObsidian");
+        movableObsidian = new MovableObsidian(++idBase, Material.rock, "pickaxe", 3).setResistance(9999F).setStepSound(Block.soundTypeStone);
+        GameRegistry.registerBlock(movableObsidian, "movableObsidian");
 
-        Substrate = new Substrate(++idBase, Material.ground, "Substrate");
-        GameRegistry.registerBlock(Substrate, "Substrate");
+        substrate = new Substrate(++idBase, Material.ground, "substrate");
+        GameRegistry.registerBlock(substrate, "substrate");
         
         /*StructOldCannon = new BlockStructure(++idBase, Material.rock, "OldCannon", Structures.cannonOld, false);
         GameRegistry.registerBlock(StructOldCannon, "OldCannon");// TODO: game crashing on every loop over the structure components */
         
         // Primed Explosives (for rendering)
-        EntityRegistry.registerModEntity(ArrowPrime.class, "Primed Arrow Bomb", ++EntityID, this, 256, 10, true);//, id, mod, trackingRange, updateFrequency, sendsVelocityUpdates);
-        EntityRegistry.registerModEntity(FirePrime.class, "Primed Fire Bomb", ++EntityID, this, 256, 10, true);
-        EntityRegistry.registerModEntity(PotionPrime.class, "Primed Potion Bomb", ++EntityID, this, 256, 10, true);
-        EntityRegistry.registerModEntity(PowderPrime.class, "Primed Black Powder Charge",  ++EntityID,  this,  64,  10,  true);
+        EntityRegistry.registerModEntity(ArrowPrime.class, "Primed arrow bomb", ++EntityID, this, 256, 10, true);//, id, mod, trackingRange, updateFrequency, sendsVelocityUpdates);
+        EntityRegistry.registerModEntity(FirePrime.class, "Primed fire bomb", ++EntityID, this, 256, 10, true);
+        EntityRegistry.registerModEntity(PotionPrime.class, "Primed potion bomb", ++EntityID, this, 256, 10, true);
+        EntityRegistry.registerModEntity(PowderPrime.class, "Primed Black powder Charge",  ++EntityID,  this,  64,  10,  true);
     	EntityRegistry.registerModEntity(DelayPrime1.class, "1 Second Delay Primed", ++EntityID, this, 64, 10, true);
     	EntityRegistry.registerModEntity(DelayPrime5.class, "5 Second Delay Primed", ++EntityID, this, 64, 10, true);
     	EntityRegistry.registerModEntity(DelayPrime10.class, "10 Second Delay Primed", ++EntityID, this, 64, 10, true);
     	EntityRegistry.registerModEntity(DelayPrime30.class, "30 Second Delay Primed", ++EntityID, this, 64, 10, true);
-    	EntityRegistry.registerModEntity(TracerPrime.class, "Primed Substrate", ++EntityID, this, 256, 10, true);
-    	EntityRegistry.registerModEntity(LargeFirePrime.class,"Primed Large Fire Bomb", ++EntityID, this, 256, 10, true);
-    	EntityRegistry.registerModEntity(TntPrime.class,"Primed TNT Bomb", ++EntityID, this, 256, 10, true);
-    	EntityRegistry.registerModEntity(FallingSubstrate.class, "Falling Substrate:",++EntityID, this, 256, 10, true);
+    	EntityRegistry.registerModEntity(TracerPrime.class, "Primed substrate", ++EntityID, this, 256, 10, true);
+    	EntityRegistry.registerModEntity(LargeFirePrime.class,"Primed Large fire bomb", ++EntityID, this, 256, 10, true);
+    	EntityRegistry.registerModEntity(TntPrime.class,"Primed TNT bomb", ++EntityID, this, 256, 10, true);
+    	EntityRegistry.registerModEntity(FallingSubstrate.class, "Falling substrate:",++EntityID, this, 256, 10, true);
     	EntityRegistry.registerModEntity(DummyEntity.class, "Dummy Entity", ++EntityID, this, 256, 10, true);
 
-        BlastHead = new BlastShirt(ArmBlast, 0, 0, "BlastHead").setTextureName(modid + "BlastHead").setCreativeTab(CreativeTabMod.tabBomb);
-        BlastShirt = new BlastShirt(ArmBlast, 0, 1, "BlastShirt").setTextureName(modid + "BlastShirt").setCreativeTab(CreativeTabMod.tabBomb);
-        BlastPants = new BlastShirt(ArmBlast, 0, 2, "BlastPants").setTextureName(modid + "BlastPants").setCreativeTab(CreativeTabMod.tabBomb);
-        BlastShoes = new BlastShirt(ArmBlast, 0, 3, "BlastShoes").setTextureName(modid + "BlastShoes").setCreativeTab(CreativeTabMod.tabBomb);
-        GameRegistry.registerItem(BlastHead,  "BlastHead");
-        GameRegistry.registerItem(BlastShirt, "BlastShirt");
-        GameRegistry.registerItem(BlastPants, "BlastPants");
-        GameRegistry.registerItem(BlastShoes, "BlastShoes");
+        blastHead = new BlastShirt(ArmBlast, 0, 0, "blastHead").setTextureName(modid + "blastHead").setCreativeTab(CreativeTabMod.tabBomb);
+        blastShirt = new BlastShirt(ArmBlast, 0, 1, "blastShirt").setTextureName(modid + "blastShirt").setCreativeTab(CreativeTabMod.tabBomb);
+        blastPants = new BlastShirt(ArmBlast, 0, 2, "blastPants").setTextureName(modid + "blastPants").setCreativeTab(CreativeTabMod.tabBomb);
+        blastShoes = new BlastShirt(ArmBlast, 0, 3, "blastShoes").setTextureName(modid + "blastShoes").setCreativeTab(CreativeTabMod.tabBomb);
+        GameRegistry.registerItem(blastHead,  "blastHead");
+        GameRegistry.registerItem(blastShirt, "blastShirt");
+        GameRegistry.registerItem(blastPants, "blastPants");
+        GameRegistry.registerItem(blastShoes, "blastShoes");
         
-        WoolHat = new GenericItem(++idBase, "WoolHat").setCreativeTab(Main.CreativeTabMod.tabBomb);
-        RI(WoolHat, "WoolHat");
-        WoolShirt = new GenericItem(++idBase, "WoolShirt").setCreativeTab(Main.CreativeTabMod.tabBomb);
-        RI(WoolShirt, "WoolShirt");
-        WoolPants = new GenericItem(++idBase, "WoolPants").setCreativeTab(Main.CreativeTabMod.tabBomb);
-        RI(WoolPants, "WoolPants");
-        WoolShoes = new GenericItem(++idBase, "WoolShoes").setCreativeTab(Main.CreativeTabMod.tabBomb);
-        RI(WoolShoes, "WoolShoes");
+        woolHat = new GenericItem(++idBase, "woolHat").setCreativeTab(Main.CreativeTabMod.tabBomb);
+        RI(woolHat, "woolHat");
+        woolShirt = new GenericItem(++idBase, "woolShirt").setCreativeTab(Main.CreativeTabMod.tabBomb);
+        RI(woolShirt, "woolShirt");
+        woolPants = new GenericItem(++idBase, "woolPants").setCreativeTab(Main.CreativeTabMod.tabBomb);
+        RI(woolPants, "woolPants");
+        woolShoes = new GenericItem(++idBase, "woolShoes").setCreativeTab(Main.CreativeTabMod.tabBomb);
+        RI(woolShoes, "woolShoes");
        
         //biome
         BiomeRegistry.mainRegistry();
@@ -451,7 +452,7 @@ event.manager.addSound("mod_id:Sparkler.ogg");
 	//yourItemStack.addEnchantment(Enchantment.protection, 3); // adding enchantments. Do what ever you like
  
     //  Dynamite Recipie (temporary until Nitroglycerin is added)     
-        GameRegistry.addRecipe(new ItemStack(Dyno, 1),
+        GameRegistry.addRecipe(new ItemStack(dyno, 1),
                 "SXS",
                 "XSX",
                 "SXS",
@@ -459,20 +460,20 @@ event.manager.addSound("mod_id:Sparkler.ogg");
             'X', Items.gunpowder
         );
     //  Gunpower bomb         
-        GameRegistry.addRecipe(new ItemStack(Bomb, 5),
+        GameRegistry.addRecipe(new ItemStack(bomb, 5),
                 "SSS",
                 "SSS",
                 "SSS",
             'S', Items.gunpowder);
 
-        GameRegistry.addRecipe(new ItemStack(C4Half, 1),
+        GameRegistry.addRecipe(new ItemStack(c4Half, 1),
                 "SXS",
                 "XSX",
                 "SXS",
             'S', Items.gunpowder,
-            'X', Plastic);
+            'X', plastic);
             //  ITEM RECIPE         
-        GameRegistry.addRecipe(new ItemStack(Lighter, 1),
+        GameRegistry.addRecipe(new ItemStack(lighter, 1),
                 "G",
                 "S",
                 "T",
@@ -480,85 +481,85 @@ event.manager.addSound("mod_id:Sparkler.ogg");
             'G', Items.gunpowder,
             'T', Blocks.torch);
 
-        GameRegistry.addRecipe(new ItemStack(Concrete, 1),
+        GameRegistry.addRecipe(new ItemStack(concrete, 1),
                 "W",
                 "S",
             'S', Blocks.sand,
             'W', Items.water_bucket.setContainerItem(Items.bucket));
         
-        GameRegistry.addRecipe(new ItemStack(SteelBar, 2),
+        GameRegistry.addRecipe(new ItemStack(steelBar, 2),
                 "S",
                 "S",
-            'S', Steel);
+            'S', steel);
         
-        GameRegistry.addRecipe(new ItemStack(ReConcrete, 1),
+        GameRegistry.addRecipe(new ItemStack(reConcrete, 1),
         		"R",
                 "W",
                 "S",
             'S', Blocks.sand,
             'W', Items.water_bucket.setContainerItem(Items.bucket),
-            'R', SteelBar);
+            'R', steelBar);
         
-        GameRegistry.addRecipe(new ItemStack(Cord, 8),
+        GameRegistry.addRecipe(new ItemStack(cord, 8),
                 "WWW",
         	"WGW",
         	"WWW",
         'W', Blocks.wool,
         'G', Items.gunpowder);
         
-        GameRegistry.addRecipe(new ItemStack(WoolHat, 1),
+        GameRegistry.addRecipe(new ItemStack(woolHat, 1),
         				"WWW",
         				"W W",
         				
         				'W', Blocks.wool);
-        GameRegistry.addRecipe(new ItemStack(WoolShirt, 1),
+        GameRegistry.addRecipe(new ItemStack(woolShirt, 1),
         				"W W", 
         				"WWW", 
         				"WWW", 
         				
         				'W', Blocks.wool);
-        GameRegistry.addRecipe(new ItemStack(WoolPants, 1),
+        GameRegistry.addRecipe(new ItemStack(woolPants, 1),
         				"WWW",
         				"W W",
         				"W W",
         				'W', Blocks.wool);
-        GameRegistry.addRecipe(new ItemStack(WoolShoes, 1),
+        GameRegistry.addRecipe(new ItemStack(woolShoes, 1),
         				"W W",
         				"W W",
         				'W', Blocks.wool);
         
      //2;1x7,7x3,1x2;1;village(size=5 distance=9)   
-	 //GameRegistry.addShapelessRecipe(new ItemStack (C4mine, 1), new ItemStack (C41, 2);//, new ItemStack (C41, 1));
-	 GameRegistry.addShapelessRecipe(new ItemStack (C45, 1), new ItemStack (C41, 1), new ItemStack (C41, 1), new ItemStack (C41, 1), new ItemStack (C41, 1), new ItemStack (C41, 1));
-	 GameRegistry.addShapelessRecipe(new ItemStack (C410, 1), new ItemStack (C45, 1), new ItemStack (C45, 1));
-	 GameRegistry.addShapelessRecipe(new ItemStack (C420, 1), new ItemStack (C410, 1), new ItemStack (C410, 1)); 
-	 GameRegistry.addShapelessRecipe(new ItemStack(CIron, 1), new ItemStack (Items.coal, 1), new ItemStack (Items.iron_ingot, 1));
-	 GameRegistry.addShapelessRecipe(new ItemStack(C41, 1), new ItemStack(C4Half, 1), new ItemStack(C4Half, 1));
-	 GameRegistry.addShapelessRecipe(new ItemStack(C4Quart, 2),  new ItemStack(C4Half, 1));
-	 GameRegistry.addShapelessRecipe(new ItemStack(C4ThreeQuart, 1),  new ItemStack(C4Quart, 1), new ItemStack(C4Quart, 1), new ItemStack(C4Quart, 1));
-	 GameRegistry.addShapelessRecipe(new ItemStack(Sandbag, 1), new ItemStack(Blocks.wool, 1), new ItemStack(Blocks.sand, 1));
-	 GameRegistry.addShapelessRecipe(new ItemStack(Substrate, 2), new ItemStack(Blocks.sand, 1), new ItemStack(Blocks.gravel, 1));
+	 //GameRegistry.addShapelessRecipe(new ItemStack (C4mine, 1), new ItemStack (c41, 2);//, new ItemStack (c41, 1));
+	 GameRegistry.addShapelessRecipe(new ItemStack (c45, 1), new ItemStack (c41, 1), new ItemStack (c41, 1), new ItemStack (c41, 1), new ItemStack (c41, 1), new ItemStack (c41, 1));
+	 GameRegistry.addShapelessRecipe(new ItemStack (c410, 1), new ItemStack (c45, 1), new ItemStack (c45, 1));
+	 GameRegistry.addShapelessRecipe(new ItemStack (c420, 1), new ItemStack (c410, 1), new ItemStack (c410, 1));
+	 GameRegistry.addShapelessRecipe(new ItemStack(cIron, 1), new ItemStack (Items.coal, 1), new ItemStack (Items.iron_ingot, 1));
+	 GameRegistry.addShapelessRecipe(new ItemStack(c41, 1), new ItemStack(c4Half, 1), new ItemStack(c4Half, 1));
+	 GameRegistry.addShapelessRecipe(new ItemStack(c4Quart, 2),  new ItemStack(c4Half, 1));
+	 GameRegistry.addShapelessRecipe(new ItemStack(c4ThreeQuart, 1),  new ItemStack(c4Quart, 1), new ItemStack(c4Quart, 1), new ItemStack(c4Quart, 1));
+	 GameRegistry.addShapelessRecipe(new ItemStack(sandbag, 1), new ItemStack(Blocks.wool, 1), new ItemStack(Blocks.sand, 1));
+	 GameRegistry.addShapelessRecipe(new ItemStack(substrate, 2), new ItemStack(Blocks.sand, 1), new ItemStack(Blocks.gravel, 1));
 
-	 ItemStack StackBlastH = new ItemStack(BlastHead, 1);//.addEnchantment(Enchantment.blastProtection, 4);
+	 ItemStack StackBlastH = new ItemStack(blastHead, 1);//.addEnchantment(Enchantment.blastProtection, 4);
 	 StackBlastH.addEnchantment(Enchantment.blastProtection, 4);
 	 
-	 ItemStack StackBlastC = new ItemStack(BlastShirt, 1);
+	 ItemStack StackBlastC = new ItemStack(blastShirt, 1);
 	 StackBlastH.addEnchantment(Enchantment.blastProtection, 4);
 	 
-	 ItemStack StackBlastP = new ItemStack(BlastPants, 1);
+	 ItemStack StackBlastP = new ItemStack(blastPants, 1);
 	 StackBlastP.addEnchantment(Enchantment.blastProtection, 4);
 	 
-	 ItemStack StackBlastS = new ItemStack(BlastShoes, 1);
+	 ItemStack StackBlastS = new ItemStack(blastShoes, 1);
 	 StackBlastS.addEnchantment(Enchantment.blastProtection, 4);
 	 
-	 GameRegistry.addShapelessRecipe(StackBlastH, new ItemStack(Items.iron_helmet, 1), new ItemStack(Items.leather_helmet), new ItemStack(WoolHat, 1));
-	 GameRegistry.addShapelessRecipe(StackBlastC, new ItemStack(Items.iron_chestplate, 1), new ItemStack(Items.leather_chestplate, 1), new ItemStack(WoolShirt, 1));
-	 GameRegistry.addShapelessRecipe(StackBlastP, new ItemStack(Items.iron_leggings, 1), new ItemStack(Items.leather_leggings, 1), new ItemStack(WoolPants, 1));
-	 GameRegistry.addShapelessRecipe(StackBlastS, new ItemStack(Items.iron_boots, 1), new ItemStack(Items.leather_boots, 1), new ItemStack(WoolShoes, 1));
+	 GameRegistry.addShapelessRecipe(StackBlastH, new ItemStack(Items.iron_helmet, 1), new ItemStack(Items.leather_helmet), new ItemStack(woolHat, 1));
+	 GameRegistry.addShapelessRecipe(StackBlastC, new ItemStack(Items.iron_chestplate, 1), new ItemStack(Items.leather_chestplate, 1), new ItemStack(woolShirt, 1));
+	 GameRegistry.addShapelessRecipe(StackBlastP, new ItemStack(Items.iron_leggings, 1), new ItemStack(Items.leather_leggings, 1), new ItemStack(woolPants, 1));
+	 GameRegistry.addShapelessRecipe(StackBlastS, new ItemStack(Items.iron_boots, 1), new ItemStack(Items.leather_boots, 1), new ItemStack(woolShoes, 1));
 	 
-	 GameRegistry.addSmelting(new ItemStack(CIron, 1), new ItemStack (Steel, 1), 10F);
-	 GameRegistry.addSmelting(new ItemStack(Items.wheat, 1), new ItemStack(Plastic, 1), 2.0F);
-	 GameRegistry.addSmelting(new ItemStack(Blocks.sapling,1), new ItemStack(Plastic, 1), 2.0F);
+	 GameRegistry.addSmelting(new ItemStack(cIron, 1), new ItemStack (steel, 1), 10F);
+	 GameRegistry.addSmelting(new ItemStack(Items.wheat, 1), new ItemStack(plastic, 1), 2.0F);
+	 GameRegistry.addSmelting(new ItemStack(Blocks.sapling,1), new ItemStack(plastic, 1), 2.0F);
 	 
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
@@ -569,7 +570,7 @@ event.manager.addSound("mod_id:Sparkler.ogg");
  * *********************************************************** */
 
     //  CHANGE TAB NAME
-        //LanguageRegistry.instance().addStringLocalization("itemGroup.MyCreativeTab_1", "en_US", "The Bomb Range Mod");   
+        //LanguageRegistry.instance().addStringLocalization("itemGroup.MyCreativeTab_1", "en_US", "The bomb Range Mod");
         
 
         
@@ -583,9 +584,9 @@ event.manager.addSound("mod_id:Sparkler.ogg");
 @EventHandler
 	public static void postInit( FMLPostInitializationEvent event ) 
 	{
-		WorldType BombRange = new WorldTypeBombRange(7, "Bomb Range");
+		WorldType BombRange = new WorldTypeBombRange(7, "bomb Range");
 		//dispenser stuff
-       // BlockDispenser.dispenseBehaviorRegistry.putObject(Powder, new BehaviorProjectileDispense());
+       // BlockDispenser.dispenseBehaviorRegistry.putObject(powder, new BehaviorProjectileDispense());
         
 	}
 	

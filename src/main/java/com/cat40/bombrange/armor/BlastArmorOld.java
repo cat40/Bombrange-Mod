@@ -78,25 +78,25 @@ public class BlastArmorOld extends ItemArmor {
 
 	/*@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
-		if (itemStack.getItem() == Main.BlastHead) {
-			this.effectPlayer(player, Potion.nightVision, 0);
+		if (itemStack.getItem() == Main.blastHead) {
+			this.effectPlayer(player, potion.nightVision, 0);
 		}
 		if (itemStack.getItem() == ModItems.tutorialChestplate) {
-			this.effectPlayer(player, Potion.digSpeed, 0);
+			this.effectPlayer(player, potion.digSpeed, 0);
 		}
 		if (itemStack.getItem() == ModItems.tutorialLeggings) {
-			this.effectPlayer(player, Potion.moveSpeed, 0);
+			this.effectPlayer(player, potion.moveSpeed, 0);
 		}
 		if (itemStack.getItem() == ModItems.tutorialBoots) {
-			this.effectPlayer(player, Potion.jump, 1);
+			this.effectPlayer(player, potion.jump, 1);
 		}
 
 		if (this.isWearingFullSet(player, ModItems.tutorialHelmet, ModItems.tutorialChestplate, ModItems.tutorialLeggings, ModItems.tutorialBoots)) {
-			this.effectPlayer(player, Potion.regeneration, 1);
+			this.effectPlayer(player, potion.regeneration, 1);
 		}
 	}*/
 /*
-	private void effectPlayer(EntityPlayer player, Potion potion, int amplifier) {
+	private void effectPlayer(EntityPlayer player, potion potion, int amplifier) {
 		//Always effect for 8 seconds, then refresh
 	//	if (player.getActivePotionEffect(potion) == null || player.getActivePotionEffect(potion).getDuration() <= 1)
 			//player.addPotionEffect(new PotionEffect(potion.id, 159, amplifier, true, true));
