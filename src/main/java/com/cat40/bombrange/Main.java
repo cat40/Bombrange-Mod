@@ -121,7 +121,7 @@ public static Block stoneExplosive;
 //public static Block StructOldCannon;
 
 public static Material stone = Material.rock;
-public static Material bombMat = Material.rock;
+public static Material bombMat = new Material(null); //Material.rock;
 
 public static Item Lighter;
 public static Item CIron;
