@@ -301,17 +301,17 @@ event.manager.addSound("mod_id:Sparkler.ogg");
         tnt = new Tnt(++idBase, bombMat, "tnt").setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
         GameRegistry.registerBlock(tnt, "tnt");
 
-        mining = new MiningExplosive(++idBase, bombMat, "MiningExplosive", C4Power).setStepSound(bombSound);
-        GameRegistry.registerBlock(mining, "MiningExplosive");
+        mining = new MiningExplosive(++idBase, bombMat, "miningExplosive", C4Power).setStepSound(bombSound);
+        GameRegistry.registerBlock(mining, "miningExplosive");
 
-        deforestation = new DeforestationExplosive(++idBase, bombMat, "DeforestationExplosive", 20*C4Power);
-        GameRegistry.registerBlock(deforestation, "DeforestationExplosive");
+        deforestation = new DeforestationExplosive(++idBase, bombMat, "deforestationExplosive", 20*C4Power);
+        GameRegistry.registerBlock(deforestation, "deforestationExplosive");
 
-        stoneExplosive = new StoneExplosive(++idBase, bombMat, "StoneExplosive", C4Power);
-        GameRegistry.registerBlock(stoneExplosive, "StoneExplosive");
+        stoneExplosive = new StoneExplosive(++idBase, bombMat, "stoneExplosive", C4Power);
+        GameRegistry.registerBlock(stoneExplosive, "stoneExplosive");
 
-        blastingCap = new BlastingCap(++idBase, bombMat, "BlastingCap");
-        GameRegistry.registerBlock(blastingCap, "BlastingCap");
+        blastingCap = new BlastingCap(++idBase, bombMat, "blastingCap");
+        GameRegistry.registerBlock(blastingCap, "blastingCap");
         
         /*fireLarge = new LargeFire(++idBase, bombMat, "fireLarge").setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
         GameRegistry.registerBlock(fireLarge, "fireLarge");*/
