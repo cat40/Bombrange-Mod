@@ -55,7 +55,7 @@ public class RenderDelay10 extends Render
 
         f2 = (1.0F - ((float)p_76986_1_.fuse - p_76986_9_ + 1.0F) / 100.0F) * 0.8F;
         this.bindEntityTexture(p_76986_1_);
-        this.blockRenderer.renderBlockAsItem(Main.Delay5, 0, p_76986_1_.getBrightness(p_76986_9_));
+        this.blockRenderer.renderBlockAsItem(Main.delay5, 0, p_76986_1_.getBrightness(p_76986_9_));
 
         if (p_76986_1_.fuse / 5 % 2 == 0)
         {
@@ -64,7 +64,7 @@ public class RenderDelay10 extends Render
             GL11.glEnable(GL11.GL_BLEND);
             GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_DST_ALPHA);
             GL11.glColor4f(1.0F, 1.0F, 1.0F, f2);
-            this.blockRenderer.renderBlockAsItem(Main.Delay10, 0, 1.0F);
+            this.blockRenderer.renderBlockAsItem(Main.delay10, 0, 1.0F);
             GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
             GL11.glDisable(GL11.GL_BLEND);
             GL11.glEnable(GL11.GL_LIGHTING);

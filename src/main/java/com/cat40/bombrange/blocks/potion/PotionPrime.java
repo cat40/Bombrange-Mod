@@ -38,7 +38,7 @@ public class PotionPrime extends Entity
         this.setSize(0.98F, 0.98F);
         this.yOffset = this.height / 2.0F;
         //need to find out where RenderTNTPrimed is called and copy that
-        //Arrow not rendering at all
+        //arrow not rendering at all
         
         arrowVectors = new double[rings][1];
         for(int i=0; i<rings; i++)

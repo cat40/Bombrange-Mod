@@ -11,10 +11,10 @@ public class BombRange extends BiomeGenBase
     {
         super(par1);
         
-        this.setBiomeName("The Bomb Range");
+        this.setBiomeName("The bomb Range");
         
-        this.topBlock = (Block)Main.Turf;
-        this.fillerBlock = (Block)Main.Turf;
+        this.topBlock = (Block)Main.turf;
+        this.fillerBlock = (Block)Main.turf;
         this.rootHeight =  64;
         this.heightVariation = 0.05F;
         this.setTemperatureRainfall(1.5F, 0.2F);

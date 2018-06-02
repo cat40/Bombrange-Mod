@@ -208,23 +208,23 @@ public class Dispenser extends BlockContainer
             		bombx += offset;
             	}
                 Map<String, Entity> bombs = new HashMap<String, Entity>();
-                /*bombs.put("tile.C4Quart", new QuartPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
-                bombs.put("tile.C4Half", new HalfPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
-                bombs.put("tile.C4ThreeQuart", new ThreeQuartPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
-                bombs.put("tile.C41", new IPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
-                bombs.put("tile.C45", new VPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
-                bombs.put("tile.C410", new XPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
-                bombs.put("tile.C420", new XXPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));*/
-                bombs.put("tile.Delay1", new DelayPrime1(world, bombx, bomby, bombz));
-                bombs.put("tile.Delay5", new DelayPrime5(world, bombx, bomby, bombz));
-                bombs.put("tile.Delay10", new DelayPrime10(world, bombx, bomby, bombz));
-                bombs.put("tile.Delay30", new DelayPrime30(world, bombx, bomby, bombz));
-                bombs.put("tile.Powder", new PowderPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
-                bombs.put("tile.Arrow", new ArrowPrime(world, bombx, bomby, bombz));
-                bombs.put("tile.Potion", new PotionPrime(world, bombx, bomby, bombz));
-                bombs.put("tile.Fire", new FirePrime(world, bombx, bomby, bombz));
-                // bombs.put("tile.Bomb", new GunpowderPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
-                //bombs.put("tile.Blast", new BlastPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
+                /*bombs.put("tile.c4Quart", new QuartPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
+                bombs.put("tile.c4Half", new HalfPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
+                bombs.put("tile.c4ThreeQuart", new ThreeQuartPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
+                bombs.put("tile.c41", new IPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
+                bombs.put("tile.c45", new VPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
+                bombs.put("tile.c410", new XPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
+                bombs.put("tile.c420", new XXPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));*/
+                bombs.put("tile.delay1", new DelayPrime1(world, bombx, bomby, bombz));
+                bombs.put("tile.delay5", new DelayPrime5(world, bombx, bomby, bombz));
+                bombs.put("tile.delay10", new DelayPrime10(world, bombx, bomby, bombz));
+                bombs.put("tile.delay30", new DelayPrime30(world, bombx, bomby, bombz));
+                bombs.put("tile.powder", new PowderPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
+                bombs.put("tile.arrow", new ArrowPrime(world, bombx, bomby, bombz));
+                bombs.put("tile.potion", new PotionPrime(world, bombx, bomby, bombz));
+                bombs.put("tile.fire", new FirePrime(world, bombx, bomby, bombz));
+                // bombs.put("tile.bomb", new GunpowderPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
+                //bombs.put("tile.blast", new BlastPrime(world, bombx, bomby, bombz, Main.dispenseFuseLen));
                 if (bombs.containsKey(name))
                 {
                 	Entity entity = bombs.get(name);
