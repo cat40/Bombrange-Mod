@@ -244,27 +244,27 @@ event.manager.addSound("mod_id:Sparkler.ogg");
  		Bomb = new Gunpowder(idBase, stone, "Bomb").setHardness(10.0F).setStepSound(Block.soundTypeAnvil).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
         GameRegistry.registerBlock(Bomb, "Bomb");
         
-        C4Quart = new C4(++idBase, bombMat, "C4Quart", C4Power/4).setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        C4Half = new C4(++idBase, bombMat, "C4Half", C4Power/2).setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        C4ThreeQuart = new C4(++idBase, bombMat, "C4ThreeQuart", C4Power * 3.0/4.0).setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        C41 = new C4(++idBase, bombMat, "C41", C4Power).setHardness(10.0F).setResistance(bombres);
-        C45 = new C4(++idBase, bombMat, "C45", C4Power*5).setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        C410 = new C4(++idBase, bombMat, "C410", C4Power*10).setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        C420 = new C4(++idBase, bombMat, "C420", C4Power*20).setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);//*/
+        C4Quart = new C4(++idBase, bombMat, "C4Quart", C4Power/4).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        C4Half = new C4(++idBase, bombMat, "C4Half", C4Power/2).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        C4ThreeQuart = new C4(++idBase, bombMat, "C4ThreeQuart", C4Power * 3.0/4.0).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        C41 = new C4(++idBase, bombMat, "C41", C4Power);
+        C45 = new C4(++idBase, bombMat, "C45", C4Power*5).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        C410 = new C4(++idBase, bombMat, "C410", C4Power*10).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        C420 = new C4(++idBase, bombMat, "C420", C4Power*20).setCreativeTab(Main.CreativeTabMod.tabBomb);//*/
        // Benchmark = new C4_10(++idBase, bombMat, "benchmark").setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerBlock(C4Quart, "C4Quart").setStepSound(bombSound);
-        GameRegistry.registerBlock(C4Half,  "C4Half").setStepSound(bombSound);
-        GameRegistry.registerBlock(C4ThreeQuart, "C4ThreeQuart").setStepSound(bombSound);
-        GameRegistry.registerBlock(C41, "C41").setStepSound(bombSound);
-        GameRegistry.registerBlock(C45, "C45").setStepSound(bombSound);
-        GameRegistry.registerBlock(C410, "C410").setStepSound(bombSound);
-        GameRegistry.registerBlock(C420, "C420").setStepSound(bombSound);
+        GameRegistry.registerBlock(C4Quart, "C4Quart");
+        GameRegistry.registerBlock(C4Half,  "C4Half");
+        GameRegistry.registerBlock(C4ThreeQuart, "C4ThreeQuart");
+        GameRegistry.registerBlock(C41, "C41");
+        GameRegistry.registerBlock(C45, "C45");
+        GameRegistry.registerBlock(C410, "C410");
+        GameRegistry.registerBlock(C420, "C420");
        // GameRegistry.registerBlock(Benchmark, "Benchmark").setStepSound(bombSound);
         
-        Powder = new Powder(++idBase, bombMat, "Powder").setHardness(10.0F).setStepSound(bombSound).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        Powder = new Powder(++idBase, bombMat, "Powder").setCreativeTab(Main.CreativeTabMod.tabBomb);
         GameRegistry.registerBlock(Powder, "Powder");
 
-        Dyno = new Dynamite(++idBase, bombMat, "Dyno").setStepSound(bombSound).setHardness(10.0F).setResistance(bombres).setCreativeTab(Main.CreativeTabMod.tabBomb);
+        Dyno = new Dynamite(++idBase, bombMat, "Dyno").setCreativeTab(Main.CreativeTabMod.tabBomb);
         GameRegistry.registerBlock(Dyno, "Dyno");
 
         Turf = new Turf(++idBase, bombMat, "Turf").setResistance(150).setStepSound(Block.soundTypeGravel).setCreativeTab(Main.CreativeTabMod.tabBomb);
@@ -300,13 +300,13 @@ event.manager.addSound("mod_id:Sparkler.ogg");
         Tnt = new Tnt(++idBase, bombMat, "Tnt").setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
         GameRegistry.registerBlock(Tnt, "Tnt");
 
-        Mining = new MiningExplosive(++idBase, bombMat, "MiningExplosive", C4Power).setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
+        Mining = new MiningExplosive(++idBase, bombMat, "MiningExplosive", C4Power).setStepSound(bombSound);
         GameRegistry.registerBlock(Mining, "MiningExplosive");
 
-        Deforestation = new DeforestationExplosive(++idBase, bombMat, "DeforestationExplosive", 20*C4Power).setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
+        Deforestation = new DeforestationExplosive(++idBase, bombMat, "DeforestationExplosive", 20*C4Power);
         GameRegistry.registerBlock(Deforestation, "DeforestationExplosive");
 
-        stoneExplosive = new StoneExplosive(++idBase, bombMat, "StoneExplosive", C4Power).setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
+        stoneExplosive = new StoneExplosive(++idBase, bombMat, "StoneExplosive", C4Power);
         GameRegistry.registerBlock(stoneExplosive, "StoneExplosive");
 
         blastingCap = new BlastingCap(++idBase, bombMat, "BlastingCap");

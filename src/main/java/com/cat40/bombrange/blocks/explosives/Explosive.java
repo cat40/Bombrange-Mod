@@ -29,6 +29,9 @@ public abstract class Explosive extends Block
         setBlockName(textureName);
         assetPath = texturePath + textureName;
         this.power = power;
+        this.setStepSound(Main.bombSound);
+        this.setHardness(10.0F);
+        this.setResistance(Main.bombres);
     }
 
     /**
