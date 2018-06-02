@@ -78,7 +78,7 @@ public class BlastArmorOld extends ItemArmor {
 
 	/*@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemStack) {
-		if (itemStack.getItem() == Main.BlastHead) {
+		if (itemStack.getItem() == Main.blastHead) {
 			this.effectPlayer(player, potion.nightVision, 0);
 		}
 		if (itemStack.getItem() == ModItems.tutorialChestplate) {

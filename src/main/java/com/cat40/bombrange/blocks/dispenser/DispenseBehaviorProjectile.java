@@ -15,7 +15,7 @@ public abstract class DispenseBehaviorProjectile extends BehaviorDefaultDispense
     private static final String __OBFID = "CL_00001394";
 
     /**
-     * Dispense the specified stack, play the dispense sound and spawn particles.
+     * dispense the specified stack, play the dispense sound and spawn particles.
      */
     public ItemStack dispenseStack(IBlockSource p_82487_1_, ItemStack p_82487_2_)
     {

@@ -54,7 +54,7 @@ public class RenderFallingSubstrate extends Render
         }
 
         this.bindEntityTexture(p_76986_1_);
-        this.blockRenderer.renderBlockAsItem(Main.Substrate, 0, p_76986_1_.getBrightness(p_76986_9_));
+        this.blockRenderer.renderBlockAsItem(Main.substrate, 0, p_76986_1_.getBrightness(p_76986_9_));
         GL11.glPopMatrix();
     }
 

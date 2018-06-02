@@ -51,7 +51,7 @@ public class BlockStructure extends Block
     
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int p_149727_6_, float p_149727_7_, float p_149727_8_, float p_149727_9_)
     {
-        if (player.getCurrentEquippedItem() != null && player.getCurrentEquippedItem().getItem() == Main.Lighter)
+        if (player.getCurrentEquippedItem() != null && player.getCurrentEquippedItem().getItem() == Main.lighter)
         {
             world.setBlockToAir(x, y, z);
             int dir = MathHelper.floor_double((double)(player.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3; // 0 = north, 1 = east, etc.

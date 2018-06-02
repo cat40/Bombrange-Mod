@@ -124,13 +124,13 @@ public static Block blastingCap;
 public static Material stone = Material.rock;
 public static Material bombMat = new Material(null); //Material.rock;
 
-public static Item Lighter;
-public static Item CIron;
-public static Item Steel;
-public static Item SteelBar;
-public static Item Plastic;
-public static Item BlastHead, BlastShirt, BlastPants, BlastShoes;
-public static Item WoolHat, WoolShirt, WoolPants, WoolShoes;
+public static Item lighter;
+public static Item cIron;
+public static Item steel;
+public static Item steelBar;
+public static Item plastic;
+public static Item blastHead, blastShirt, blastPants, blastShoes;
+public static Item woolHat, woolShirt, woolPants, woolShoes;
 
 // constants
 public static float bombres = 3.0F;
@@ -210,7 +210,7 @@ event.manager.addSound("mod_id:Sparkler.ogg");
 /*       public static CreativeTabs MyCreativeTab_1 = new CreativeTabs("MyCreativeTab_1")
         {
             public ItemStack getIconItemStack() {
-                return new ItemStack(Lighter, 1, 0);   // Icon, Stack Size, Tab Position
+                return new ItemStack(lighter, 1, 0);   // Icon, Stack Size, Tab Position
             }
         };
     */     
@@ -318,9 +318,9 @@ event.manager.addSound("mod_id:Sparkler.ogg");
         //TODO fireLarge is spawning fireballs about every second (but only calls the method in the entity class once)
         //Fireballs are not exploding or lighting fires.
         
-        Lighter = new Lighter(++idBase, OneUse, "Lighter").setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerItem(Lighter, "Lighter");
-        //LanguageRegistry.addName(Lighter, "Fuse Lighter"); 
+        lighter = new Lighter(++idBase, OneUse, "lighter").setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerItem(lighter, "lighter");
+        //LanguageRegistry.addName(lighter, "Fuse lighter");
         
         concrete = new GenericBlock(++idBase, Material.rock, "concrete", "Pickaxe", 2).setResistance(50).setCreativeTab(Main.CreativeTabMod.tabBomb);
         GameRegistry.registerBlock(concrete, "concrete");
@@ -331,20 +331,20 @@ event.manager.addSound("mod_id:Sparkler.ogg");
         sandbag = new GenericBlock(++idBase, Material.sand, "sandbag", "Shovel", 0).setResistance(45).setStepSound(Block.soundTypeGravel);
         GameRegistry.registerBlock(sandbag, "sandbag"); // todo add a texture for this
         
-        Steel = new GenericItem(++idBase, "Steel").setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerItem(Steel, "Steel");
+        steel = new GenericItem(++idBase, "steel").setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerItem(steel, "steel");
         
-        CIron = new GenericItem(++idBase, "CIron").setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerItem(CIron,  "CIron");
+        cIron = new GenericItem(++idBase, "cIron").setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerItem(cIron,  "cIron");
         
-        SteelBar = new GenericItem(++idBase, "SteelBar").setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerItem(SteelBar, "SteelBar");
+        steelBar = new GenericItem(++idBase, "steelBar").setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerItem(steelBar, "steelBar");
         
         reGlass = new ReGlass(++idBase, Material.glass, "reGlass", "Pickaxe", 0).setResistance(45).setCreativeTab(Main.CreativeTabMod.tabBomb);
         GameRegistry.registerBlock(reGlass, "reGlass");
         
-        Plastic = new GenericItem(++idBase, "Plastic").setCreativeTab(Main.CreativeTabMod.tabBomb);
-        GameRegistry.registerItem(Plastic,  "Plastic");
+        plastic = new GenericItem(++idBase, "plastic").setCreativeTab(Main.CreativeTabMod.tabBomb);
+        GameRegistry.registerItem(plastic,  "plastic");
         
         dispense = new Dispenser(++idBase).setResistance(indestructable).setStepSound(Block.soundTypeStone).setCreativeTab(Main.CreativeTabMod.tabBomb);
         GameRegistry.registerBlock(dispense, "dispense");
@@ -380,23 +380,23 @@ event.manager.addSound("mod_id:Sparkler.ogg");
     	EntityRegistry.registerModEntity(FallingSubstrate.class, "Falling substrate:",++EntityID, this, 256, 10, true);
     	EntityRegistry.registerModEntity(DummyEntity.class, "Dummy Entity", ++EntityID, this, 256, 10, true);
 
-        BlastHead = new BlastShirt(ArmBlast, 0, 0, "BlastHead").setTextureName(modid + "BlastHead").setCreativeTab(CreativeTabMod.tabBomb);
-        BlastShirt = new BlastShirt(ArmBlast, 0, 1, "BlastShirt").setTextureName(modid + "BlastShirt").setCreativeTab(CreativeTabMod.tabBomb);
-        BlastPants = new BlastShirt(ArmBlast, 0, 2, "BlastPants").setTextureName(modid + "BlastPants").setCreativeTab(CreativeTabMod.tabBomb);
-        BlastShoes = new BlastShirt(ArmBlast, 0, 3, "BlastShoes").setTextureName(modid + "BlastShoes").setCreativeTab(CreativeTabMod.tabBomb);
-        GameRegistry.registerItem(BlastHead,  "BlastHead");
-        GameRegistry.registerItem(BlastShirt, "BlastShirt");
-        GameRegistry.registerItem(BlastPants, "BlastPants");
-        GameRegistry.registerItem(BlastShoes, "BlastShoes");
+        blastHead = new BlastShirt(ArmBlast, 0, 0, "blastHead").setTextureName(modid + "blastHead").setCreativeTab(CreativeTabMod.tabBomb);
+        blastShirt = new BlastShirt(ArmBlast, 0, 1, "blastShirt").setTextureName(modid + "blastShirt").setCreativeTab(CreativeTabMod.tabBomb);
+        blastPants = new BlastShirt(ArmBlast, 0, 2, "blastPants").setTextureName(modid + "blastPants").setCreativeTab(CreativeTabMod.tabBomb);
+        blastShoes = new BlastShirt(ArmBlast, 0, 3, "blastShoes").setTextureName(modid + "blastShoes").setCreativeTab(CreativeTabMod.tabBomb);
+        GameRegistry.registerItem(blastHead,  "blastHead");
+        GameRegistry.registerItem(blastShirt, "blastShirt");
+        GameRegistry.registerItem(blastPants, "blastPants");
+        GameRegistry.registerItem(blastShoes, "blastShoes");
         
-        WoolHat = new GenericItem(++idBase, "WoolHat").setCreativeTab(Main.CreativeTabMod.tabBomb);
-        RI(WoolHat, "WoolHat");
-        WoolShirt = new GenericItem(++idBase, "WoolShirt").setCreativeTab(Main.CreativeTabMod.tabBomb);
-        RI(WoolShirt, "WoolShirt");
-        WoolPants = new GenericItem(++idBase, "WoolPants").setCreativeTab(Main.CreativeTabMod.tabBomb);
-        RI(WoolPants, "WoolPants");
-        WoolShoes = new GenericItem(++idBase, "WoolShoes").setCreativeTab(Main.CreativeTabMod.tabBomb);
-        RI(WoolShoes, "WoolShoes");
+        woolHat = new GenericItem(++idBase, "woolHat").setCreativeTab(Main.CreativeTabMod.tabBomb);
+        RI(woolHat, "woolHat");
+        woolShirt = new GenericItem(++idBase, "woolShirt").setCreativeTab(Main.CreativeTabMod.tabBomb);
+        RI(woolShirt, "woolShirt");
+        woolPants = new GenericItem(++idBase, "woolPants").setCreativeTab(Main.CreativeTabMod.tabBomb);
+        RI(woolPants, "woolPants");
+        woolShoes = new GenericItem(++idBase, "woolShoes").setCreativeTab(Main.CreativeTabMod.tabBomb);
+        RI(woolShoes, "woolShoes");
        
         //biome
         BiomeRegistry.mainRegistry();
@@ -471,9 +471,9 @@ event.manager.addSound("mod_id:Sparkler.ogg");
                 "XSX",
                 "SXS",
             'S', Items.gunpowder,
-            'X', Plastic);
+            'X', plastic);
             //  ITEM RECIPE         
-        GameRegistry.addRecipe(new ItemStack(Lighter, 1),
+        GameRegistry.addRecipe(new ItemStack(lighter, 1),
                 "G",
                 "S",
                 "T",
@@ -487,10 +487,10 @@ event.manager.addSound("mod_id:Sparkler.ogg");
             'S', Blocks.sand,
             'W', Items.water_bucket.setContainerItem(Items.bucket));
         
-        GameRegistry.addRecipe(new ItemStack(SteelBar, 2),
+        GameRegistry.addRecipe(new ItemStack(steelBar, 2),
                 "S",
                 "S",
-            'S', Steel);
+            'S', steel);
         
         GameRegistry.addRecipe(new ItemStack(reConcrete, 1),
         		"R",
@@ -498,7 +498,7 @@ event.manager.addSound("mod_id:Sparkler.ogg");
                 "S",
             'S', Blocks.sand,
             'W', Items.water_bucket.setContainerItem(Items.bucket),
-            'R', SteelBar);
+            'R', steelBar);
         
         GameRegistry.addRecipe(new ItemStack(cord, 8),
                 "WWW",
@@ -507,23 +507,23 @@ event.manager.addSound("mod_id:Sparkler.ogg");
         'W', Blocks.wool,
         'G', Items.gunpowder);
         
-        GameRegistry.addRecipe(new ItemStack(WoolHat, 1),
+        GameRegistry.addRecipe(new ItemStack(woolHat, 1),
         				"WWW",
         				"W W",
         				
         				'W', Blocks.wool);
-        GameRegistry.addRecipe(new ItemStack(WoolShirt, 1),
+        GameRegistry.addRecipe(new ItemStack(woolShirt, 1),
         				"W W", 
         				"WWW", 
         				"WWW", 
         				
         				'W', Blocks.wool);
-        GameRegistry.addRecipe(new ItemStack(WoolPants, 1),
+        GameRegistry.addRecipe(new ItemStack(woolPants, 1),
         				"WWW",
         				"W W",
         				"W W",
         				'W', Blocks.wool);
-        GameRegistry.addRecipe(new ItemStack(WoolShoes, 1),
+        GameRegistry.addRecipe(new ItemStack(woolShoes, 1),
         				"W W",
         				"W W",
         				'W', Blocks.wool);
@@ -533,33 +533,33 @@ event.manager.addSound("mod_id:Sparkler.ogg");
 	 GameRegistry.addShapelessRecipe(new ItemStack (c45, 1), new ItemStack (c41, 1), new ItemStack (c41, 1), new ItemStack (c41, 1), new ItemStack (c41, 1), new ItemStack (c41, 1));
 	 GameRegistry.addShapelessRecipe(new ItemStack (c410, 1), new ItemStack (c45, 1), new ItemStack (c45, 1));
 	 GameRegistry.addShapelessRecipe(new ItemStack (c420, 1), new ItemStack (c410, 1), new ItemStack (c410, 1));
-	 GameRegistry.addShapelessRecipe(new ItemStack(CIron, 1), new ItemStack (Items.coal, 1), new ItemStack (Items.iron_ingot, 1));
+	 GameRegistry.addShapelessRecipe(new ItemStack(cIron, 1), new ItemStack (Items.coal, 1), new ItemStack (Items.iron_ingot, 1));
 	 GameRegistry.addShapelessRecipe(new ItemStack(c41, 1), new ItemStack(c4Half, 1), new ItemStack(c4Half, 1));
 	 GameRegistry.addShapelessRecipe(new ItemStack(c4Quart, 2),  new ItemStack(c4Half, 1));
 	 GameRegistry.addShapelessRecipe(new ItemStack(c4ThreeQuart, 1),  new ItemStack(c4Quart, 1), new ItemStack(c4Quart, 1), new ItemStack(c4Quart, 1));
 	 GameRegistry.addShapelessRecipe(new ItemStack(sandbag, 1), new ItemStack(Blocks.wool, 1), new ItemStack(Blocks.sand, 1));
 	 GameRegistry.addShapelessRecipe(new ItemStack(substrate, 2), new ItemStack(Blocks.sand, 1), new ItemStack(Blocks.gravel, 1));
 
-	 ItemStack StackBlastH = new ItemStack(BlastHead, 1);//.addEnchantment(Enchantment.blastProtection, 4);
+	 ItemStack StackBlastH = new ItemStack(blastHead, 1);//.addEnchantment(Enchantment.blastProtection, 4);
 	 StackBlastH.addEnchantment(Enchantment.blastProtection, 4);
 	 
-	 ItemStack StackBlastC = new ItemStack(BlastShirt, 1);
+	 ItemStack StackBlastC = new ItemStack(blastShirt, 1);
 	 StackBlastH.addEnchantment(Enchantment.blastProtection, 4);
 	 
-	 ItemStack StackBlastP = new ItemStack(BlastPants, 1);
+	 ItemStack StackBlastP = new ItemStack(blastPants, 1);
 	 StackBlastP.addEnchantment(Enchantment.blastProtection, 4);
 	 
-	 ItemStack StackBlastS = new ItemStack(BlastShoes, 1);
+	 ItemStack StackBlastS = new ItemStack(blastShoes, 1);
 	 StackBlastS.addEnchantment(Enchantment.blastProtection, 4);
 	 
-	 GameRegistry.addShapelessRecipe(StackBlastH, new ItemStack(Items.iron_helmet, 1), new ItemStack(Items.leather_helmet), new ItemStack(WoolHat, 1));
-	 GameRegistry.addShapelessRecipe(StackBlastC, new ItemStack(Items.iron_chestplate, 1), new ItemStack(Items.leather_chestplate, 1), new ItemStack(WoolShirt, 1));
-	 GameRegistry.addShapelessRecipe(StackBlastP, new ItemStack(Items.iron_leggings, 1), new ItemStack(Items.leather_leggings, 1), new ItemStack(WoolPants, 1));
-	 GameRegistry.addShapelessRecipe(StackBlastS, new ItemStack(Items.iron_boots, 1), new ItemStack(Items.leather_boots, 1), new ItemStack(WoolShoes, 1));
+	 GameRegistry.addShapelessRecipe(StackBlastH, new ItemStack(Items.iron_helmet, 1), new ItemStack(Items.leather_helmet), new ItemStack(woolHat, 1));
+	 GameRegistry.addShapelessRecipe(StackBlastC, new ItemStack(Items.iron_chestplate, 1), new ItemStack(Items.leather_chestplate, 1), new ItemStack(woolShirt, 1));
+	 GameRegistry.addShapelessRecipe(StackBlastP, new ItemStack(Items.iron_leggings, 1), new ItemStack(Items.leather_leggings, 1), new ItemStack(woolPants, 1));
+	 GameRegistry.addShapelessRecipe(StackBlastS, new ItemStack(Items.iron_boots, 1), new ItemStack(Items.leather_boots, 1), new ItemStack(woolShoes, 1));
 	 
-	 GameRegistry.addSmelting(new ItemStack(CIron, 1), new ItemStack (Steel, 1), 10F);
-	 GameRegistry.addSmelting(new ItemStack(Items.wheat, 1), new ItemStack(Plastic, 1), 2.0F);
-	 GameRegistry.addSmelting(new ItemStack(Blocks.sapling,1), new ItemStack(Plastic, 1), 2.0F);
+	 GameRegistry.addSmelting(new ItemStack(cIron, 1), new ItemStack (steel, 1), 10F);
+	 GameRegistry.addSmelting(new ItemStack(Items.wheat, 1), new ItemStack(plastic, 1), 2.0F);
+	 GameRegistry.addSmelting(new ItemStack(Blocks.sapling,1), new ItemStack(plastic, 1), 2.0F);
 	 
 
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */	
