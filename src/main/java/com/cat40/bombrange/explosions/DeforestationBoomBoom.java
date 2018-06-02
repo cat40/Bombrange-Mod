@@ -159,16 +159,11 @@ public class DeforestationBoomBoom extends Explosion {
                         int cordy = b * (int) (y+.5) + (int) this.explosionY;
                         int cordz = c * (int) (z+.5) + (int) this.explosionZ;
                         Block block = this.worldObj.getBlock(cordx, cordy, cordz);
-                        if(block.isWood(this.worldObj, cordx, cordy, cordz) || block.isLeaves(this.worldObj, cordx, cordy, cordz))
+                        if(block.getMaterial() != Material.air && (block.isWood(this.worldObj, cordx, cordy, cordz) || block.isLeaves(this.worldObj, cordx, cordy, cordz)))
                         {
                             block.onBlockExploded(this.worldObj, cordx, cordy, cordz, this);
                             this.worldObj.setBlockToAir(cordx, cordy, cordz);
                         }
-                        //worldObj.setBlockToAir(a * x + (int) (this.explosionX + 0.5), b * y + (int) (this.explosionY + 0.5), c * (int) (z + 0.5) + (int) (this.explosionZ + 0.5));
-                        /*worldObj.setBlock(a * (int) (x+.5) + (int) this.explosionX,
-                                b * (int) (y+.5) + (int) this.explosionY,
-                                c * (int) (z+.5) + (int) this.explosionZ,
-                                Blocks.brick_block);*/
                     }
                 }
             }
