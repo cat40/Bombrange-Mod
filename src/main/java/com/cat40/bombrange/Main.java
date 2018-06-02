@@ -118,6 +118,7 @@ public static Block Substrate;
 public static Block Mining;
 public static Block Deforestation;
 public static Block stoneExplosive;
+public static Block blastingCap;
 //public static Block StructOldCannon;
 
 public static Material stone = Material.rock;
@@ -307,6 +308,9 @@ event.manager.addSound("mod_id:Sparkler.ogg");
 
         stoneExplosive = new StoneExplosive(++idBase, bombMat, "StoneExplosive", C4Power).setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
         GameRegistry.registerBlock(stoneExplosive, "StoneExplosive");
+
+        blastingCap = new BlastingCap(++idBase, bombMat, "BlastingCap");
+        GameRegistry.registerBlock(blastingCap, "BlastingCap");
         
         /*FireLarge = new LargeFire(++idBase, bombMat, "FireLarge").setStepSound(bombSound).setHardness(10.0F).setResistance(bombres);
         GameRegistry.registerBlock(FireLarge, "FireLarge");*/

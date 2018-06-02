@@ -35,6 +35,7 @@ tile.Substrate.name=Substrate
 tile.MiningExplosive.name=Mining Explosive
 tile.DeforestationExplosive.name=Deforestation Explosive
 tile.StoneExplosive.name=Stone Explosive
+tile.BlastingCap=Blasting Cap
 
 item.Lighter.name=Fuse Lighter
 item.Plastic.name=Plastic
