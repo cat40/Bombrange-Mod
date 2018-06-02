@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ed5093c-a0d9-4802-8d5f-3f1c608f1899" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/BlastingCap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/BlastingCap.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -24,10 +24,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
+            <state relative-caret-position="723">
               <caret line="147" column="3" selection-start-line="147" selection-start-column="3" selection-end-line="147" selection-end-column="3" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -64,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BlastingCap.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BlastingCap.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/BlastingCap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+            <state relative-caret-position="578">
+              <caret line="41" column="55" lean-forward="true" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="56" />
               <folding>
                 <element signature="e#445#446#0" expanded="true" />
                 <element signature="e#501#502#0" expanded="true" />
@@ -679,9 +679,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/explosions/ExplosiveBoomBoom.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/explosions/DeforestationBoomBoom.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Explosive.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/BlastingCap.java" />
         <option value="$PROJECT_DIR$/src/main/java/assets/bombrange/lang/en_US.lang" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/BlastingCap.java" />
       </list>
     </option>
   </component>
@@ -858,12 +858,12 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5083333" side_tool="true" weight="0.21572796" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49166667" weight="0.21572796" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49166667" visible="true" weight="0.21572796" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1828125" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1828125" />
       <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49739584" weight="0.17003188" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4953125" weight="0.26354942" />
       <window_info anchor="right" id="Gradle" order="3" />
@@ -1267,17 +1267,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/BlastingCap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
-          <folding>
-            <element signature="e#445#446#0" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/assets/bombrange/lang/en_US.lang">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
@@ -1287,11 +1276,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
+        <state relative-caret-position="723">
           <caret line="147" column="3" selection-start-line="147" selection-start-column="3" selection-end-line="147" selection-end-column="3" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/BlastingCap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="41" column="55" lean-forward="true" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="56" />
+          <folding>
+            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
           </folding>
         </state>
       </provider>

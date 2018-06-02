@@ -33,13 +33,17 @@ public class BlastingCap extends ActivatableExplosive
             {
                 for (int c = -1; c <= 1; c++)
                 {
-                    Block block = world.getBlock(a + x, b + y, c + z);
+                    int xcord = a+x;
+                    int ycord = b+y;
+                    int zcord = c+z;
+
+                    Block block = world.getBlock(xcord, ycord, zcord);
                     System.out.println(Blocks.tnt.getMaterial());
-                    if (block.getMaterial() == Main.bombMat)
+                    if (Main.explosives.contains(block))
                     {
-                        //world.setBlock(a + x, b + y, c + z, Blocks.brick_block);
-                        block.onBlockDestroyedByExplosion(world, a*x, b*y, c*z, null);
-                        world.setBlockToAir(a*x, b*y, c*z);
+                        world.setBlock(xcord, ycord, zcord, Blocks.brick_block);
+                        block.onBlockDestroyedByExplosion(world, xcord, ycord, zcord, null);
+                        world.setBlockToAir(xcord, ycord, zcord);
                     }
                 }
             }
