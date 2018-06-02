@@ -61,6 +61,9 @@ import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.util.EnumHelper;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 /* 	MOD INFO */
 	@Mod(modid = "bombrange", name = "Bomb Range Mod", version = "0.2.0")
@@ -80,6 +83,7 @@ public class Main {
 public static String modid_without_colon = "bombrange";
 public static String modid = modid_without_colon + ":";
 /* Explosives */
+public static List<Block> explosives = new ArrayList<Block>();
 public static Block Bomb;
 public static Block C41;
 public static Block C45;

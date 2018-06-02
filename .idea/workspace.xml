@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ed5093c-a0d9-4802-8d5f-3f1c608f1899" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/BlastingCap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/BlastingCap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -24,14 +24,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="267" column="49" selection-start-line="267" selection-start-column="49" selection-end-line="267" selection-end-column="49" />
+            <state relative-caret-position="442">
+              <caret line="89" column="25" lean-forward="true" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
+                <element signature="e#3515#3522#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -64,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BlastingCap.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BlastingCap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/BlastingCap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+            <state relative-caret-position="588">
+              <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
               <folding>
                 <element signature="e#445#446#0" expanded="true" />
                 <element signature="e#501#502#0" expanded="true" />
@@ -680,8 +681,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/explosions/DeforestationBoomBoom.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/Explosive.java" />
         <option value="$PROJECT_DIR$/src/main/java/assets/bombrange/lang/en_US.lang" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/BlastingCap.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java" />
       </list>
     </option>
   </component>
@@ -1312,17 +1313,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="267" column="49" selection-start-line="267" selection-start-column="49" selection-end-line="267" selection-end-column="49" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/ActivatableExplosive.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-663">
@@ -1342,11 +1332,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/BlastingCap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+        <state relative-caret-position="588">
+          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
           <folding>
             <element signature="e#445#446#0" expanded="true" />
             <element signature="e#501#502#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="89" column="25" lean-forward="true" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#3515#3522#0" expanded="true" />
           </folding>
         </state>
       </provider>
