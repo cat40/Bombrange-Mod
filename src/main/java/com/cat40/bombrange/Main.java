@@ -237,7 +237,7 @@ event.manager.addSound("mod_id:Sparkler.ogg");
   * todo add special propellent block that has a directional explosion
   * todo add mining explosives that drop everything, or everything but stone and dirt.
   * todo add explosive that only destroys stone (and drops it all)
-  * todo make deforestation explosive more of a globe instead of a series of rays
+  * todo add explosion effects to blasting cap
   * todo modify powder explosion to make more smoke
   */
  
