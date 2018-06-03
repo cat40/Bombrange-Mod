@@ -118,34 +118,7 @@ public static Block mining;
 public static Block deforestation;
 public static Block stoneExplosive;
 public static Block blastingCap;
-public static List<Block> explosives = new ArrayList<Block>(){{ // todo replace this with a type check if the block is extension of Explosive
-    add(Blocks.tnt);
-    add(bomb);
-    add(c41);
-    add(c45);
-    add(c410);
-    add(c420);
-    add(dyno);
-    add(cord);
-    add(c4Quart);
-    add(c4Half);
-    add(c4ThreeQuart);
-    add(powder);
-    add(delay1);
-    add(delay5);
-    add(delay10);
-    add(delay30);
-    add(arrow);
-    add(fire);
-    add(potion);
-    add(fireLarge);
-    add(tracer);
-    add(tnt);
-    add(mining);
-    add(deforestation);
-    add(stoneExplosive);
-    add(blastingCap);
-}};
+public static List<Block> explosives;
 //public static Block StructOldCannon;
 
 public static Material stone = Material.rock;
@@ -427,7 +400,35 @@ event.manager.addSound("mod_id:Sparkler.ogg");
        
         //biome
         BiomeRegistry.mainRegistry();
-        
+
+        this.explosives = new ArrayList<Block>(){{ // todo replace this with a type check if the block is extension of Explosive
+            add(Blocks.tnt);
+            add(bomb);
+            add(c41);
+            add(c45);
+            add(c410);
+            add(c420);
+            add(dyno);
+            add(cord);
+            add(c4Quart);
+            add(c4Half);
+            add(c4ThreeQuart);
+            add(powder);
+            add(delay1);
+            add(delay5);
+            add(delay10);
+            add(delay30);
+            add(arrow);
+            add(fire);
+            add(potion);
+            add(fireLarge);
+            add(tracer);
+            add(tnt);
+            add(mining);
+            add(deforestation);
+            add(stoneExplosive);
+            add(blastingCap);
+        }};
        
 //  REMOVE OTHER BIOMES (doesn't work)
  /*   //    BiomeManager.removeSpawnBiome(BiomeGenBase.desert);
