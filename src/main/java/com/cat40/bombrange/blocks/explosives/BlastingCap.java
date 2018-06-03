@@ -6,7 +6,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 
 public class BlastingCap extends ActivatableExplosive
@@ -27,8 +26,6 @@ public class BlastingCap extends ActivatableExplosive
 
     public void blowUp(World world, int x, int y, int z)
     {
-        System.out.println(Main.c420);
-        System.out.println(Main.explosives.contains(Main.c420));
         for(int b=-1; b<=1; b++)
         {
             for(int a=-1; a<=1; a++)
@@ -40,11 +37,8 @@ public class BlastingCap extends ActivatableExplosive
                     int zcord = c+z;
 
                     Block block = world.getBlock(xcord, ycord, zcord);
-                    System.out.println(block);
-                    System.out.println(block.equals(Main.c420));
                     if (Main.explosives.contains(block))
                     {
-                        world.setBlock(xcord, ycord, zcord, Blocks.brick_block);
                         block.onBlockDestroyedByExplosion(world, xcord, ycord, zcord, null);
                         world.setBlockToAir(xcord, ycord, zcord);
                     }
