@@ -18,6 +18,7 @@ public class C4 extends Explosive
 
     public void blowUp(World world, int x, int y, int z)
     {
+        world.spawnParticle("hugeexplode", x, y, z, 1.0D, 0.0D, 0.0D);
         super.useExplosion(new Explosion(world, null, x, y, z, (int) this.power));
     }
 

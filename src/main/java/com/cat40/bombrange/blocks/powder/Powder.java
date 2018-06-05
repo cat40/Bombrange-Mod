@@ -1,7 +1,7 @@
 package com.cat40.bombrange.blocks.powder;
 
-import java.util.Random;
 import com.cat40.bombrange.Main;
+import com.cat40.bombrange.explosions.GunpowderBoomBoom;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -11,6 +11,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
+
+import java.util.Random;
 
 public class Powder extends Block
 {
@@ -42,15 +44,19 @@ public class Powder extends Block
         return p_149691_1_ == 0 ? this.field_150115_b : (p_149691_1_ == 1 ? this.field_150116_a : this.blockIcon);
     }
 */
-    public void primeTnt(World par1World, int par2, int par3, int par4, int par5)
+    public void primeTnt(World par1World, int x, int y, int z, int par5)
     {
         if (!par1World.isRemote)
         {
             if ((par5 & 1) == 1)
             {
-                PowderPrime entitytntprimed = new PowderPrime(par1World, (double)((float)par2 + 0.5F), (double)((float)par3 + 0.5F), (double)((float)par4 + 0.5), Main.fuseLen);
-                par1World.spawnEntityInWorld(entitytntprimed);
-                par1World.playSoundAtEntity(entitytntprimed, "random.fuse", 0.0F, 0.0F);
+                //par1World.createExplosion(null, x, y, z, Main.powderPower, true); // todo figure out what happens here that's not covered below
+                Explosion boom = new GunpowderBoomBoom(par1World, x, y, z, Main.powderPower);
+                boom.doExplosionA();
+                boom.doExplosionB(true);
+                //PowderPrime entitytntprimed = new PowderPrime(par1World, (double)((float)par2 + 0.5F), (double)((float)par3 + 0.5F), (double)((float)par4 + 0.5), Main.fuseLen);
+                //par1World.spawnEntityInWorld(entitytntprimed);
+                //par1World.playSoundAtEntity(entitytntprimed, "random.fuse", 0.0F, 0.0F);
             }
         }
     }
