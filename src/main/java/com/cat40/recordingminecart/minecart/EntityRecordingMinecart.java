@@ -57,28 +57,27 @@ public class EntityRecordingMinecart extends EntityMinecart {
         super.onUpdate();
         if(this.getDirection() > 0)
         {
-            // do stuff
             this.ballast = this.worldObj.getBlock(cordInt(this.posX), cordInt(this.posY-1), cordInt(this.posZ));
-            switch(getDirection())
+            switch(this.getDirection())
             {
                 case 1:
-                    left = this.worldObj.getBlock(cordInt(this.posX), cordInt(this.posY), cordInt(this.posZ-1));
-                    right = this.worldObj.getBlock(cordInt(this.posX), cordInt(this.posY), cordInt(this.posZ+1));
+                    this.left = this.worldObj.getBlock(cordInt(this.posX), cordInt(this.posY), cordInt(this.posZ-1));
+                    this.right = this.worldObj.getBlock(cordInt(this.posX), cordInt(this.posY), cordInt(this.posZ+1));
                     break;
                 case 2:
-                    left = this.worldObj.getBlock(cordInt(this.posX), cordInt(this.posY), cordInt(this.posZ+1));
-                    right = this.worldObj.getBlock(cordInt(this.posX), cordInt(this.posY), cordInt(this.posZ-1));
+                    this.left = this.worldObj.getBlock(cordInt(this.posX), cordInt(this.posY), cordInt(this.posZ+1));
+                    this.right = this.worldObj.getBlock(cordInt(this.posX), cordInt(this.posY), cordInt(this.posZ-1));
                     break;
                 case 3:
-                    left = this.worldObj.getBlock(cordInt(this.posX+1), cordInt(this.posY), cordInt(this.posZ));
-                    right = this.worldObj.getBlock(cordInt(this.posX-1), cordInt(this.posY), cordInt(this.posZ));
+                    this.left = this.worldObj.getBlock(cordInt(this.posX+1), cordInt(this.posY), cordInt(this.posZ));
+                    this.right = this.worldObj.getBlock(cordInt(this.posX-1), cordInt(this.posY), cordInt(this.posZ));
                     break;
                 case 4:
-                    left = this.worldObj.getBlock(cordInt(this.posX-1), cordInt(this.posY), cordInt(this.posZ));
-                    right = this.worldObj.getBlock(cordInt(this.posX+1), cordInt(this.posY), cordInt(this.posZ));
+                    this.left = this.worldObj.getBlock(cordInt(this.posX-1), cordInt(this.posY), cordInt(this.posZ));
+                    this.right = this.worldObj.getBlock(cordInt(this.posX+1), cordInt(this.posY), cordInt(this.posZ));
                     break;
                 default:
-                    throw new ValueException("direction " + getDirection() + " makes no sense");
+                    throw new ValueException("direction " + this.getDirection() + " makes no sense");
             }
             this.prevX = this.posX;
             this.prevY = this.posY;
