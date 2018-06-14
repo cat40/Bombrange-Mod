@@ -13,19 +13,29 @@ public class ItemRecordingMinecart extends ItemMinecart {
         super(type);
     }
 
+
+    private static double cordFloat(int cord)
+    {
+        return cord+0.5;
+    }
+    private static int cordInt(double cord)
+    {
+        return (int) (cord-0.5);
+    }
+
     @Override
-    public boolean onItemUse(ItemStack p_77648_1_, EntityPlayer p_77648_2_, World p_77648_3_, int p_77648_4_, int p_77648_5_, int p_77648_6_, int p_77648_7_, float p_77648_8_, float p_77648_9_, float p_77648_10_) {
-        if (BlockRailBase.func_150051_a(p_77648_3_.getBlock(p_77648_4_, p_77648_5_, p_77648_6_))) {
-            if (!p_77648_3_.isRemote) {
-                EntityMinecart entityminecart = EntityMinecart.createMinecart(p_77648_3_, (double)((float)p_77648_4_ + 0.5F), (double)((float)p_77648_5_ + 0.5F), (double)((float)p_77648_6_ + 0.5F), this.minecartType);
-                if (p_77648_1_.hasDisplayName()) {
-                    entityminecart.setMinecartName(p_77648_1_.getDisplayName());
+    public boolean onItemUse(ItemStack itemStack, EntityPlayer player, World world, int x, int y, int z, int p_77648_7_, float p_77648_8_, float p_77648_9_, float p_77648_10_) {
+        if (BlockRailBase.func_150051_a(world.getBlock(x, y, z))) {
+            if (!world.isRemote) {
+                EntityMinecart entityminecart = new EntityRecordingMinecart(world, cordFloat(x), cordFloat(y), cordFloat(z));
+                if (itemStack.hasDisplayName()) {
+                    entityminecart.setMinecartName(itemStack.getDisplayName());
                 }
 
-                p_77648_3_.spawnEntityInWorld(entityminecart);
+                world.spawnEntityInWorld(entityminecart);
             }
 
-            --p_77648_1_.stackSize;
+            --itemStack.stackSize;
             return true;
         } else {
             return false;

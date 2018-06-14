@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ed5093c-a0d9-4802-8d5f-3f1c608f1899" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cat40/recordingminecart/minecart/ItemRecordingMinecart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cat40/recordingminecart/minecart/EntityRecordingMinecart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cat40/recordingminecart/minecart/ItemRecordingMinecart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cat40/recordingminecart/minecart/ItemRecordingMinecart.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -46,34 +47,72 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItemRecordingMinecart.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ItemRecordingMinecart.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/recordingminecart/minecart/ItemRecordingMinecart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="272">
+              <caret line="16" selection-start-line="16" selection-end-line="23" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#488#489#0" expanded="true" />
                 <element signature="e#508#509#0" expanded="true" />
+                <element signature="e#490#491#0" expanded="true" />
+                <element signature="e#517#518#0" expanded="true" />
+                <element signature="e#571#572#0" expanded="true" />
+                <element signature="e#598#599#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientProxy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/recordingminecart/proxies/ClientProxy.java">
+      <file leaf-file-name="EntityMinecartTNT.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar!/net/minecraft/entity/item/EntityMinecartTNT.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="102">
+              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommonProxy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/recordingminecart/proxies/CommonProxy.java">
+      <file leaf-file-name="EntityMinecartEmpty.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar!/net/minecraft/entity/item/EntityMinecartEmpty.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="238">
+              <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="21" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntityMinecart.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar!/net/minecraft/entity/item/EntityMinecart.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="76" column="48" selection-start-line="76" selection-start-column="48" selection-end-line="76" selection-end-column="137" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntityRecordingMinecart.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/recordingminecart/minecart/EntityRecordingMinecart.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#250#251#0" expanded="true" />
+                <element signature="e#272#273#0" expanded="true" />
+                <element signature="e#365#366#0" expanded="true" />
+                <element signature="e#402#403#0" expanded="true" />
+                <element signature="e#196#197#0" expanded="true" />
+                <element signature="e#219#220#0" expanded="true" />
+                <element signature="e#516#517#0" expanded="true" />
+                <element signature="e#547#548#0" expanded="true" />
+                <element signature="e#597#598#0" expanded="true" />
+                <element signature="e#636#637#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -628,10 +667,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/explosives/BlastingCap.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/recordingminecart/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cat40/recordingminecart/minecart/ItemRecordingMinecart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cat40/recordingminecart/minecart/EntityRecordingMinecart.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -698,6 +738,16 @@
             <path>
               <item name="Bombrange-Mod" type="b2602c69:ProjectViewProjectNode" />
               <item name="Bombrange-Mod" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cat40" type="462c0819:PsiDirectoryNode" />
+              <item name="recordingminecart" type="462c0819:PsiDirectoryNode" />
+              <item name="minecart" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bombrange-Mod" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bombrange-Mod" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar" type="ab9368bb:PsiFileNode" />
             </path>
             <path>
@@ -712,6 +762,23 @@
               <item name="forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar" type="ab9368bb:PsiFileNode" />
               <item name="net" type="462c0819:PsiDirectoryNode" />
               <item name="minecraft" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bombrange-Mod" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bombrange-Mod" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar" type="ab9368bb:PsiFileNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+              <item name="minecraft" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Bombrange-Mod" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Bombrange-Mod" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar" type="ab9368bb:PsiFileNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+              <item name="minecraft" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+              <item name="item" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Bombrange-Mod" type="b2602c69:ProjectViewProjectNode" />
@@ -914,23 +981,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/cord/Cord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="50" column="93" selection-start-line="50" selection-start-column="93" selection-end-line="50" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/blastingcap/BlastPrime.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/dynamite/DynaPrime.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/gunpowder/GunpowderPrime.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/tnt/Tnt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/bombrange/blocks/dispenser/Dispenser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3264">
@@ -1255,14 +1305,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar!/net/minecraft/entity/item/EntityMinecartContainer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar!/net/minecraft/entity/item/EntityMinecart.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="76" column="48" selection-start-line="76" selection-start-column="48" selection-end-line="76" selection-end-column="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar!/net/minecraft/entity/item/EntityMinecartTNT.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar!/net/minecraft/entity/item/EntityMinecartEmpty.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/recordingminecart/minecart/ItemRecordingMinecart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="23" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#488#489#0" expanded="true" />
             <element signature="e#508#509#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+            <element signature="e#598#599#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cat40/recordingminecart/minecart/EntityRecordingMinecart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#250#251#0" expanded="true" />
+            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#365#366#0" expanded="true" />
+            <element signature="e#402#403#0" expanded="true" />
+            <element signature="e#196#197#0" expanded="true" />
+            <element signature="e#219#220#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
           </folding>
         </state>
       </provider>
