@@ -16,13 +16,9 @@ import java.util.Random;
 public class BlastingCap extends ActivatableExplosive
 {
 
-    private static Random random = new Random();
-    private  EffectRenderer effectRenderer;
-
     @SideOnly(Side.CLIENT)
     public BlastingCap (int id, Material material, String textureName) {
         super(id, material, textureName, 1.250F);
-        this.effectRenderer = Minecraft.getMinecraft().effectRenderer;
     }
 
     @Override
@@ -33,19 +29,37 @@ public class BlastingCap extends ActivatableExplosive
         this.field_150115_b = iconRegister.registerIcon(this.assetPath);
     }
 
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void randomDisplayTick(World world, int x, int y, int z, Random p_149734_5_)
+    {
+        double spread = 2;
+        for(int i=0; i<10; i++)
+        {
+            Minecraft.getMinecraft().effectRenderer.addEffect(new EntityExplodeFX(world,
+                    x + 0.5 + spread * Math.random() - 0.5,
+                    y + 0.5 + Math.random(),
+                    z + 0.5 + spread * Math.random() - 0.5,
+                    (Math.random() - 0.5) / 10,
+                    Math.random() / 10,
+                    (Math.random() - 0.5) / 10));
+        }
+    }
     public void blowUp(World world, int x, int y, int z)
     {
         // type, positions, motions
         System.out.println("spawning particle at " + x +" " + y + " " + z);
         double spread = 2;
-        for(int __=0; __<20; __++)
-            Minecraft.getMinecraft().effectRenderer.addEffect(new EntityExplodeFX(world,
+        EffectRenderer effectRenderer = Minecraft.getMinecraft().effectRenderer;
+        for(int __=0; __<100; __++)
+            effectRenderer.addEffect(new EntityExplodeFX(world,
                     x+0.5+spread*Math.random()-0.5,
                     y+0.5+Math.random(),
                     z+0.5+spread*Math.random()-0.5,
                     (Math.random()-0.5)/10,
                     Math.random()/10,
                     (Math.random()-0.5)/10));
+        System.out.println("effects rendered");
         for(int b=-1; b<=1; b++)
         {
             for(int a=-1; a<=1; a++)
