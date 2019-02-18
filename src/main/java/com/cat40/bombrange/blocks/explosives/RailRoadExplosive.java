@@ -20,11 +20,12 @@ public class RailRoadExplosive extends Explosive {
     @Override
     public void blowUp(World world, int x, int y, int z) {
         // for now, just goes in the positive x direction, y should be the bottom level
+        System.out.println("rail road blowing up");
         for(int xPos = x; xPos < x+DEFAULT_LENGTH; xPos++)
         {
             for(int yPos = y; yPos < y+4; yPos++)
             {
-                for(int zPos = z-1; zPos <=z+1; z++)
+                for(int zPos = z-1; zPos <=z+1; zPos++)
                 {
                     // remove the blocks
                     world.setBlockToAir(xPos, yPos, zPos);

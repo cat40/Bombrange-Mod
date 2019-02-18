@@ -134,7 +134,7 @@ public static Item blastHead, blastShirt, blastPants, blastShoes;
 public static Item woolHat, woolShirt, woolPants, woolShoes;
 
 // constants
-public static float bombres = 3.0F;
+public static float bombres = 1.0F; // 3.0F;
 public static int idBase = 4000;
 public static int blockidBase = idBase + 50;
 public static SoundType bombSound = Block.soundTypeSnow;
@@ -263,7 +263,7 @@ event.manager.addSound("mod_id:Sparkler.ogg");
         GameRegistry.registerBlock(c420, "c420");
        // GameRegistry.registerBlock(Benchmark, "Benchmark").setStepSound(bombSound);
 
-        railRoadExplosive = new RailRoadExplosive(++idBase, Material.rock, "railroadbomb", 0);
+        railRoadExplosive = new RailRoadExplosive(++idBase, bombMat, "railroadbomb", 0).setResistance(bombres);
         GameRegistry.registerBlock(railRoadExplosive, "railroadbomb");
         
         powder = new Powder(++idBase, bombMat, "powder").setCreativeTab(Main.CreativeTabMod.tabBomb);
