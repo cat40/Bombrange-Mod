@@ -79,7 +79,7 @@ public class Main {
 /**	
  * DECLARATION SECTION 
  * *********************************************************** */
-	// mod id (for textures)
+// mod id (for textures)
 public static String modid_without_colon = "bombrange";
 public static String modid = modid_without_colon + ":";
 /* Explosives */
