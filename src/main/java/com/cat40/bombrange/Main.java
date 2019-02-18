@@ -118,6 +118,7 @@ public static Block mining;
 public static Block deforestation;
 public static Block stoneExplosive;
 public static Block blastingCap;
+public static Block railRoadExplosive;
 public static List<Block> explosives;
 //public static Block StructOldCannon;
 
@@ -261,6 +262,9 @@ event.manager.addSound("mod_id:Sparkler.ogg");
         GameRegistry.registerBlock(c410, "c410");
         GameRegistry.registerBlock(c420, "c420");
        // GameRegistry.registerBlock(Benchmark, "Benchmark").setStepSound(bombSound);
+
+        railRoadExplosive = new RailRoadExplosive(++idBase, Material.rock, "railroadbomb", 0);
+        GameRegistry.registerBlock(railRoadExplosive, "railroadbomb");
         
         powder = new Powder(++idBase, bombMat, "powder").setCreativeTab(Main.CreativeTabMod.tabBomb);
         GameRegistry.registerBlock(powder, "powder");
